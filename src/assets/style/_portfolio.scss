@@ -1,0 +1,13 @@
+.portfolio {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 32px;
+	padding: 64px;
+
+	&__item {
+		flex: 1 1 0;
+		min-width: 400px;
+		max-width: 666px;
+	}
+}

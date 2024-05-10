@@ -92,7 +92,6 @@ function ejsCompile() {
 			chunk.contents = Buffer.from(html, encoding)
 			callback(null, chunk)
 		}).catch(error => {
-
 			callback(new Error(error.message, {
 				cause: chunk.path
 			}), chunk)
@@ -153,6 +152,9 @@ function ttfToWoff() {
 		wawoff2.compress(chunk.contents).then(woff => {
 			chunk.contents = Buffer.from(woff)
 			callback(null, chunk)
+		}).catch(error => {
+			console.log(error)
+			callback(error, chunk)
 		})
 	})
 }

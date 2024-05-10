@@ -1,0 +1,24 @@
+.label {
+	padding: 8px 12px;
+	border-radius: 4px;
+	font-weight: 600;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+
+	&--pink {
+		background-color: #cd2071;
+	}
+
+	&--blue {
+		background-color: #1B66FA;
+	}
+
+	&--yellow {
+		background-color: #D9A023;
+	}
+
+	&--green {
+		background-color: #23D926;
+	}
+}

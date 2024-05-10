@@ -14,7 +14,12 @@ function cleanExtraImgs() {
 		read: false,
 		nodir: true
 	})
-		.pipe(removeExcess('img-raw', 'img', ...convertingImgTypes))
+		.pipe(removeExcess('img-raw', 'img', ...convertingImgTypes)
+			.on("error", function (error) {
+				printPaintedMessage(`${error.message} in file ${error.cause}`, "removeExcess")
+				bs.notify("removeExcess Error")
+				this.emit("end")
+			}))
 }
 
 function browserSyncInit() {
@@ -89,7 +94,8 @@ function copyStatic() {
 	return gulp.src(["./src/assets/static/**/*", "!./src/assets/static/img-raw/**/*"], {
 		allowEmpty: true,
 		since: gulp.lastRun(copyStatic),
-		nodir: true
+		nodir: true,
+		encoding: false
 	})
 		.pipe(destGulp.dest("./build/assets/static/"))
 		.pipe(reload())
@@ -115,7 +121,8 @@ function makeIconsStack() {
 function imageMin() {
 	return gulp.src("./src/assets/static/img-raw/**/*", {
 		allowEmpty: true,
-		nodir: true
+		nodir: true,
+		encoding: false
 	})
 		.pipe(newer("./src/assets/static/img/", ".webp", ...convertingImgTypes))
 		.pipe(sharpWebp())
@@ -132,7 +139,9 @@ function cleanBuild() {
 }
 
 function convertFont() {
-	return gulp.src("./src/assets/static/font/**/*.ttf")
+	return gulp.src("./src/assets/static/font/**/*.ttf", {
+		encoding: false
+	})
 		.pipe(ttfToWoff())
 		.pipe(clean())
 		.pipe(ext(".woff2"))

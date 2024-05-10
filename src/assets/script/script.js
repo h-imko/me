@@ -9,6 +9,7 @@ import Quantity from "./_Quantity"
 import Animate from "./_Animate"
 import SyncedInputs from "./_SyncedInputs"
 import { breakpoints, headerHeightToCSS } from "./_helpers"
+import tippy from 'tippy.js'
 
 document.addEventListener('DOMContentLoaded', function () {
 	// headerHeightToCSS()
@@ -20,7 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	// initSyncedInputs()
 	// initDropzone()
 	// initAnimates()
+	tippy('[data-tippy-content]')
 })
+
+function initTippy() {
+
+}
 
 function initSyncedInputs() {
 	SyncedInputs.findGroups().forEach(group => {

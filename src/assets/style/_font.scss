@@ -6,8 +6,8 @@
 }
 
 @font-face {
-	font-family: "";
-	src: url(/src/assets/static/font/) format("woff2-variations");
+	font-family: "Golos";
+	src: url(/src/assets/static/font/Golos.woff2) format("woff2-variations");
 	font-display: swap;
 	font-weight: 125 950;
 	font-style: normal;
@@ -49,6 +49,8 @@ h6,
 
 body,
 input {
+	font-family: "Golos", sans-serif;
+
 	@media screen and (max-width: $mobile) {}
 }
 
