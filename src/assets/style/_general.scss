@@ -31,7 +31,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	background-color: #f5f6f9;
+	background-color: #ecf1f5;
+	color: #2A335B;
 
 	&.noscroll {
 		overflow: hidden;
