@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="ru">
+	@@include('parts/_head.html')
+
+	<body>
+		<div class="page">
+			@@include('parts/header/header.html')
+			<main class="main">
+				@@include('parts/mobile-menu/mobile-menu.html')
+				@@include('parts/mobile-catalog/mobile-catalog.html')
+				<div class="mobile-search">
+					<form action="" class="mobile-search__form">
+						<div class="mobile-search__close"></div>
+						<div class="mobile-search__field">
+							<input class="mobile-search__input" type="text" value="Печ">
+							<button class="mobile-search__clear-input"></button>
+						</div>
+						<div class="mobile-search__list-items">
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ь</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ное литье</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани газо-дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани электрические</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и-камины</a>
+							<a class="mobile-search__link-item" href="#">Аксессуары для <b>печ</b>ей Гефест</a>
+						</div>
+					</form>
+				</div>
+				<div class="block-content">
+					<div class="container">
+						<br>
+						<br>
+						<button data-open-modal="modal-entry">Вход или регистрация</button>
+						<br>
+						<br>
+						<button data-open-modal="modal-entry-sms">Вход или регистрация смс</button>
+						<br>
+						<br>
+						<button data-open-modal="modal-entry-reg">Вход или регистрация регистрация</button>
+						<br>
+						<br>
+						<button data-open-modal="modal-code-sms">Код из SMS</button>
+						<br>
+						<br>
+						<button data-open-modal="new-code">Код из SMS Получить новый код</button>
+						<br>
+						<br>
+						<button data-open-modal="sent-code">Код из SMS Код отправлен</button>
+						<br>
+						<br>
+						<button data-open-modal="code-sms-preloader">Код из SMS Прелоадер</button>
+						<br>
+						<br>
+						<button data-open-modal="incorrect-code">Неверный код</button>
+						<br>
+						<br>
+						<button data-open-modal="completion-registration">Завершение регистрации</button>
+						<br>
+						<br>
+						<button data-open-modal="modal-entry-legal">Вход для юридических лиц</button>
+						<br>
+						<br>
+						<button data-open-modal="modal-register-legal">Регистрация юридического лица</button>
+						<br>
+						<br>
+						<button data-open-modal="modal-reset-password">Сброс пароля</button>
+						<br>
+						<br>
+						<button data-open-modal="modal-reset-password-msg">Письмо отправлено</button>
+						<div class="modal modal-entry-registration modal-entry">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__tabs">
+										<div class="modal__tabs__tab is-active"><span class="subtitle23">Вход</span></div>
+										<div class="modal__tabs__tab"><span class="subtitle23">Регистрация</span></div>
+									</div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-phone subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Телефон</label>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<button class="forgot-password subtitle6">Забыли пароль?</button>
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="password">
+												<label class="wrap-field__name-field subtitle6">Пароль<span class="require">*</span></label>
+												<button class="show-pass" type="button"></button>
+											</div>
+										</div>
+										<div class="btngroup">
+											<button class="btn1 button3 btn--full">Войти</button>
+											<button class="btn2 button3 btn--full">Войти с помощью кода из SMS</button>
+										</div>
+										<button class="entry-legal-entities">Для юридических лиц</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-entry-registration modal-entry-sms">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__tabs">
+										<div class="modal__tabs__tab is-active"><span class="subtitle23">Вход</span></div>
+										<div class="modal__tabs__tab"><span class="subtitle23">Регистрация</span></div>
+									</div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-phone subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Телефон</label>
+											</div>
+										</div>
+										<div class="btngroup">
+											<button class="btn1 button3 btn--full">Получить код</button>
+											<button class="btn2 button3 btn--full">Войти с помощью пароля</button>
+										</div>
+										<button class="entry-legal-entities">Для юридических лиц</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-entry-registration modal-entry-reg">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__tabs">
+										<div class="modal__tabs__tab"><span class="subtitle23">Вход</span></div>
+										<div class="modal__tabs__tab is-active"><span class="subtitle23">Регистрация</span></div>
+									</div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-phone subtitle6" type="text" required>
+												<label class="wrap-field__name-field subtitle6">Телефон<span class="require">*</span></label>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="email" required>
+												<label class="wrap-field__name-field subtitle6">Email<span class="require">*</span></label>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="text" required>
+												<label class="wrap-field__name-field subtitle6">ФИО<span class="require">*</span></label>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="password" required>
+												<label class="wrap-field__name-field subtitle6">Пароль<span class="require">*</span></label>
+												<button class="show-pass" type="button"></button>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="password" required>
+												<label class="wrap-field__name-field subtitle6">Подтверждение пароля<span class="require">*</span></label>
+												<button class="show-pass" type="button"></button>
+											</div>
+										</div>
+										<div class="btngroup">
+											<button class="btn1 button3 btn--full">Получить код</button>
+										</div>
+										<button class="entry-legal-entities">Для юридических лиц</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-code-sms">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Код из SMS</div>
+									<div class="modal__descr text-center">Мы отправили код на номер <span class="phone-code">+7 (960) 455-66-66</span></div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Код</label>
+											</div>
+										</div>
+										<div class="msg-repeat-code text-center">Получить код повторно можно через <b class="subtitle27">45с.</b></div>
+										<button class="change-phone-number subtitle8">Поменять номер телефона</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-code-sms new-code">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Код из SMS</div>
+									<div class="modal__descr text-center">Мы отправили код на номер <span class="phone-code">+7 (960) 455-66-66</span></div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Код</label>
+											</div>
+										</div>
+										<button class="get-new-code subtitle6">Получить новый код</button>
+										<button class="change-phone-number subtitle8">Поменять номер телефона</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-code-sms sent-code">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Код из SMS</div>
+									<div class="modal__descr text-center">Мы отправили код на номер <span class="phone-code">+7 (960) 455-66-66</span></div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Код</label>
+											</div>
+										</div>
+										<button class="msg-code-sent text-center subtitle6">Код отправлен</button>
+										<button class="change-phone-number subtitle8">Поменять номер телефона</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-code-sms code-sms-preloader">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Код из SMS</div>
+									<div class="modal__descr text-center">Мы отправили код на номер <span class="phone-code">+7 (960) 455-66-66</span></div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6" type="text" value="756656">
+												<label class="wrap-field__name-field subtitle6">Код</label>
+												<div class="field-preloader"></div>
+											</div>
+										</div>
+										<div class="msg-repeat-code text-center">Получить код повторно можно через <b class="subtitle27">45с.</b></div>
+										<button class="change-phone-number subtitle8">Поменять номер телефона</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-completion-registration completion-registration">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Завершение регистрации</div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Email<span class="require">*</span></label>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">ФИО<span class="require">*</span></label>
+											</div>
+										</div>
+										<div class="wrap-checkbox checkbox-type1 modal-delivery-terms__checkbox">
+											<input class="wrap-checkbox__checkbox" type="checkbox" id="privacy-check-test">
+											<label class="wrap-checkbox__label checkbox-type1__label subtitle25" for="privacy-check-test">Даю согласие на <a href="#">обработку персональных данных</a> в соответствии с  <a href="#">политикой конфиденциальности</a></label>
+										</div>
+										<div class="wrap-checkbox checkbox-type1 modal-delivery-terms__checkbox">
+											<input class="wrap-checkbox__checkbox" type="checkbox" id="mailing-test">
+											<label class="wrap-checkbox__label checkbox-type1__label subtitle25" for="mailing-test">Соглашаюсь получать <a href="#">маркетинговую рассылку</a></label>
+										</div>
+										<input class="completion-registration__submit btn1 button3" type="submit" value="Завершить">
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-code-sms incorrect-code">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Код из SMS</div>
+									<div class="modal__descr text-center">Мы отправили код на номер <span class="phone-code">+7 (960) 455-66-66</span></div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6 cz-error" type="text">
+												<label class="wrap-field__name-field subtitle6">Код</label>
+											</div>
+										</div>
+										<div class="msg-repeat-code text-center">Получить код повторно можно через <b class="subtitle27">45с.</b></div>
+										<button class="change-phone-number subtitle8">Поменять номер телефона</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-entry-legal">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Вход для юридических лиц</div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="email">
+												<label class="wrap-field__name-field subtitle6">Email<span class="require">*</span></label>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<button class="forgot-password subtitle6">Забыли пароль?</button>
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="password">
+												<label class="wrap-field__name-field subtitle6">Пароль<span class="require">*</span></label>
+												<button class="show-pass" type="button"></button>
+											</div>
+										</div>
+										<input class="modal-entry-legal__submit btn1 button3" type="submit" value="Войти">
+										<button class="register-legal-entity subtitle6">Зарегистрироваться как юридическое лицо</button>
+										<button class="for-individuals">Для физических лиц</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-register-legal">
+							<div class="modal__content w-921">
+								<div class="modal__body">
+									<div class="modal__title modal-register-legal__title subtitle17 text-center">Регистрация юридического лица</div>
+									<form action="">
+										<div class="modal-register-legal__subtitle subtitle23">О компании</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<!--                                        <input class="wrap-field__input subtitle6" type="email">-->
+												<textarea class="wrap-field__input autoheight subtitle6"></textarea>
+												<label class="wrap-field__name-field subtitle6">Наименование организации<span class="require">*</span></label>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Юридический адрес</label>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Почтовый адрес</label>
+											</div>
+										</div>
+										<div class="columns-fields">
+											<div class="wrap-field">
+												<div class="wrap-field__area">
+													<input class="wrap-field__input subtitle6" type="text">
+													<label class="wrap-field__name-field subtitle6">ИНН<span class="require">*</span></label>
+												</div>
+											</div>
+											<div class="wrap-field">
+												<div class="wrap-field__area">
+													<input class="wrap-field__input subtitle6" type="text">
+													<label class="wrap-field__name-field subtitle6">КПП</label>
+												</div>
+											</div>
+											<div class="wrap-field">
+												<div class="wrap-field__area">
+													<input class="wrap-field__input subtitle6" type="text">
+													<label class="wrap-field__name-field subtitle6">Расчетный счет<span class="require">*</span></label>
+												</div>
+											</div>
+											<div class="wrap-field">
+												<div class="wrap-field__area">
+													<input class="wrap-field__input subtitle6" type="text">
+													<label class="wrap-field__name-field subtitle6">Наименование банка<span class="require">*</span></label>
+												</div>
+											</div>
+											<div class="wrap-field">
+												<div class="wrap-field__area">
+													<input class="wrap-field__input subtitle6" type="text">
+													<label class="wrap-field__name-field subtitle6">БИК<span class="require">*</span></label>
+												</div>
+											</div>
+										</div>
+										<div class="modal-register-legal__subtitle subtitle23">Контактное лицо</div>
+										<div class="columns-fields">
+											<div class="wrap-field">
+												<div class="wrap-field__area">
+													<input class="wrap-field__input subtitle6" type="text">
+													<label class="wrap-field__name-field subtitle6">ФИО<span class="require">*</span></label>
+												</div>
+											</div>
+											<div class="wrap-field">
+												<div class="wrap-field__area">
+													<input class="wrap-field__input subtitle6" type="text">
+													<label class="wrap-field__name-field subtitle6">Телефон</label>
+												</div>
+											</div>
+											<div class="wrap-field">
+												<div class="wrap-field__area">
+													<input class="wrap-field__input subtitle6" type="text">
+													<label class="wrap-field__name-field subtitle6">Email<span class="require">*</span></label>
+												</div>
+											</div>
+										</div>
+										<div class="modal-register-legal__subtitle subtitle23">Пароль</div>
+										<div class="columns-fields">
+											<div class="wrap-field">
+												<input class="wrap-field__input subtitle6" type="password">
+												<label class="wrap-field__name-field subtitle6">Пароль<span class="require">*</span></label>
+												<button class="show-pass"></button>
+											</div>
+											<div class="wrap-field">
+												<input class="wrap-field__input subtitle6" type="password">
+												<label class="wrap-field__name-field subtitle6">Подтверждение пароля<span class="require">*</span></label>
+												<button class="show-pass"></button>
+											</div>
+										</div>
+										<div class="wrap-checkbox checkbox-type1 modal-delivery-terms__checkbox">
+											<input class="wrap-checkbox__checkbox" type="checkbox" id="privacy-check-test1">
+											<label class="wrap-checkbox__label checkbox-type1__label subtitle25" for="privacy-check-test1">Даю согласие на <a href="#">обработку персональных данных</a> в соответствии с  <a href="#">политикой конфиденциальности</a></label>
+										</div>
+										<div class="wrap-checkbox checkbox-type1 modal-delivery-terms__checkbox">
+											<input class="wrap-checkbox__checkbox" type="checkbox" id="mailing-test1">
+											<label class="wrap-checkbox__label checkbox-type1__label subtitle25" for="mailing-test1">Соглашаюсь получать <a href="#">маркетинговую рассылку</a></label>
+										</div>
+										<input class="modal-entry-legal__submit btn1 button3" type="submit" value="Зарегистрироваться">
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-reset-password">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Сброс пароля</div>
+									<div class="modal__descr subtitle9 text-center">Мы вышлем вам электронное письмо для сброса пароля</div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="email">
+												<label class="wrap-field__name-field subtitle6">Email<span class="require">*</span></label>
+											</div>
+										</div>
+										<input class="modal-entry-legal__submit btn1 button3" type="submit" value="Сбросить пароль">
+										<button class="cancel-reset-password subtitle6">Отмена</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-reset-password-msg">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Письмо отправлено</div>
+									<div class="modal__descr subtitle9 text-center">
+										<p>На ваш email отправлено письмо со ссылкой. Перейдите по ней для смены пароля.</p>
+										<p>Если его нет во входящих, проверьте папку «Спам».</p>
+									</div>
+									<button class="modal-reset-password-msg__btn btn1 button3" data-close-modal>Ок</button>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('parts/footer/_footer.html')
+		</div>
+	</body>
+
+</html>

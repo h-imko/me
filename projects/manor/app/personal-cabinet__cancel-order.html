@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+	@@include('parts/_head.html')
+
+	<body>
+		<div class="page">
+			@@include('parts/header/header.html')
+			<main class="main">
+				@@include('parts/mobile-menu/mobile-menu.html')
+				@@include('parts/mobile-catalog/mobile-catalog.html')
+				<div class="mobile-search">
+					<form action="" class="mobile-search__form">
+						<div class="mobile-search__close"></div>
+						<div class="mobile-search__field">
+							<input class="mobile-search__input" type="text" value="Печ">
+							<button class="mobile-search__clear-input"></button>
+						</div>
+						<div class="mobile-search__list-items">
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ь</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ное литье</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани газо-дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани электрические</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и-камины</a>
+							<a class="mobile-search__link-item" href="#">Аксессуары для <b>печ</b>ей Гефест</a>
+						</div>
+					</form>
+				</div>
+				<div class="block-content ">
+					<div class="container">
+						<div class="personal-area block-personal-area">
+							<div class="personal-area__left">
+								<div class="personal-area__menu menu-profile">
+									<a class="menu-profile__user menu-profile__link subtitle9" href="#">Профиль</a>
+									<a class="menu-profile__orders menu-profile__link menu-profile__link--selected subtitle9" href="#">Заказы</a>
+									<a class="menu-profile__bonuses menu-profile__link subtitle9" href="#">Бонусы</a>
+									<a class="menu-profile__exit menu-profile__link subtitle9" href="#">Выход</a>
+								</div>
+							</div>
+							<div class="personal-area__right">
+								<div class="personal-area--736">
+									<a class="back-page subtitle6" href="#">К списку заказов</a>
+									<h1 class="personal-area__title subtitle14">Отмена заказа №54354453</h1>
+									<div class="confirm-msg">Вы уверены, что хотите отменить заказ?</div>
+									<form action="">
+										<textarea class="cancel-order__textarea autoheight subtitle6" placeholder="Пожалуйста, укажите причину отмены заказа"></textarea>
+										<input class="personal-area__submit btn1 button" type="submit" value="Отменить заказ">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('parts/footer/_footer.html')
+		</div>
+	</body>
+
+</html>

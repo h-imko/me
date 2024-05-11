@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+	@@include('parts/_head.html')
+
+	<body>
+		<div class="page">
+			@@include('parts/header/header.html')
+			<main class="main">
+				@@include('parts/mobile-menu/mobile-menu.html')
+				@@include('parts/mobile-catalog/mobile-catalog.html')
+				<div class="mobile-search">
+					<form action="" class="mobile-search__form">
+						<div class="mobile-search__close"></div>
+						<div class="mobile-search__field">
+							<input class="mobile-search__input" type="text" value="Печ">
+							<button class="mobile-search__clear-input"></button>
+						</div>
+						<div class="mobile-search__list-items">
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ь</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ное литье</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани газо-дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани электрические</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и-камины</a>
+							<a class="mobile-search__link-item" href="#">Аксессуары для <b>печ</b>ей Гефест</a>
+						</div>
+					</form>
+				</div>
+				<div class="container">
+					<div class="wrap-breadcrumb">
+						<div class="breadcrumb-item subtitle6"><a href="#" class="wrap-breadcrumb__link"><span>Главная</span></a></div>
+						<div class="bx-breadcrumb-item subtitle6"><span>Результаты поиска по запросу “пваппва”</span></div>
+					</div>
+				</div>
+				<div class="block-content">
+					<div class="container">
+						<h1 class="subtitle14">По запросу “пваппва” ничего не найдено.</h1>
+						<p class="prev-search">Введите другой запрос или начните с <a href="#">главной страницы</a>.</p>
+					</div>
+				</div>
+			</main>
+			@@include('parts/footer/_footer.html')
+		</div>
+	</body>
+
+</html>

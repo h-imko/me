@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="ru">
+	@@include('parts/_head.html')
+
+	<body>
+		<div class="page">
+			@@include('parts/header/header.html')
+			<main class="main">
+				@@include('parts/mobile-menu/mobile-menu.html')
+				@@include('parts/mobile-catalog/mobile-catalog.html')
+				<div class="mobile-search">
+					<form action="" class="mobile-search__form">
+						<div class="mobile-search__close"></div>
+						<div class="mobile-search__field">
+							<input class="mobile-search__input" type="text" placeholder="Поиск товаров">
+							<button class="mobile-search__clear-input"></button>
+						</div>
+						<div class="mobile-search__list-items">
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ь</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ное литье</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани газо-дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани электрические</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и-камины</a>
+							<a class="mobile-search__link-item" href="#">Аксессуары для <b>печ</b>ей Гефест</a>
+						</div>
+					</form>
+				</div>
+				<div class="popup-city">
+					<div class="popup-city__city">Ваш город <b class="subtitle27">Калуга?</b></div>
+					<div class="popup-city__btns">
+						<button class="popup-city__edit btn2 button3">Изменить</button>
+						<button class="popup-city__ok btn1 button3">Верно</button>
+					</div>
+					<button class="popup-city__close"></button>
+				</div>
+				<div class="list-city-mobile">
+					<div class="workarea-list-city-mobile">
+						<div class="list-city-mobile__title subtitle17 text-center">Выберите город</div>
+						<div class="select-city__list-city">
+							<!--                        <a class="select-city__city" href="#">Белгород</a>-->
+							<!--                        <a class="select-city__city" href="#">Липецк</a>-->
+							<!--                        <a class="select-city__city select-city__city&#45;&#45;selected" href="#">Калуга</a>-->
+							<!--                        <a class="select-city__city" href="#">Курск</a>-->
+							<!--                        <a class="select-city__city" href="#">Воронеж</a>-->
+							<a class="select-city__city" href="#">
+								<span class="select-city__name-city">Белгород</span>
+								<span class="select-city__store">Торговый центр «Твоя Усадьба»</span>
+								<span class="select-city__address">ул. Серафимовича, д. 67</span>
+							</a>
+							<a class="select-city__city" href="#">
+								<span class="select-city__name-city">Липецк</span>
+								<span class="select-city__store">Торговый центр «Твоя Усадьба»</span>
+								<span class="select-city__address">ул. Проезд Поперечный, д. 1с3</span>
+							</a>
+							<a class="select-city__city select-city__city--selected" href="#">
+								<span class="select-city__name-city">Калуга</span>
+								<span class="select-city__store">Торговый центр «Твоя Усадьба»</span>
+								<span class="select-city__address">ул.Салтыкова-Щедрина, д. 133Ас2</span>
+							</a>
+							<a class="select-city__city" href="#">
+								<span class="select-city__name-city">Курск</span>
+								<span class="select-city__store">Магазин «Территория Бани»</span>
+								<span class="select-city__address">ул. Нижняя Луговая, д. 1</span>
+							</a>
+							<a class="select-city__city" href="#">
+								<span class="select-city__name-city">Воронеж</span>
+								<span class="select-city__store">Два магазина</span>
+							</a>
+						</div>
+						<button class="list-city-mobile__close"></button>
+					</div>
+				</div>
+				<div class="big-slider big-slider--main">
+					<div class="container">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="big-slider__slide">
+										<img class="big-slider__img big-slider--dt" src="img/slide.png" alt="">
+										<img class="big-slider__img big-slider--mob" src="img/slide-mobile.png" alt="">
+										<div class="big-slider__text">
+											<div class="big-slider__title banner-title">Печи отопительные и котлы со скидкой!*</div>
+											<div class="big-slider__subtitle banner-subtitle">*вернем 15% от цены любым товаром!</div>
+											<div class="big-slider__btn"><a class="btn-banner" href="#">Подробнее</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="big-slider__slide">
+										<img class="big-slider__img big-slider--dt" src="img/slide.png" alt="">
+										<img class="big-slider__img big-slider--mob" src="img/slide-mobile.png" alt="">
+										<div class="big-slider__text">
+											<div class="big-slider__title banner-title">Печи отопительные и котлы со скидкой!*</div>
+											<div class="big-slider__subtitle banner-subtitle">*вернем 15% от цены любым товаром!</div>
+											<div class="big-slider__btn"><a class="btn-banner" href="#">Подробнее</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="big-slider__slide">
+										<img class="big-slider__img big-slider--dt" src="img/slide.png" alt="">
+										<img class="big-slider__img big-slider--mob" src="img/slide-mobile.png" alt="">
+										<div class="big-slider__text">
+											<div class="big-slider__title banner-title">Печи отопительные и котлы со скидкой!*</div>
+											<div class="big-slider__subtitle banner-subtitle">*вернем 15% от цены любым товаром!</div>
+											<div class="big-slider__btn"><a class="btn-banner" href="#">Подробнее</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination big-slider__pagination"></div>
+							<div class="swiper-button-prev prev-slide big-slider__prev-slide"></div>
+							<div class="swiper-button-next next-slide big-slider__next-slide"></div>
+						</div>
+					</div>
+				</div>
+				<div class="slider-category slider-category--main">
+					<div class="container">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="slider-category__slide">
+										<a class="slider-category__link" href="#">
+											<img class="slider-category__img" src="img/cat1.png" alt="">
+											<span class="slider-category__name subtitle1">Новые поступления</span>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="slider-category__slide">
+										<a class="slider-category__link" href="#">
+											<img class="slider-category__img" src="img/cat2.png" alt="">
+											<span class="slider-category__name subtitle1">Хиты продаж</span>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="slider-category__slide">
+										<a class="slider-category__link" href="#">
+											<img class="slider-category__img" src="img/cat3.png" alt="">
+											<span class="slider-category__name subtitle1">Отделочные материалы</span>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="slider-category__slide">
+										<a class="slider-category__link" href="#">
+											<img class="slider-category__img" src="img/cat4.png" alt="">
+											<span class="slider-category__name subtitle1">Все для барбекю</span>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="slider-category__slide">
+										<a class="slider-category__link" href="#">
+											<img class="slider-category__img" src="img/cat2.png" alt="">
+											<span class="slider-category__name subtitle1">Хиты продаж</span>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="slider-category__slide">
+										<a class="slider-category__link" href="#">
+											<img class="slider-category__img" src="img/cat3.png" alt="">
+											<span class="slider-category__name subtitle1">Отделочные материалы</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-prev prev-slide slider-category__prev"></div>
+							<div class="swiper-button-next next-slide slider-category__next"></div>
+						</div>
+					</div>
+				</div>
+				<div class="wrap-calc-main">
+					<div class="container">
+						<div class="calc-main">
+							<div class="calc-main__left">
+								<div class="calc-main__title subtitle2">Затрудняетесь с выбором печи для бани?</div>
+								<div class="calc-main__subtitle subtitle1">Пройдите тест за 2 минуты и получите предложение для вас</div>
+								<div class="calc calc-white">
+									<div class="calc__section">
+										<div class="calc__step subtitle6">Вопрос 1/5</div>
+										<div class="calc__title subtitle4">Какого объема будет ваша парилка?</div>
+										<div class="calc__values">
+											<div class="calc__value subtitle5"><span>6-14 м<sup>3</sup></span></div>
+											<div class="calc__value subtitle5"><span>15-20 м<sup>3</sup></span></div>
+											<div class="calc__value subtitle5"><span>21-25 м<sup>3</sup></span></div>
+											<div class="calc__value subtitle5"><span>26-30 м<sup>3</sup></span></div>
+										</div>
+										<label class="calc__input">
+											<div class="calc__input__label subtitle22">Другое</div>
+											<input type="text" class="subtitle5" placeholder="Введите свой ответ">
+										</label>
+										<div class="calc__nav">
+											<button class="btn5 button">
+												<img src="img/arr-calc-back.svg" alt="">
+												<span>Назад</span>
+											</button>
+											<button class="btn4 button">
+												<span>Далее</span>
+												<img src="img/arr-calc.svg" alt="">
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="calc-main__right">
+								<div class="calc-main__form form-help">
+									<div class="form-help__title subtitle4 text-center">Нужна помощь?</div>
+									<div class="form-help__subtitle subtitle5 text-center">Оставьте свой номер телефона, и наш менеджер вас проконсультирует</div>
+									<form class="form-consultation" action="">
+										<div class="wrap-field">
+											<input class="wrap-field__input subtitle6" type="text">
+											<label class="wrap-field__name-field subtitle6">Ваше имя</label>
+										</div>
+										<div class="wrap-field">
+											<input class="wrap-field__input mask-phone subtitle6" type="text">
+											<label class="wrap-field__name-field subtitle6">Телефон</label>
+										</div>
+										<div class="wrap-checkbox checkbox-type1 form-consultation__checkbox">
+											<input class="wrap-checkbox__checkbox" type="checkbox" id="privacy-check">
+											<label class="wrap-checkbox__label checkbox-type1__label subtitle25" for="privacy-check">Даю согласие на <a href="#">обработку персональных данных</a> в соответствии с  <a href="#">политикой конфиденциальности</a></label>
+										</div>
+										<div class="wrap-checkbox checkbox-type1 form-consultation__checkbox">
+											<input class="wrap-checkbox__checkbox" type="checkbox" id="mailing">
+											<label class="wrap-checkbox__label checkbox-type1__label subtitle25" for="mailing">Соглашаюсь получать <a href="#">маркетинговую рассылку</a></label>
+										</div>
+										<input class="form-consultation__submit btn1 button" type="submit" value="Получить консультацию">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sales-main">
+					<div class="container">
+						<div class="sales-main__title subtitle2 text-center">Скидки</div>
+						@@include('parts/slider-items/slider-items.html')
+						<div class="link-all-elements sales-main__all-elements">
+							<a class="btn2 button2" href="#">Смотреть все товары со скидками</a>
+						</div>
+					</div>
+				</div>
+				<div class="shops-main">
+					<div class="container">
+						<div class="shops-main__title subtitle2 text-center">Приходите в наши розничные магазины и&nbsp;лично убедитесь в качестве товара</div>
+						<div class="shops-on-map">
+							<img class="baloon show-dt" src="img/baloon.png" alt="" style="position: absolute; top: 50%; left: 50%; transform: translate(-28px, 115px);">
+							<img class="shops-on-map__map" src="img/map.png" alt="">
+							<div class="map-popup" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+								<div class="address map-popup__address">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+								<div class="working-time map-popup__working-time">
+									<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+									<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+								</div>
+								<div class="phone map-popup__phones">
+									<div class="map-popup__phone subtitle9"><a class="map-popup__phone-link subtitle9" href="tel:+7-962-347-12-94">+7-962-347-12-94</a></div>
+									<div class="map-popup__phone subtitle9"><a class="map-popup__phone-link subtitle9" href="tel:8 (473) 251-60-05">8 (473) 251-60-05</a></div>
+								</div>
+								<button class="map-popup__close"></button>
+							</div>
+							<div class="select-city-popup">
+								<div class="block-select-city">
+									<div class="block-select-city__label subtitle6">Город</div>
+									<select class="default-select">
+										<option data-value="1" value="1" selected>Все</option>
+										<option data-value="2" value="2">Воронеж</option>
+										<option data-value="3" value="3">Белгород</option>
+										<option data-value="4" value="4">Липецк</option>
+										<option data-value="5" value="5">Курск</option>
+										<option data-value="6" value="6">Калуга</option>
+									</select>
+								</div>
+								<div class="list-shops select-city__list-shops active" data-content="1">
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="list-shops select-city__list-shops" data-content="2">
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="list-shops select-city__list-shops" data-content="3">
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="list-shops select-city__list-shops" data-content="4">
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="list-shops select-city__list-shops" data-content="5">
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="list-shops select-city__list-shops" data-content="6">
+									<div class="item-shop">
+										<div class="item-shop__info">
+											<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="select-city-popup-mobile">
+									<div class="tabs-city">
+										<div class="wrap-nav-tabs">
+											<div class="nav-tabs nav-tabs-city">
+												<button class="nav-tab nav-tab-city subtitle6" data-tab="1">Картой</button>
+												<button class="nav-tab nav-tab-city tab--active subtitle6" data-tab="2">Списком</button>
+											</div>
+										</div>
+										<div class="tab-content">
+											<div data-tab-content="1" class="tab-pane">
+												<div class="select-city__map-mobile">
+													<div class="modal__title modal-delivery-terms__title subtitle17">Выберите пункт самовывоза</div>
+													<div class="map-mobile">
+														<img src="img/map.png" alt="" style="width: 100%; height: 400px; object-fit: cover">
+														<img class="baloon" src="img/baloon.png" alt="" data-open-modal="modal-select-address-mobile" style="position: absolute; top: 10px; left: 10px;">
+													</div>
+													<div class="modal modal-mobile-bottom modal-select-address-mobile">
+														<div class="modal__content">
+															<div class="modal__body">
+																<div class="address map-popup__address">г. Калуга, ул.Салтыкова-Щедрина, д. 133Ас2</div>
+																<div class="phone map-popup__phones">
+																	<div class="map-popup__phone map-popup__phone--black"><a class="map-popup__phone-link map-popup__phone--black" href="tel:8 (473) 251-60-05">8 (473) 251-60-05</a></div>
+																</div>
+																<div class="working-time map-popup__working-time">
+																	<div class="map-popup__time">Пн-Пт 9:00-18:00</div>
+																	<div class="map-popup__time">Сб-Вс 9:00-17:00</div>
+																</div>
+															</div>
+															<button class="modal__close" data-close-modal=""></button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div data-tab-content="2" class="tab-pane active">
+												<div class="list-shops select-city__list-shops active" data-content="1">
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="list-shops select-city__list-shops" data-content="2">
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="list-shops select-city__list-shops" data-content="3">
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="list-shops select-city__list-shops" data-content="4">
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="list-shops select-city__list-shops" data-content="5">
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="list-shops select-city__list-shops" data-content="6">
+													<div class="item-shop">
+														<div class="item-shop__info">
+															<div class="address map-popup__address subtitle9">г. Калуга, ул.Салтыкова-Щедрина, д.&nbsp;133Ас2</div>
+															<div class="working-time map-popup__working-time">
+																<div class="map-popup__time subtitle9">Пн-Пт 9:00-18:00</div>
+																<div class="map-popup__time subtitle9">Сб-Вс 9:00-17:00</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="useful-articles useful-articles--grey">
+					<div class="container">
+						<div class="useful-articles__title subtitle2 text-center">Полезные статьи</div>
+						<p class="useful-articles__prev subtitle5 text-center">Здесь мы отвечаем на самые популярные вопросы о строительстве бань</p>
+						@@include('parts/slider-articles/slider.html')
+						<div class="link-all-elements useful-articles__link">
+							<a class="btn2 button2" href="#">Читать все статьи</a>
+						</div>
+					</div>
+				</div>
+				<div class="brands brands__main">
+					<div class="container">
+						<div class="brands__title subtitle2 text-center">Бренды</div>
+						@@include('parts/brands/brands.html')
+					</div>
+				</div>
+				<div class="wrapp-bottom-mobil-panel">
+					<div class="bottom-mobil-panel">
+						<div class="item-panel">
+							<a class="item-panel__link item-panel__link--selected subtitle40" href="#">
+								<span class="item-panel__icon icon-home"></span>
+								<span class="item-panel__text">Главная</span>
+							</a>
+						</div>
+						<div class="item-panel">
+							<a class="item-panel__link mobile-catalog-open subtitle40" href="#">
+								<span class="item-panel__icon icon-catalog"></span>
+								<span class="item-panel__text">Каталог</span>
+							</a>
+						</div>
+						<div class="item-panel">
+							<a class="item-panel__link subtitle40" href="#">
+								<span class="item-panel__icon icon-favorites"></span>
+								<span class="item-panel__text">
+									Избранное
+									<span class="counter">10+</span>
+								</span>
+							</a>
+						</div>
+						<div class="item-panel">
+							<a class="item-panel__link subtitle40" href="#">
+								<span class="item-panel__icon icon-cart"></span>
+								<span class="item-panel__text">
+									Корзина
+									<span class="counter">10+</span>
+								</span>
+							</a>
+						</div>
+						<div class="item-panel">
+							<a class="item-panel__link subtitle40" href="#">
+								<span class="item-panel__icon icon-user"></span>
+								<span class="item-panel__text">Профиль</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="modal modal-result-test">
+					<div class="modal__content w-505">
+						<div class="modal__body">
+							<div class="modal__title modal-delivery-terms__title subtitle17 text-center">Оставьте свои контактные данные, и мы вышлем вам результаты теста</div>
+							<form action="">
+								<div class="wrap-field">
+									<input class="wrap-field__input subtitle6" type="text">
+									<label class="wrap-field__name-field subtitle6">Ваше имя</label>
+								</div>
+								<div class="wrap-field">
+									<input class="wrap-field__input subtitle6" type="text">
+									<label class="wrap-field__name-field subtitle6">Телефон или почта</label>
+								</div>
+								<div class="wrap-checkbox checkbox-type1 modal-delivery-terms__checkbox">
+									<input class="wrap-checkbox__checkbox" type="checkbox" id="privacy-check-test">
+									<label class="wrap-checkbox__label checkbox-type1__label subtitle25" for="privacy-check-test">Даю согласие на <a href="#">обработку персональных данных</a> в соответствии с  <a href="#">политикой конфиденциальности</a></label>
+								</div>
+								<div class="wrap-checkbox checkbox-type1 modal-delivery-terms__checkbox">
+									<input class="wrap-checkbox__checkbox" type="checkbox" id="mailing-test">
+									<label class="wrap-checkbox__label checkbox-type1__label subtitle25" for="mailing-test">Соглашаюсь получать <a href="#">маркетинговую рассылку</a></label>
+								</div>
+								<input class="modal-delivery-terms__btn btn1" type="submit" value="Отправить заявку">
+							</form>
+						</div>
+						<button class="modal__close" data-close-modal></button>
+					</div>
+				</div>
+				<div class="block-cookie">
+					<div class="block-cookie__text">
+						Мы используем файлы cookie. <a class="block-cookie__link" href="#" target="_blank">Соглашение об использовании</a>
+					</div>
+					<button class="block-cookie__btn btn1 button">Принять</button>
+					<button class="block-cookie__btn-close"></button>
+				</div>
+				<div class="modal modal-availability-stores modal-list-availability-stores">
+					<div class="modal__content w-657">
+						<div class="modal__body">
+							<div class="modal__title subtitle17 text-center">Наличие в магазинах</div>
+							<ul class="list-availability">
+								<li class="list-availability__item">
+									<span class="list-availability__address subtitle6">Калуга, ТЦ "Твоя усадьба", ул.Салтыкова-Щедрина, д. 133Ас2</span>
+									<span class="list-availability__amount">7 шт</span>
+								</li>
+								<li class="list-availability__item">
+									<span class="list-availability__address subtitle6">Центральный склад</span>
+									<span class="list-availability__amount">15 шт</span>
+								</li>
+								<li class="list-availability__item">
+									<span class="list-availability__address subtitle6">Воронеж, ТЦ "Твоя усадьба", Монтажный проезд, д.12С</span>
+									<span class="list-availability__amount">7 шт</span>
+								</li>
+								<li class="list-availability__item">
+									<span class="list-availability__address subtitle6">Воронеж, магазин «Территория Бани», ул. Холмистая, д. 68</span>
+									<span class="list-availability__amount">7 шт</span>
+								</li>
+								<li class="list-availability__item">
+									<span class="list-availability__address subtitle6">Курск, ТЦ «Покровский», магазин «Территория Бани», ТЦ "Твоя усадьба", ул. Нижняя Луговая д.1</span>
+									<span class="list-availability__amount">7 шт</span>
+								</li>
+							</ul>
+						</div>
+						<button class="modal__close" data-close-modal></button>
+					</div>
+				</div>
+				<div class="modal popup-modal-availability modal-address-store">
+					<div class="modal__content w-1121">
+						<div class="modal__body">
+							<div class="block-descktop">
+								<div class="map-popup" style="position: absolute; top: 31%; left: 50%; transform: translate(-54%, -50%);">
+									<div class="address map-popup__address">г. Калуга, ул.Салтыкова-Щедрина, д. 133Ас2</div>
+									<div class="phone map-popup__phones">
+										<div class="map-popup__phone map-popup__phone--black"><a href="tel:8 (473) 251-60-05">8 (473) 251-60-05</a></div>
+									</div>
+									<div class="working-time map-popup__working-time">
+										<div class="map-popup__time">Пн-Пт 9:00-18:00</div>
+										<div class="map-popup__time">Сб-Вс 9:00-17:00</div>
+									</div>
+									<button class="map-popup__close" data-close-modal></button>
+								</div>
+								<img src="img/card/map.png" alt="" loading="lazy">
+							</div>
+							<div class="block-mobile">
+								<div class="modal__title modal-delivery-terms__title subtitle17">Адрес магазина</div>
+								<div class="map-mobile">
+									<img src="img/map.png" alt="" style="width: 100%; height: 400px; object-fit: cover">
+									<img class="baloon" src="img/baloon.png" alt="" data-open-modal="modal-select-address-mobile2" style="position: absolute; top: 10px; left: 10px;">
+								</div>
+								<div class="modal modal-mobile-bottom modal-select-address-mobile2">
+									<div class="modal__content">
+										<div class="modal__body">
+											<div class="address map-popup__address">г. Калуга, ул.Салтыкова-Щедрина, д. 133Ас2</div>
+											<div class="phone map-popup__phones">
+												<div class="map-popup__phone map-popup__phone--black"><a href="tel:8 (473) 251-60-05">8 (473) 251-60-05</a></div>
+											</div>
+											<div class="working-time map-popup__working-time">
+												<div class="map-popup__time">Пн-Пт 9:00-18:00</div>
+												<div class="map-popup__time">Сб-Вс 9:00-17:00</div>
+											</div>
+										</div>
+										<button class="modal__close" data-close-modal=""></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="modal__close modal__close--full" data-close-modal></button>
+					</div>
+				</div>
+				<div class="modal modal--slide modal-cart-added">
+					<div class="modal__content modal__content--slide w-971 p-25">
+						<div class="modal__body">
+							<div class="cart-added">
+								<div class="cart-added__title subtitle17">
+									<span>Товар добавлен в корзину</span>
+								</div>
+								<div class="cart-added__body">
+									<div class="cart-added__product">
+										<div class="cart-added__product__img">
+											<img src="img/cart-added.png" alt="">
+										</div>
+										<div class="cart-added__product__info">
+											<div class="cart-added__product__article subtitle6">
+												<span>Артикул: О031883</span>
+											</div>
+											<div class="cart-added__product__name subtitle9">
+												<span>Печь для бани серия ПФ Макси "Стандарт"</span>
+											</div>
+										</div>
+										<div class="cart-added__product__footer">
+											<div class="cart-added__product__counter">
+												<input class="input-counter card__input-counter text-center" type="text" value="1">
+											</div>
+											<div class="cart-added__product__price">
+												<div class="cart-added__product__price__current subtitle5">
+													<span>77 350 ₽</span>
+												</div>
+												<div class="cart-added__product__price__old">
+													<span>80 000 ₽</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cart-added__buttons">
+										<a href="" class="btn1 button1">Перейти в корзину</a>
+										<button class="btn2 button3" data-close-modal="modal-cart-added">Продолжить покупки</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="modal__close " data-close-modal></button>
+					</div>
+				</div>
+			</main>
+			@@include('parts/footer/_footer.html')
+		</div>
+	</body>
+
+</html>

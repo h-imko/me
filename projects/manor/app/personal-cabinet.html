@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+	@@include('parts/_head.html')
+
+	<body>
+		<div class="page">
+			@@include('parts/header/header.html')
+			<main class="main">
+				@@include('parts/mobile-menu/mobile-menu.html')
+				@@include('parts/mobile-catalog/mobile-catalog.html')
+				<div class="mobile-search">
+					<form action="" class="mobile-search__form">
+						<div class="mobile-search__close"></div>
+						<div class="mobile-search__field">
+							<input class="mobile-search__input" type="text" value="Печ">
+							<button class="mobile-search__clear-input"></button>
+						</div>
+						<div class="mobile-search__list-items">
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ь</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ное литье</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани газо-дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани электрические</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и-камины</a>
+							<a class="mobile-search__link-item" href="#">Аксессуары для <b>печ</b>ей Гефест</a>
+						</div>
+					</form>
+				</div>
+				<div class="block-content ">
+					<div class="container">
+						<div class="personal-area block-personal-area">
+							<div class="personal-area__left">
+								<div class="personal-area__menu menu-profile">
+									<a class="menu-profile__user menu-profile__link menu-profile__link--selected subtitle9" href="#">Профиль</a>
+									<a class="menu-profile__orders menu-profile__link subtitle9" href="#">Заказы</a>
+									<a class="menu-profile__bonuses menu-profile__link subtitle9" href="#">Бонусы</a>
+									<a class="menu-profile__exit menu-profile__link subtitle9" href="#">Выход</a>
+								</div>
+							</div>
+							<div class="personal-area__right">
+								<div class="personal-area--415">
+									<a class="back-page show-mobile subtitle6" href="javascript:void(0)" onclick="history.back()">Назад</a>
+									<h1 class="personal-area__title subtitle14">Профиль</h1>
+									<form action="">
+										<div class="wrap-field">
+											<input class="wrap-field__input subtitle6" type="text" value="Иванов Петр">
+											<label class="wrap-field__name-field subtitle6">ФИО<span class="require">*</span></label>
+											<div class="check-field"></div>
+										</div>
+										<div class="wrap-field">
+											<input class="wrap-field__input datepicker subtitle6" type="text">
+											<label class="wrap-field__name-field subtitle6">Дата рождения</label>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-phone subtitle6" type="text" value="9204554455">
+												<label class="wrap-field__name-field subtitle6">Телефон<span class="require">*</span></label>
+												<div class="check-field"></div>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="email">
+												<label class="wrap-field__name-field subtitle6">Email</label>
+											</div>
+										</div>
+										<input class="personal-area__submit btn1 button" type="submit" value="Сохранить изменения">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('parts/footer/_footer.html')
+		</div>
+	</body>
+
+</html>

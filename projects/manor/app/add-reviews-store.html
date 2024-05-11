@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+	@@include('parts/_head.html')
+
+	<body>
+		<div class="page">
+			@@include('parts/header/header.html')
+			<main class="main">
+				@@include('parts/mobile-menu/mobile-menu.html')
+				@@include('parts/mobile-catalog/mobile-catalog.html')
+				<div class="mobile-search">
+					<form action="" class="mobile-search__form">
+						<div class="mobile-search__close"></div>
+						<div class="mobile-search__field">
+							<input class="mobile-search__input" type="text" value="Печ">
+							<button class="mobile-search__clear-input"></button>
+						</div>
+						<div class="mobile-search__list-items">
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ь</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ное литье</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани газо-дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани электрические</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и-камины</a>
+							<a class="mobile-search__link-item" href="#">Аксессуары для <b>печ</b>ей Гефест</a>
+						</div>
+					</form>
+				</div>
+				<div class="container">
+					<div class="wrap-breadcrumb">
+						<div class="breadcrumb-item subtitle6"><a href="#" class="wrap-breadcrumb__link"><span>Главная</span></a></div>
+						<div class="breadcrumb-item subtitle6"><a href="#" class="wrap-breadcrumb__link"><span>Отзывы</span></a></div>
+						<div class="breadcrumb-item subtitle6"><a href="#" class="wrap-breadcrumb__link"><span>Печи для бани</span></a></div>
+						<div class="breadcrumb-item subtitle6"><a href="#" class="wrap-breadcrumb__link"><span>Печи для бани дровяные</span></a></div>
+						<div class="bx-breadcrumb-item subtitle6"><span>Оставить отзыв</span></div>
+					</div>
+				</div>
+				<div class="block-content ">
+					<div class="container">
+						<div class="wrap-add-review">
+							<div class="add-review">
+								<a class="back-page add-review__back-page subtitle6" href="javascript:void(0)" onclick="history.back()">Назад</a>
+								<h1 class="add-review__title subtitle2">Оставьте отзыв о нашем магазине</h1>
+								<form action="" class="add-review__form">
+									<div class="add-review__rating">
+										<input name="rating" value="5" id="rating_5" type="radio">
+										<label for="rating_5" class="add-review__label"></label>
+										<input name="rating" value="4" id="rating_4" type="radio">
+										<label for="rating_4" class="add-review__label"></label>
+										<input name="rating" value="3" id="rating_3" type="radio">
+										<label for="rating_3" class="add-review__label"></label>
+										<input name="rating" value="2" id="rating_2" type="radio">
+										<label for="rating_2" class="add-review__label"></label>
+										<input name="rating" value="1" id="rating_1" type="radio">
+										<label for="rating_1" class="add-review__label"></label>
+									</div>
+									<div class="wrap-field">
+										<textarea class="add-review__textarea wrap-field__input autoheight subtitle6"></textarea>
+										<label class="wrap-field__name-field subtitle6">Комментарий <span class="require">*</span></label>
+									</div>
+									<div class="wrap-file add-review__file">
+										<div class="wrap-file__caption subtitle6">Фото</div>
+										<div class="file">
+											<label class="file__label">
+												<input class="file__input" type="file">
+												<span class="file__btn btn2 subtitle5">Выберите файл</span>
+											</label>
+											<div class="file__info">
+												<div class="file__name subtitle6">Фото 1.jpg</div>
+												<div class="file__delete"></div>
+											</div>
+										</div>
+									</div>
+									<div class="wrap-field">
+										<input class="wrap-field__input subtitle6" type="text">
+										<label class="wrap-field__name-field subtitle6">Ваше имя<span class="require">*</span></label>
+									</div>
+									<input class="add-review__submit btn1 button" type="submit" value="Оставить отзыв">
+									<div class="add-review__text-bottom">Нажимая кнопку «Отправить», Вы даёте согласие на использование данных отзыва на сторонних ресурсах и на <a href="#">обработку персональных данных</a> в соответствии с Политикой конфиденциальности.</div>
+								</form>
+								<a href="javascript:void(0)" onclick="history.back()" class="add-review__close show-mobile"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('parts/footer/_footer.html')
+		</div>
+	</body>
+
+</html>

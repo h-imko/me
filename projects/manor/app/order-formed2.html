@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+	@@include('parts/_head.html')
+
+	<body>
+		<div class="page">
+			@@include('parts/header/header.html')
+			<main class="main">
+				@@include('parts/mobile-menu/mobile-menu.html')
+				@@include('parts/mobile-catalog/mobile-catalog.html')
+				<div class="mobile-search">
+					<form action="" class="mobile-search__form">
+						<div class="mobile-search__close"></div>
+						<div class="mobile-search__field">
+							<input class="mobile-search__input" type="text" value="Печ">
+							<button class="mobile-search__clear-input"></button>
+						</div>
+						<div class="mobile-search__list-items">
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ь</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ное литье</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани газо-дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани электрические</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и-камины</a>
+							<a class="mobile-search__link-item" href="#">Аксессуары для <b>печ</b>ей Гефест</a>
+						</div>
+					</form>
+				</div>
+				<div class="container">
+					<div class="wrap-breadcrumb">
+						<div class="breadcrumb-item subtitle6"><a href="#" class="wrap-breadcrumb__link"><span>Главная</span></a></div>
+						<div class="breadcrumb-item subtitle6"><a href="#" class="wrap-breadcrumb__link"><span>Корзина</span></a></div>
+						<div class="bx-breadcrumb-item subtitle6"><span>Оформление заказа</span></div>
+					</div>
+				</div>
+				<div class="block-content ">
+					<div class="container">
+						<h1 class="subtitle14">Заказ сформирован</h1>
+						<div class="order-formed">
+							<p class="order-formed__number">Ваш заказ <b>№564654</b> от 01.07.2022 17:22 успешно создан.</p>
+							<p>Наш менеджер свяжется с Вами в ближайшее время для уточнения деталей заказа.</p>
+							<p>Вы сможете следить за выполнением своего заказа в <a href="#">Персональном разделе сайта</a>.</p>
+							<p>Обратите внимание, что для входа в этот раздел вам необходимо будет авторизоваться.</p>
+							<div class="type-payment-title subtitle17">Способ оплаты заказа</div>
+							<div class="type-payment-value subtitle6">
+								<img src="img/card-online.svg" alt="">
+								Картой онлайн
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('parts/footer/_footer.html')
+		</div>
+	</body>
+
+</html>

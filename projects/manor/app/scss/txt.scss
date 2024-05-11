@@ -1,0 +1,171 @@
+.txt-page__title {
+	margin-bottom: 37px;
+	font-size: 35px;
+	line-height: 50px;
+}
+
+.txt-page__content {
+	max-width: 992px;
+	margin: 0 auto;
+}
+
+.txt-page {
+	img {
+		border-radius: 8px;
+		height: auto !important;
+	}
+
+	p {
+		margin: 14px 0;
+	}
+
+	h2 {
+		margin: 40px 0 20px 0;
+	}
+
+	h3 {
+		margin: 40px 0 20px 0;
+	}
+
+	h4 {
+		margin: 40px 0;
+	}
+
+	h5 {
+		margin: 40px 0;
+	}
+
+	h6 {
+		margin: 40px 0;
+	}
+
+	ul {
+		margin: 28px 0;
+
+		li {
+			padding-left: 19px;
+			margin-bottom: 10px;
+			position: relative;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&::before {
+				content: '';
+				display: inline-flex;
+				width: 6px;
+				height: 6px;
+				background: $black2;
+				border-radius: 50%;
+				position: absolute;
+				top: 9px;
+				left: 0;
+			}
+		}
+	}
+
+	ol {
+		margin: 28px 0;
+		padding: 0;
+		counter-reset: myCounter;
+
+		li {
+			padding-left: 26px;
+			margin-bottom: 10px;
+			list-style: none;
+			position: relative;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&::before {
+				counter-increment: myCounter;
+				content: counter(myCounter);
+				font-family: Roboto;
+				font-size: 16px;
+				color: $black;
+				line-height: 25px;
+				font-weight: 700;
+				position: absolute;
+				top: 0px;
+				left: 0;
+			}
+		}
+	}
+
+	.gallery-txt {
+		margin-top: 60px;
+	}
+}
+
+.gallery {
+	margin: 0 -15px;
+	display: flex;
+	flex-wrap: wrap;
+
+	a {
+		display: inline-flex;
+		height: 33vh;
+		flex-grow: 1;
+		margin-bottom: 30px;
+		padding: 0 14px;
+		//&:last-child{
+		//  flex-grow: 10;
+		//}
+	}
+
+	img {
+		max-height: 100%;
+		min-width: 100%;
+		object-fit: cover;
+		vertical-align: bottom;
+	}
+}
+
+@media (max-width: 1023px) {
+	.txt-page__title {
+		margin-bottom: 20px;
+		font-size: 28px;
+		line-height: 33px;
+		text-align: left;
+	}
+
+	.txt-page h2 {
+		margin: 30px 0 15px 0;
+	}
+
+	.txt-page h3 {
+		margin: 30px 0 15px 0;
+	}
+
+	.txt-page h4 {
+		margin: 30px 0 30px 0;
+	}
+
+	.txt-page h5 {
+		margin: 30px 0 30px 0;
+	}
+
+	.txt-page h6 {
+		margin: 30px 0 30px 0;
+	}
+
+	.txt-page ul {
+		margin: 20px 0;
+	}
+
+	.txt-page ol {
+		margin: 20px 0;
+	}
+
+	.gallery {
+		margin: 0 -7.5px;
+	}
+
+	.gallery a {
+		margin-bottom: 15px;
+		padding: 0 7px;
+	}
+}

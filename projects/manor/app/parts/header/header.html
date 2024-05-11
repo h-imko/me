@@ -1,0 +1,199 @@
+<header class="header">
+	<div class="header-static">
+		<div class="container">
+			<div class="header__wrap">
+				<div class="header-wrap__left">
+					<button class="btn-burger header__btn-burger btn-mobile-menu"></button>
+					<div class="logo header__logo">
+						<a class="logo__link" href="#">
+							<img class="logo__img logo-dt" src="./img/logo.svg" alt="">
+							<img class="logo__img logo-mob" src="./img/header/logo-horiz.svg" alt="">
+						</a>
+					</div>
+					<div class="wrap-menu-catalog">
+						<button class="btn-catalog header__btn-catalog btn-catalog-open btn1 button">Каталог</button>
+						@@include('../menu/menu.html')
+					</div>
+					<button class="search-mobile-btn header__search-btn mobile-open-search"></button>
+				</div>
+				<div class="header-wrap__right">
+					<div class="header__top">
+						<div class="select-city header__select-city">
+							<button class="select-city__btn subtitle6">Калуга</button>
+							<div class="select-city__list-city">
+								<a class="select-city__city" href="#">
+									<span class="select-city__name-city">Белгород</span>
+									<span class="select-city__store">Торговый центр «Твоя Усадьба»</span>
+									<span class="select-city__address">ул. Серафимовича, д. 67</span>
+								</a>
+								<a class="select-city__city" href="#">
+									<span class="select-city__name-city">Липецк</span>
+									<span class="select-city__store">Торговый центр «Твоя Усадьба»</span>
+									<span class="select-city__address">ул. Проезд Поперечный, д. 1с3</span>
+								</a>
+								<a class="select-city__city select-city__city--selected" href="#">
+									<span class="select-city__name-city">Калуга</span>
+									<span class="select-city__store">Торговый центр «Твоя Усадьба»</span>
+									<span class="select-city__address">ул.Салтыкова-Щедрина, д. 133Ас2</span>
+								</a>
+								<a class="select-city__city" href="#">
+									<span class="select-city__name-city">Курск</span>
+									<span class="select-city__store">Магазин «Территория Бани»</span>
+									<span class="select-city__address">ул. Нижняя Луговая, д. 1</span>
+								</a>
+								<a class="select-city__city" href="#">
+									<span class="select-city__name-city">Воронеж</span>
+									<span class="select-city__store">Два магазина</span>
+								</a>
+							</div>
+						</div>
+						<div class="header__addresses">
+							<button class="header__address" data-open-modal="modal-address-store">Монтажный проезд, д.12С</button>
+							<button class="header__address" data-open-modal="modal-address-store">ул. Холмистая, д. 68</button>
+						</div>
+						<div class="simple-menu header__simple-menu">
+							<ul class="simple-menu__list">
+								<li class="simple-menu__item">
+									<a class="simple-menu__link simple-menu__link--black subtitle6" href="#">Доставка и оплата</a>
+								</li>
+								<li class="simple-menu__item">
+									<a class="simple-menu__link simple-menu__link--black subtitle6" href="#">Адреса магазинов</a>
+								</li>
+								<li class="simple-menu__item">
+									<a class="simple-menu__link simple-menu__link--black subtitle6" href="#">Для оптовиков</a>
+								</li>
+								<li class="simple-menu__item">
+									<a class="simple-menu__link simple-menu__link--black subtitle6" href="#">Бонусная программа</a>
+								</li>
+								<li class="simple-menu__item">
+									<a class="simple-menu__link simple-menu__link--black subtitle6" href="#">Монтажный отдел</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__middle">
+						<form class="form-search header__form-search" action="">
+							<input class="form-search__input subtitle6" type="text" placeholder="Поиск товаров">
+							<button class="form-search__button"></button>
+						</form>
+						<div class="compare header__compare">
+							<a class="compare__link header__icon" href="#">
+								<span class="compare__icon"></span>
+								<span class="compare__count header__counter subtitle25">100</span>
+								<span class="compare__prompt header__prompt subtitle25">Сравнение</span>
+							</a>
+						</div>
+						<div class="favorites header__favorites">
+							<a class="favorites__link header__icon" href="#">
+								<span class="favorites__icon"></span>
+								<span class="favorites__count header__counter subtitle25">100</span>
+								<span class="favorites__prompt header__prompt subtitle25">Избранное</span>
+							</a>
+						</div>
+						<div class="personal-cabinet header__personal-cabinet">
+							<a class="personal-cabinet__link header__icon" href="#">
+								<span class="personal-cabinet__icon"></span>
+								<span class="cart__prompt header__prompt subtitle25">Личный кабинет</span>
+							</a>
+						</div>
+						<div class="cart header__cart">
+							<a class="cart__link header__icon" href="#">
+								<span class="cart__icon"></span>
+								<span class="cart__count header__counter subtitle25">100</span>
+								<span class="cart__prompt header__prompt subtitle25">Корзина</span>
+							</a>
+						</div>
+						<div class="phones header-phones">
+							<a class="phones__item subtitle5" href="tel:88007000828">8 (800) 7-000-828</a>
+							<a class="phones__item subtitle5" href="tel:84842595018">8 (4842) 59-50-18</a>
+						</div>
+					</div>
+					<div class="header__bottom">
+						<div class="sections-catalog">
+							<div class="sections-catalog__list">
+								<div class="sections-catalog__item item-section">
+									<a class="item-section__link" href="#">
+										<span class="item-section__name h4">Печи для бани</span>
+									</a>
+								</div>
+								<div class="sections-catalog__item item-section">
+									<a class="item-section__link" href="#">
+										<span class="item-section__name h4">Печи-камины</span>
+									</a>
+								</div>
+								<div class="sections-catalog__item item-section">
+									<a class="item-section__link" href="#">
+										<span class="item-section__name h4">Печи и котлы отопительные</span>
+									</a>
+								</div>
+								<div class="sections-catalog__item item-section">
+									<a class="item-section__link" href="#">
+										<span class="item-section__name h4">Дымоходы и&nbsp;баки</span>
+									</a>
+								</div>
+								<div class="sections-catalog__item item-section">
+									<a class="item-section__link" href="#">
+										<span class="item-section__name h4">Грили и барбекю</span>
+									</a>
+								</div>
+								<div class="sections-catalog__item item-section">
+									<a class="item-section__link" href="#">
+										<span class="item-section__name h4">Печное литье</span>
+									</a>
+								</div>
+								<div class="sections-catalog__item item-section">
+									<a class="item-section__link" href="#">
+										<span class="item-section__name h4">Акции</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search-field-mobile">
+					<input class="search-field-mobile__input mobile-open-search" type="text" placeholder="Поиск товаров">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-fixed">
+		<div class="container">
+			<div class="header-fixed__line">
+				<a href="#"><img class="header-fixed__logo" src="./img/logo.svg" alt=""></a>
+				<button class="btn-catalog header-fixed__btn-catalog btn-catalog-open btn1 button">Каталог</button>
+				@@include('../menu/menu.html')
+				<form class="form-search header-fixed__form-search" action="">
+					<input class="form-search__input subtitle6" type="text" placeholder="Поиск товаров">
+					<button class="form-search__button"></button>
+				</form>
+				<div class="compare header__compare">
+					<a class="compare__link header__icon" href="#">
+						<span class="compare__icon"></span>
+						<span class="compare__count header__counter subtitle25">100</span>
+						<span class="compare__prompt header__prompt subtitle25">Сравнение</span>
+					</a>
+				</div>
+				<div class="favorites header__favorites">
+					<a class="favorites__link header__icon" href="#">
+						<span class="favorites__icon"></span>
+						<span class="favorites__count header__counter subtitle25">100</span>
+						<span class="favorites__prompt header__prompt subtitle25">Избранное</span>
+					</a>
+				</div>
+				<div class="personal-cabinet header__personal-cabinet">
+					<a class="personal-cabinet__link header__icon" href="#">
+						<span class="personal-cabinet__icon"></span>
+						<span class="cart__prompt header__prompt subtitle25">Личный кабинет</span>
+					</a>
+				</div>
+				<div class="cart header__cart">
+					<a class="cart__link header__icon" href="#">
+						<span class="cart__icon"></span>
+						<span class="cart__count header__counter subtitle25">100</span>
+						<span class="cart__prompt header__prompt subtitle25">Корзина</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

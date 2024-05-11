@@ -1,0 +1,297 @@
+.store-addresses {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.page-store-addresses {
+	margin-top: 42px;
+	margin-bottom: 100px;
+}
+
+.store-addresses__left {
+	width: 481px;
+	margin-right: 30px;
+}
+
+.store-addresses__right {
+	width: calc(100% - 511px);
+}
+
+.store-addresses__select-city-popup {
+	width: 100%;
+	height: 100%;
+	position: static;
+
+	.default-select {
+		max-width: 355px;
+	}
+
+	.select-city__list-shops {
+		max-height: 585px;
+	}
+
+	.item-shop {
+		padding: 20px 0 0 23px;
+		margin-bottom: 0;
+
+		&:hover {
+			background: $greyBg;
+		}
+	}
+
+	.item-shop__info {
+		border-bottom: none;
+		position: relative;
+
+		&::after {
+			content: '';
+			display: block;
+			width: calc(100%);
+			height: 1px;
+			background: $greyCountur;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	.scrollbar-track-y {
+		width: 33px;
+		right: 0 !important;
+		background: $white !important;
+	}
+
+	.scrollbar-thumb {
+		left: 50%;
+		margin-left: -2.5px;
+	}
+}
+
+.store-addresses__block-map {
+	position: relative;
+}
+
+.store-addresses__map {
+	min-height: 701px;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.page-store__contact-us {
+	margin-bottom: 30px;
+}
+
+.contact-us__title {
+	margin-bottom: 12px;
+}
+
+.contact-us__communication-methods {
+	margin-top: 62px;
+}
+
+.communication-methods {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px 30px;
+}
+
+.communication-methods__item {
+	padding: 27px 95px;
+	background: $white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+}
+
+.communication-methods__icon {
+	margin-bottom: 24px;
+}
+
+.communication-methods__descr {
+	color: #959699;
+}
+
+.communication-methods__descr-link {
+	color: #959699;
+	text-decoration: none;
+}
+
+.need-help {
+	padding: 60px 0;
+	background: $white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+}
+
+.need-help__title {
+	margin-bottom: 12px;
+}
+
+.need-help__descr {
+	max-width: 420px;
+	margin: 0 auto;
+}
+
+.need-help__form {
+	margin: 48px auto;
+	max-width: 870px;
+}
+
+.line-fields {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.need-help__line-fields {
+	justify-content: space-between;
+
+	.wrap-field {
+		margin-bottom: 0;
+	}
+
+	.wrap-field__input {
+		width: 415px;
+	}
+}
+
+.need-help__checkbox {
+	margin-top: 30px;
+
+	.checkbox-type1__label::before {
+		top: 2px;
+	}
+
+	.wrap-checkbox__checkbox:checked + .checkbox-type1__label::before {
+		top: 2px;
+	}
+
+	.wrap-checkbox__checkbox:checked + .checkbox-type1__label::after {
+		top: 2px;
+	}
+}
+
+.need-help__checkbox + .need-help__checkbox {
+	margin-top: 19px;
+}
+
+.form-need-help__btn {
+	display: flex;
+	margin: 48px auto 0;
+}
+
+@media (max-width: 1023px) {
+	.page-store-addresses {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+
+	.store-addresses__left {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.store-addresses__right {
+		width: 100%;
+		display: none;
+	}
+
+	.store-addresses__select-city-popup .item-shop {
+		padding: 0 15px 0 0;
+		margin-bottom: 10px;
+	}
+
+	.store-addresses__select-city-popup .item-shop:hover {
+		background: none;
+	}
+
+	.store-addresses__select-city-popup .scrollbar-track-y {
+		width: 8px;
+	}
+
+	.page-store__contact-us {
+		margin-bottom: 15px;
+	}
+
+	.contact-us__communication-methods {
+		margin-top: 25px;
+	}
+
+	.communication-methods {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 15px 0px;
+	}
+
+	.communication-methods__icon {
+		margin-bottom: 11px;
+
+		img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	.communication-methods__name {
+		margin-bottom: 6px;
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.communication-methods__descr span {
+		display: block;
+	}
+
+	.communication-methods__item {
+		padding: 25px 28px;
+	}
+
+	.need-help {
+		padding: 26px 15px 36px;
+	}
+
+	.need-help__title {
+		margin-bottom: 7px;
+		font-size: 23px;
+		line-height: 29px;
+	}
+
+	.need-help__form {
+		margin-top: 14px;
+		margin-bottom: 0;
+	}
+
+	.need-help__line-fields .wrap-field {
+		width: 100%;
+		margin-bottom: 16px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.need-help__line-fields .wrap-field__input {
+		width: 100%;
+	}
+
+	.need-help__checkbox {
+		margin-top: 27px;
+		line-height: 14px;
+	}
+
+	.form-need-help__btn {
+		margin-top: 24px;
+		padding: 15px 36px;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1599px) {
+	.store-addresses__left {
+		width: 395px;
+	}
+
+	.store-addresses__right {
+		width: calc(100% - 425px);
+	}
+
+	.communication-methods__item {
+		padding: 27px 15px;
+	}
+}

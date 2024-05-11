@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+	@@include('parts/_head.html')
+
+	<body>
+		<div class="page">
+			@@include('parts/header/header.html')
+			<main class="main">
+				@@include('parts/mobile-menu/mobile-menu.html')
+				@@include('parts/mobile-catalog/mobile-catalog.html')
+				<div class="mobile-search">
+					<form action="" class="mobile-search__form">
+						<div class="mobile-search__close"></div>
+						<div class="mobile-search__field">
+							<input class="mobile-search__input" type="text" value="Печ">
+							<button class="mobile-search__clear-input"></button>
+						</div>
+						<div class="mobile-search__list-items">
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ь</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ное литье</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани газо-дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани электрические</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и-камины</a>
+							<a class="mobile-search__link-item" href="#">Аксессуары для <b>печ</b>ей Гефест</a>
+						</div>
+					</form>
+				</div>
+				<div class="block-content ">
+					<div class="container">
+						<div class="personal-area block-personal-area">
+							<div class="personal-area__left">
+								<div class="personal-area__menu menu-profile">
+									<a class="menu-profile__user menu-profile__link subtitle9" href="#">Профиль</a>
+									<a class="menu-profile__orders menu-profile__link subtitle9" href="#">Заказы</a>
+									<a class="menu-profile__bonuses menu-profile__link menu-profile__link--selected subtitle9" href="#">Бонусы</a>
+									<a class="menu-profile__exit menu-profile__link subtitle9" href="#">Выход</a>
+								</div>
+							</div>
+							<div class="personal-area__right">
+								<a class="back-page show-mobile subtitle6" href="javascript:void(0)" onclick="history.back()">Назад</a>
+								<h1 class="personal-area__title subtitle14">Бонусы</h1>
+								<div class="bonus-card">
+									<div class="bonus-card__top">
+										<div class="bonus-card__level">
+											<p>
+												<span>Ваш уровень <span class="bonus-card__hide-mobile"> –</span></span>
+												<a href="#">СЕРЕБРО</a>
+											</p>
+										</div>
+										<div class="bonus-card__progress">
+											<!-- value - процент накопленной от общей -->
+											<div class="bonus-card__progress__bar" style="--value: 54; --text: '149 590 ₽'"></div>
+											<div class="bonus-card__progress__info">
+												<p>
+													<span class="bonus-card__progress__caption">Сумма Ваших покупок – <span> 149 590 ₽</span></span>
+												</p>
+												<p>
+													<span class="bonus-card__progress__caption">
+														200 410 ₽ до&nbsp;уровня
+														<b class="bonus-card__hide-mobile">–</b>
+													</span>
+													<span class="bonus-card__level">
+														<a href="#"> ЗОЛОТО</a>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="bonus-card__bottom">
+										<div class="bonus-card__bonus-grid">
+											<div class="bonus-card__bonus-item">
+												<div class="bonus-card__bonus-item__available">
+													<span class="bonus-card__bonus-item__available__text">Доступно бонусных&nbsp;рублей </span>
+													<span class="bonus-card__hide-mobile"> – </span>
+													<span class="bonus-card__bonus-item__available__value">7 348</span>
+												</div>
+												<div class="bonus-card__bonus-item__expires">
+													<div class="bonus-card__bonus-item__expires__date">
+														<span>22.09.23 сгорит</span>
+													</div>
+													<div class="bonus-card__bonus-item__expires__value">
+														<span>1 000</span>
+													</div>
+													<div class="bonus-card__bonus-item__expires__kind">
+														<span>бонусных рублей</span>
+													</div>
+												</div>
+											</div>
+											<div class="bonus-card__bonus-item bonus-card__bonus-item--grey">
+												<div class="bonus-card__bonus-item__available">
+													<span class="bonus-card__bonus-item__available__text">Доступно ПРОМО&nbsp;бонусов </span>
+													<span class="bonus-card__hide-mobile"> – </span>
+													<span class="bonus-card__bonus-item__available__value">500</span>
+												</div>
+												<div class="bonus-card__bonus-item__expires">
+													<div class="bonus-card__bonus-item__expires__date">
+														<span>30.09.23 сгорит</span>
+													</div>
+													<div class="bonus-card__bonus-item__expires__value">
+														<span> 100</span>
+													</div>
+													<div class="bonus-card__bonus-item__expires__kind">
+														<span>ПРОМО бонусов</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu-personal-cabinet-mobile personal-menu-mobile">
+					<div class="subtitle17 ">Личный кабинет</div>
+					<div class="personal-area__menu menu-profile">
+						<a class="menu-profile__user menu-profile__link subtitle9" href="#">Профиль</a>
+						<a class="menu-profile__orders menu-profile__link subtitle9" href="#">Заказы</a>
+						<a class="menu-profile__bonuses menu-profile__link subtitle9" href="#">Бонусы</a>
+						<a class="menu-profile__exit menu-profile__link subtitle9" href="#">Выход</a>
+					</div>
+					<button class="modal__close"></button>
+				</div>
+			</main>
+			@@include('parts/footer/_footer.html')
+		</div>
+	</body>
+
+</html>

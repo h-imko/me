@@ -1,0 +1,63 @@
+@import '../../node_modules/tippy.js/dist/tippy';
+
+.tippy-box {
+	border-radius: 8px;
+	background: var(--unnamed, #FFF);
+	box-shadow: 0px 1px 0px 0px #FF7500 inset, 1px 0px 0px 0px #FF7500 inset, -1px 0px 0px 0px #FF7500 inset, 0px -1px 0px 0px #FF7500 inset;
+
+	@media (max-width: 1023px) {
+		margin-left: -8px;
+		margin-right: 8px;
+	}
+}
+
+[data-tippy-root] {
+	z-index: 9 !important;
+}
+
+.tippy-content {
+	padding: 15px;
+	font-family: Roboto;
+	font-size: 16px;
+	color: $black2;
+	line-height: 155%;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+
+	.accent {
+		color: #ff0a00;
+	}
+}
+
+.tippy-closer {
+	width: 12px;
+	height: 12px;
+	background-image: url(../img/close-modal.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	cursor: pointer;
+}
+
+.tippy-box[data-placement^=top] > .tippy-arrow:before {
+	background-color: #fff;
+	width: 20px;
+	height: 20px;
+	border-width: 0 0 1px 1px;
+	border-style: solid;
+	border-color: red;
+	transform: translateY(6px) rotate(-45deg);
+}
+
+.tippy-box[data-placement^=bottom] > .tippy-arrow:before {
+	background-color: #fff;
+	width: 20px;
+	height: 20px;
+	border-width: 0 0 1px 1px;
+	border-style: solid;
+	border-color: red;
+	transform: translateY(-20px) rotate(135deg);
+}

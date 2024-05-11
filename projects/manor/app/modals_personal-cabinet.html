@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+	@@include('parts/_head.html')
+
+	<body>
+		<div class="page">
+			@@include('parts/header/header.html')
+			<main class="main">
+				@@include('parts/mobile-menu/mobile-menu.html')
+				@@include('parts/mobile-catalog/mobile-catalog.html')
+				<div class="mobile-search">
+					<form action="" class="mobile-search__form">
+						<div class="mobile-search__close"></div>
+						<div class="mobile-search__field">
+							<input class="mobile-search__input" type="text" value="Печ">
+							<button class="mobile-search__clear-input"></button>
+						</div>
+						<div class="mobile-search__list-items">
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ь</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>ное литье</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани газо-дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и для бани электрические</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и отопительные дровяные</a>
+							<a class="mobile-search__link-item" href="#"><b>Печ</b>и-камины</a>
+							<a class="mobile-search__link-item" href="#">Аксессуары для <b>печ</b>ей Гефест</a>
+						</div>
+					</form>
+				</div>
+				<div class="block-content">
+					<div class="container">
+						<br>
+						<br>
+						<button data-open-modal="modal-number-busy">Этот номер уже исползуется другим пользователем</button>
+						<br>
+						<br>
+						<button data-open-modal="modal-code-sms">Требуется подтверждение</button>
+						<br>
+						<br>
+						<button data-open-modal="new-code">Требуется подтверждение Получить новый код</button>
+						<br>
+						<br>
+						<button data-open-modal="sent-code">Требуется подтверждение Код отправлен</button>
+						<br>
+						<br>
+						<button data-open-modal="code-sms-preloader">Требуется подтверждение Прелоадер</button>
+						<br>
+						<br>
+						<button data-open-modal="modal-number-verified">Номер успешно подтвержден!</button>
+						<br>
+						<br>
+						<button data-open-modal="modal-change-password">Изменение пароля</button>
+						<br>
+						<br>
+						<div class="modal modal-mobile-bottom modal-number-busy ">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Этот номер уже используется другим пользователем</div>
+									<button class="modal-number-busy__btn btn1 button3" data-close-modal>Ок</button>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-code-sms">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Требуется подтверждение</div>
+									<div class="modal__descr text-center">Мы отправили код на номер <span class="phone-code">+7 (960) 455-66-66</span></div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Код</label>
+											</div>
+										</div>
+										<div class="msg-repeat-code text-center">Получить код повторно можно через <b class="subtitle27">45с.</b></div>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-code-sms new-code">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Требуется подтверждение</div>
+									<div class="modal__descr text-center">Мы отправили код на номер <span class="phone-code">+7 (960) 455-66-66</span></div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Код</label>
+											</div>
+										</div>
+										<button class="get-new-code subtitle6">Получить новый код</button>
+										<div class="msg-repeat-code text-center">Получить код повторно можно через <b class="subtitle27">45с.</b></div>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-code-sms sent-code">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Требуется подтверждение</div>
+									<div class="modal__descr text-center">Мы отправили код на номер <span class="phone-code">+7 (960) 455-66-66</span></div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6" type="text">
+												<label class="wrap-field__name-field subtitle6">Код</label>
+											</div>
+										</div>
+										<button class="msg-code-sent text-center subtitle6">Код отправлен</button>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-code-sms code-sms-preloader">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Требуется подтверждение</div>
+									<div class="modal__descr text-center">Мы отправили код на номер <span class="phone-code">+7 (960) 455-66-66</span></div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input mask-number subtitle6" type="text" value="756656">
+												<label class="wrap-field__name-field subtitle6">Код</label>
+												<div class="field-preloader"></div>
+											</div>
+										</div>
+										<div class="msg-repeat-code text-center">Получить код повторно можно через <b class="subtitle27">45с.</b></div>
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-number-verified">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<img class="modal-number-verified__img" src="img/img-ok.svg" alt="">
+									<div class="modal__title subtitle17 text-center">Номер успешно подтвержден!</div>
+									<button class="modal-number-verified__btn btn1 button3" data-close-modal>Ок</button>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+						<div class="modal modal-change-password">
+							<div class="modal__content w-505">
+								<div class="modal__body">
+									<div class="modal__title subtitle17 text-center">Изменение пароля</div>
+									<form action="">
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="password">
+												<label class="wrap-field__name-field subtitle6">Старый пароль</label>
+												<button class="show-pass"></button>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="password">
+												<label class="wrap-field__name-field subtitle6">Новый пароль</label>
+												<button class="show-pass"></button>
+											</div>
+										</div>
+										<div class="wrap-field">
+											<div class="wrap-field__area">
+												<input class="wrap-field__input subtitle6" type="password">
+												<label class="wrap-field__name-field subtitle6">Повторите новый пароль</label>
+												<button class="show-pass"></button>
+											</div>
+										</div>
+										<input class="modal-change-password__submit btn1 button3" type="submit" value="Изменить пароль">
+									</form>
+								</div>
+								<button class="modal__close" data-close-modal></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('parts/footer/_footer.html')
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,38 @@
+.page-404 {
+	padding: 78px 0 100px 0;
+	text-align: center;
+}
+
+.page-404__img {
+	margin-bottom: 14px;
+}
+
+.page-404__title {
+	margin-bottom: 13px;
+}
+
+.page-404__btn {
+	margin-top: 46px;
+}
+
+@media (max-width: 1023px) {
+	.page-404 {
+		padding: 20px 0 30px 0;
+	}
+
+	.page-404__img {
+		margin-bottom: 30px;
+		padding: 0 37px;
+	}
+
+	.page-404__title {
+		margin-bottom: 15px;
+	}
+
+	.page-404__btn {
+		padding: 15px;
+		margin-top: 30px;
+		width: 100%;
+		max-width: 288px;
+	}
+}
