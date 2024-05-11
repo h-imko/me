@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="catalog">
+					<div class="catalog__container">
+						<div class="catalog__title">
+							<span>Видеонаблюдение</span>
+						</div>
+						<div class="catalog__upload">
+							<div class="catalog__upload__btn" data-popup-target="popup__catalog_upload" data-popup-control="open">
+								<span>Загрузить спецификацию</span>
+							</div>
+						</div>
+						<div class="catalog__inner">
+							<%- include('/catalog__nav') %>
+							<div class="catalog__table-wrapper">
+								<div class="catalog__table">
+									<div class="catalog__table__thead">
+										<div class="catalog__table__tr">
+											<div class="catalog__table__th">
+												<span>Фото</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Артикул</span>
+												<input type="text" placeholder="Поиск по артикулу">
+											</div>
+											<div class="catalog__table__th">
+												<span>Название</span>
+												<input type="text" placeholder="Поиск по названию">
+											</div>
+											<div class="catalog__table__th">
+												<span>Розничная цена</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Моя цена</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Количество</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Наличие</span>
+											</div>
+										</div>
+									</div>
+									<div class="catalog__table__tbody">
+										<% for( let index = 0; index < 10; index++ ) { %>
+										<%- include('/catalog__table__tr',{
+												labelColor: index % 2 ? "light" : "dark",
+												labelText: index % 2 ? "Акция" : "20%",
+												tagColor: index % 2 ? "light" : "dark",
+												index: index
+											}) %>
+										<% } %>
+										<div class="promo__footer">
+											<div class="pagination">
+												<a onclick="" href="javascript:void(0)" class="pagination__page is-active"><span>1</span></a>
+												<a onclick="" href="/catalog/videonablyudenie/?PAGEN_1=2" class="pagination__page"><span>2</span></a>
+												<a onclick="" href="/catalog/videonablyudenie/?PAGEN_1=3" class="pagination__page"><span>3</span></a>
+												<a onclick="" href="/catalog/videonablyudenie/?PAGEN_1=58" class="pagination__page "><span>...</span></a>
+												<a onclick="" href="/catalog/videonablyudenie/?PAGEN_1=114" class="pagination__page"><span>114</span></a>
+												<a onclick="" href="/catalog/videonablyudenie/?PAGEN_1=2" class="pagination__arrow"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- кнопка появляется если хотя бы 1 товар добавлен в корзину, видимость переключается классом show. Если выпиливать и добавлять разметку ниче не сломается -->
+								<div class="catalog__table-button show">
+									<a href="" class="catalog__table-button__inner" data-button-beautiful>
+										<span>Добавить в корзину</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__catalog_upload') %>
+	</body>
+
+</html>

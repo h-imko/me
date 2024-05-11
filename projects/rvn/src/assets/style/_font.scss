@@ -1,0 +1,416 @@
+@font-face {
+	font-family: "OpenSans";
+	src: url(/src/assets/static/font/OpenSans-Variable.woff2) format("woff2-variations");
+	font-display: swap;
+	font-weight: 125 950;
+	font-style: normal;
+}
+
+@mixin d1 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+@mixin m1 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+	leading-trim: both;
+	text-edge: cap;
+}
+
+@mixin d2 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+@mixin m2 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+@mixin d3 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+@mixin m3 {
+	// font-style: normal;
+	// font-weight: 400;
+	// font-size: 14px;
+}
+
+@mixin d4 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+@mixin m4 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+@mixin d5 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 80px;
+}
+
+@mixin m5 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 65px;
+}
+
+@mixin d6 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+@mixin m6 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+@mixin d7 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+}
+
+@mixin m7 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+@mixin d8 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	text-decoration-line: underline;
+}
+
+@mixin m8 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	text-decoration-line: underline;
+}
+
+@mixin d9 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+@mixin m9 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+@mixin d10 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+@mixin m10 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+@mixin d11 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+@mixin m11 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+@mixin d12 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+@mixin m12 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+}
+
+@mixin d13 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+@mixin m13 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+@mixin d14 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+@mixin m14 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+@mixin d15 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+@mixin d16 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+@mixin m16 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+@mixin d17 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	text-decoration-line: underline;
+}
+
+@mixin m17 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	text-decoration-line: underline;
+}
+
+@mixin m18 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 140%;
+	leading-trim: both;
+	text-edge: cap;
+}
+
+@mixin m19 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 140%;
+	leading-trim: both;
+	text-edge: cap;
+}
+
+@mixin m20 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;
+	leading-trim: both;
+	text-edge: cap;
+}
+
+@mixin m21 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+@mixin d-button {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+@mixin m-button {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	leading-trim: both;
+	text-edge: cap;
+}
+
+@mixin d-h1 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 35px;
+}
+
+@mixin m-h1 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+h1,
+.h1,
+%h1 {
+	@include d-h1;
+
+	@media (max-width: $mobile) {
+		@include m-h1;
+	}
+}
+
+@mixin d-h2 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 28px;
+}
+
+@mixin m-h2 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+h2,
+.h2,
+%h2 {
+	@include d-h2;
+
+	@media (max-width: $mobile) {
+		@include m-h2;
+	}
+}
+
+@mixin d-h3 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+@mixin m-h3 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+h3,
+.h3,
+%h3 {
+	@include d-h3;
+
+	@media (max-width: $mobile) {
+		@include m-h3;
+	}
+}
+
+@mixin d-h4 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+@mixin m-h4 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+h4,
+.h4,
+%h4 {
+	@include d-h4;
+
+	@media (max-width: $mobile) {
+		@include m-h4;
+	}
+}
+
+@mixin d-h5 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+@mixin m-h5 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+h5,
+.h5,
+%h5 {
+	@include d-h5;
+
+	@media (max-width: $mobile) {
+		@include m-h5;
+	}
+}
+
+@mixin d-h6 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+@mixin m-h6 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 143.69%;
+}
+
+h6,
+.h6,
+%h6 {
+	@include d-h6;
+
+	@media (max-width: $mobile) {
+		@include m-h6;
+	}
+}
+
+.font--ruble {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+input {
+	font-family: "OpenSans";
+	color: $black;
+
+	@media screen and (max-width: $mobile) {}
+}
+
+a {
+	color: inherit;
+	transition: all ease var(--transition-duration);
+}

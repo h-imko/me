@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="kp">
+					<div class="kp__container">
+						<div class="kp__title">
+							<span>Готовое КП за 4 простых шага</span>
+						</div>
+						<%- include('/kp__steps') %>
+						<div class="kp__step">
+							<p>
+								<b>Шаг 1.</b><span>Укажите цену для клиента за каждый товар.</span>
+							</p>
+						</div>
+						<div class="kp__inner">
+							<div class="catalog__table-wrapper">
+								<div class="catalog__table catalog__table--2">
+									<div class="catalog__table__thead">
+										<div class="catalog__table__tr">
+											<div class="catalog__table__th">
+												<span>№</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Фото</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Артикул</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Название</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Количество</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Розничная цена</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Моя цена</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Цена для клиента</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Наличие</span>
+											</div>
+											<div class="catalog__table__th"> </div>
+										</div>
+									</div>
+									<div class="catalog__table__tbody">
+										<% for( let index = 0; index < 10; index++ ) { %>
+										<%- include('/catalog__table__tr',{
+											labelColor: index % 2 ? "light" : "dark",
+											labelText: index % 2 ? "Акция" : "20%",
+												type: 2,
+												hidePreorder: true,
+												value: 1
+											}) %>
+										<% } %>
+									</div>
+								</div>
+							</div>
+							<div class="kp__table-add" data-popup-control="open" data-popup-target="popup__kp_add">
+								<div class="kp__table-add__plus"></div>
+								<span>Добавить товар</span>
+							</div>
+						</div>
+						<div class="kp__footer">
+							<div class="kp__summary">
+								<div class="kp__summary__row">
+									<span>Сумма товаров по розничным ценам:</span>
+									<span> 500 000 </span>
+									<span><span class="font--ruble">₽</span></span>
+								</div>
+								<div class="kp__summary__row">
+									<span>Сумма товаров по моим ценам: </span>
+									<span>400 000 </span>
+									<span><span class="font--ruble">₽</span></span>
+								</div>
+								<div class="kp__summary__row">
+									<span>Моя общая скидка: </span>
+									<span>- 100 000 </span>
+									<span><span class="font--ruble">₽</span></span>
+								</div>
+								<div class="kp__summary__row">
+									<span>Сумма товаров по ценам клиента: </span>
+									<span> 450 000 </span>
+									<span><span class="font--ruble">₽</span></span>
+								</div>
+								<div class="kp__summary__row">
+									<span>Скидка для клиента: </span>
+									<span> 450 000 </span>
+									<span><span class="font--ruble">₽</span></span>
+								</div>
+								<div class="kp__summary__row">
+									<span>Моя выгода: </span>
+									<span> +450 000 </span>
+									<span><span class="font--ruble">₽</span></span>
+								</div>
+								<div class="kp__summary__total">
+									<span>Итоговая сумма для клиента:</span>
+									<span>400 000 </span>
+									<span><span class="font--ruble">₽</span></span>
+								</div>
+							</div>
+							<div class="kp__footer__buttons">
+								<div class="kp__footer__button kp__footer__button--filled" data-button-beautiful>
+									<span>Далее</span>
+									<div class="icon icon--arrow-right"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<iframe name="printframe" class="kp__printframe"></iframe>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__kp_add') %>
+		<script src="/src/assets/script/print.js"></script>
+	</body>
+
+</html>

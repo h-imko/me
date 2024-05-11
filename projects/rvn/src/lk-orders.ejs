@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="lk">
+					<div class="lk__container">
+						<div class="lk__grid">
+							<div class="lk__grid__left">
+								<%- include('/lk__nav') %>
+								<a href="" class="lk__connect-button">
+									<span>Подключиться к ЭДО</span>
+								</a>
+							</div>
+							<div class="lk__grid__right">
+								<div class="lk__content">
+									<div class="orders">
+										<div class="lk__content__title">
+											<span>Заказы</span>
+										</div>
+										<div class="orders__filter">
+											<label class="custom-input">
+												<select name="" id="" required>
+													<option value="biba">Общество с ограниченной ответственностью «Весна»</option>
+													<option value="boba">boba</option>
+												</select>
+												<div class="custom-input__label">
+													<span>Выбор организации</span>
+												</div>
+											</label>
+											<label class="custom-input">
+												<input type="search" placeholder=" ">
+												<div class="custom-input__label">
+													<span>Поиск по названию товара или артикулу</span>
+												</div>
+												<div class="custom-input__icon">
+													<div class="icon icon--search-normal"></div>
+												</div>
+											</label>
+											<div class="orders__filter__tabs">
+												<div class="orders__filter__tabs__item is-active">
+													<span>Все</span>
+												</div>
+												<div class="orders__filter__tabs__item">
+													<span>Готовится счет</span>
+												</div>
+												<div class="orders__filter__tabs__item">
+													<span>Счет сформирован</span>
+												</div>
+												<div class="orders__filter__tabs__item">
+													<span>Зарезервированые</span>
+												</div>
+												<div class="orders__filter__tabs__item">
+													<span>Отправлен</span>
+												</div>
+												<div class="orders__filter__tabs__item">
+													<span>Выполнен</span>
+												</div>
+												<div class="orders__filter__tabs__item">
+													<span>Отменен</span>
+												</div>
+											</div>
+										</div>
+										<div class="orders__list">
+											<div class="orders__order">
+												<div class="orders__order__info">
+													<div class="orders__order__info__left">
+														<div class="orders__order__info__name">
+															<span>Заказ №54354453</span>
+														</div>
+														<div class="orders__order__info__date">
+															<span>от 10 августа 2022</span>
+														</div>
+														<div class="orders__order__info__count">
+															<span>10 товаров</span>
+														</div>
+														<div class="orders__order__info__price">
+															<span>177 350 <span class="font--ruble">₽</span></span>
+														</div>
+														<div class="orders__order__info__status">
+															<span>Готовится счет</span>
+														</div>
+														<div class="orders__order__info__person">
+															<span>Иванов Иван Иванович</span>
+															<span>Закупщик</span>
+														</div>
+													</div>
+													<div class="orders__order__info__right">
+														<div class="orders__order__info__actions">
+															<a href="">Отменить заказ</a>
+														</div>
+													</div>
+												</div>
+												<div class="orders__order__popup-opener" data-popup-target="popup__orders_list" data-popup-control="open">
+													<div class="orders__order__extra__toggler">Подробнее
+														<div class="orders__order__extra__toggler__flipper"></div>
+													</div>
+												</div>
+												<div class="orders__order__extra">
+													<div class="spoiler">
+														<div class="spoiler__content">
+															<div class="spoiler__content__inner">
+																<div class="orders__order__extra__content">
+																	<%- include('/orders__product') %>
+																</div>
+															</div>
+														</div>
+														<div class="spoiler__toggler">
+															<div class="orders__order__extra__toggler">
+																<span class="spoiler__initial">Подробнее</span>
+																<span class="spoiler__final">Скрыть</span>
+																<div class="spoiler__flipper">
+																	<div class="orders__order__extra__toggler__flipper"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="orders__order">
+												<div class="orders__order__info">
+													<div class="orders__order__info__left">
+														<div class="orders__order__info__name">
+															<span>Заказ №54354453</span>
+														</div>
+														<div class="orders__order__info__date">
+															<span>от 10 августа 2022</span>
+														</div>
+														<div class="orders__order__info__count">
+															<span>10 товаров</span>
+														</div>
+														<div class="orders__order__info__price">
+															<span>177 350 <span class="font--ruble">₽</span></span>
+														</div>
+														<div class="orders__order__info__status orders__order__info__status--light">
+															<span>Счет сформирован</span>
+														</div>
+														<div class="orders__order__info__person">
+															<span>Иванов Иван Иванович</span>
+															<span>Закупщик</span>
+														</div>
+													</div>
+													<div class="orders__order__info__right">
+														<div class="orders__order__info__actions">
+															<a href="">Отменить заказ</a>
+															<a href="">Зарезервировать до 04.04.23</a>
+														</div>
+													</div>
+												</div>
+												<div class="orders__order__downloads">
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--note-2"></div>
+														<span>КП для ИП Петров.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--clipboard-tick"></div>
+														<span>Счет.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+												</div>
+												<div class="orders__order__popup-opener" data-popup-target="popup__orders_list" data-popup-control="open">
+													<div class="orders__order__extra__toggler">Подробнее
+														<div class="orders__order__extra__toggler__flipper"></div>
+													</div>
+												</div>
+												<div class="orders__order__extra">
+													<div class="spoiler">
+														<div class="spoiler__content">
+															<div class="spoiler__content__inner">
+																<div class="orders__order__extra__content">
+																	<%- include('/orders__product') %>
+																</div>
+															</div>
+														</div>
+														<div class="spoiler__toggler">
+															<div class="orders__order__extra__toggler">
+																<span class="spoiler__initial">Подробнее</span>
+																<span class="spoiler__final">Скрыть</span>
+																<div class="spoiler__flipper">
+																	<div class="orders__order__extra__toggler__flipper"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="orders__order">
+												<div class="orders__order__info">
+													<div class="orders__order__info__left">
+														<div class="orders__order__info__name">
+															<span>Заказ №54354453</span>
+														</div>
+														<div class="orders__order__info__date">
+															<span>от 10 августа 2022</span>
+														</div>
+														<div class="orders__order__info__count">
+															<span>10 товаров</span>
+														</div>
+														<div class="orders__order__info__price">
+															<span>177 350 <span class="font--ruble">₽</span></span>
+														</div>
+														<div class="orders__order__info__status orders__order__info__status--dark">
+															<span>Зарезервирован до 05.04.23</span>
+														</div>
+														<div class="orders__order__info__person">
+															<span>Иванов Иван Иванович</span>
+															<span>Закупщик</span>
+														</div>
+													</div>
+													<div class="orders__order__info__right">
+														<div class="orders__order__info__actions">
+															<a href="">Отменить заказ</a>
+															<a href="">Оплатить</a>
+														</div>
+													</div>
+												</div>
+												<div class="orders__order__downloads">
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--note-2"></div>
+														<span>КП для ИП Петров.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--clipboard-tick"></div>
+														<span>Счет.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+												</div>
+												<div class="orders__order__popup-opener" data-popup-target="popup__orders_list" data-popup-control="open">
+													<div class="orders__order__extra__toggler">Подробнее
+														<div class="orders__order__extra__toggler__flipper"></div>
+													</div>
+												</div>
+												<div class="orders__order__extra">
+													<div class="spoiler">
+														<div class="spoiler__content">
+															<div class="spoiler__content__inner">
+																<div class="orders__order__extra__content">
+																	<%- include('/orders__product') %>
+																</div>
+															</div>
+														</div>
+														<div class="spoiler__toggler">
+															<div class="orders__order__extra__toggler">
+																<span class="spoiler__initial">Подробнее</span>
+																<span class="spoiler__final">Скрыть</span>
+																<div class="spoiler__flipper">
+																	<div class="orders__order__extra__toggler__flipper"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="orders__order">
+												<div class="orders__order__info">
+													<div class="orders__order__info__left">
+														<div class="orders__order__info__name">
+															<span>Заказ №54354453</span>
+														</div>
+														<div class="orders__order__info__date">
+															<span>от 10 августа 2022</span>
+														</div>
+														<div class="orders__order__info__count">
+															<span>10 товаров</span>
+														</div>
+														<div class="orders__order__info__price">
+															<span>177 350 <span class="font--ruble">₽</span></span>
+														</div>
+														<div class="orders__order__info__status orders__order__info__status--grey">
+															<span>Отправлен</span>
+														</div>
+														<div class="orders__order__info__person">
+															<span>Иванов Иван Иванович</span>
+															<span>Закупщик</span>
+														</div>
+													</div>
+													<div class="orders__order__info__right">
+														<div class="orders__order__info__actions">
+															<a href="">Отменить заказ</a>
+														</div>
+													</div>
+												</div>
+												<div class="orders__order__downloads">
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--note-2"></div>
+														<span>КП для ИП Петров.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--clipboard-tick"></div>
+														<span>Счет.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+												</div>
+												<div class="orders__order__popup-opener" data-popup-target="popup__orders_list" data-popup-control="open">
+													<div class="orders__order__extra__toggler">Подробнее
+														<div class="orders__order__extra__toggler__flipper"></div>
+													</div>
+												</div>
+												<div class="orders__order__extra">
+													<div class="spoiler">
+														<div class="spoiler__content">
+															<div class="spoiler__content__inner">
+																<div class="orders__order__extra__content">
+																	<%- include('/orders__product') %>
+																</div>
+															</div>
+														</div>
+														<div class="spoiler__toggler">
+															<div class="orders__order__extra__toggler">
+																<span class="spoiler__initial">Подробнее</span>
+																<span class="spoiler__final">Скрыть</span>
+																<div class="spoiler__flipper">
+																	<div class="orders__order__extra__toggler__flipper"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="orders__order">
+												<div class="orders__order__info">
+													<div class="orders__order__info__left">
+														<div class="orders__order__info__name">
+															<span>Заказ №54354453</span>
+														</div>
+														<div class="orders__order__info__date">
+															<span>от 10 августа 2022</span>
+														</div>
+														<div class="orders__order__info__count">
+															<span>10 товаров</span>
+														</div>
+														<div class="orders__order__info__price">
+															<span>177 350 <span class="font--ruble">₽</span></span>
+														</div>
+														<div class="orders__order__info__status orders__order__info__status--lighter">
+															<span>Выполнен</span>
+														</div>
+														<div class="orders__order__info__person">
+															<span>Иванов Иван Иванович</span>
+															<span>Закупщик</span>
+														</div>
+													</div>
+												</div>
+												<div class="orders__order__downloads">
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--note-2"></div>
+														<span>КП для ИП Петров.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--clipboard-tick"></div>
+														<span>Счет.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+												</div>
+												<div class="orders__order__downloads">
+													<div class="orders__order__downloads__label">
+														<span>Заказаны все документы</span>
+													</div>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--note-2"></div>
+														<span>УПД.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--document-text"></div>
+														<span>Накладная.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__link">Заказать УПД</a>
+													<a href="" class="orders__order__downloads__link">Заказать накладную</a>
+												</div>
+												<div class="orders__order__popup-opener" data-popup-target="popup__orders_list" data-popup-control="open">
+													<div class="orders__order__extra__toggler">Подробнее
+														<div class="orders__order__extra__toggler__flipper"></div>
+													</div>
+												</div>
+												<div class="orders__order__extra">
+													<div class="spoiler">
+														<div class="spoiler__content">
+															<div class="spoiler__content__inner">
+																<div class="orders__order__extra__content">
+																	<%- include('/orders__product') %>
+																</div>
+															</div>
+														</div>
+														<div class="spoiler__toggler">
+															<div class="orders__order__extra__toggler">
+																<span class="spoiler__initial">Подробнее</span>
+																<span class="spoiler__final">Скрыть</span>
+																<div class="spoiler__flipper">
+																	<div class="orders__order__extra__toggler__flipper"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="orders__order">
+												<div class="orders__order__info">
+													<div class="orders__order__info__left">
+														<div class="orders__order__info__name">
+															<span>Заказ №54354453</span>
+														</div>
+														<div class="orders__order__info__date">
+															<span>от 10 августа 2022</span>
+														</div>
+														<div class="orders__order__info__count">
+															<span>10 товаров</span>
+														</div>
+														<div class="orders__order__info__price">
+															<span>177 350 <span class="font--ruble">₽</span></span>
+														</div>
+														<div class="orders__order__info__status orders__order__info__status--lighter">
+															<span>Выполнен</span>
+														</div>
+														<div class="orders__order__info__person">
+															<span>Иванов Иван Иванович</span>
+															<span>Закупщик</span>
+														</div>
+													</div>
+												</div>
+												<div class="orders__order__downloads">
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--note-2"></div>
+														<span>КП для ИП Петров.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--clipboard-tick"></div>
+														<span>Счет.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+												</div>
+												<div class="orders__order__downloads">
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--note-2"></div>
+														<span>УПД.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--note-2"></div>
+														<span>УПД.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--note-2"></div>
+														<span>УПД.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--document-text"></div>
+														<span>Накладная.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__link">Заказать УПД</a>
+													<a href="" class="orders__order__downloads__link">Заказать накладную</a>
+												</div>
+												<div class="orders__order__popup-opener" data-popup-target="popup__orders_list" data-popup-control="open">
+													<div class="orders__order__extra__toggler">Подробнее
+														<div class="orders__order__extra__toggler__flipper"></div>
+													</div>
+												</div>
+												<div class="orders__order__extra">
+													<div class="spoiler">
+														<div class="spoiler__content">
+															<div class="spoiler__content__inner">
+																<div class="orders__order__extra__content">
+																	<%- include('/orders__product') %>
+																</div>
+															</div>
+														</div>
+														<div class="spoiler__toggler">
+															<div class="orders__order__extra__toggler">
+																<span class="spoiler__initial">Подробнее</span>
+																<span class="spoiler__final">Скрыть</span>
+																<div class="spoiler__flipper">
+																	<div class="orders__order__extra__toggler__flipper"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="orders__order">
+												<div class="orders__order__info">
+													<div class="orders__order__info__left">
+														<div class="orders__order__info__name">
+															<span>Заказ №54354453</span>
+														</div>
+														<div class="orders__order__info__date">
+															<span>от 10 августа 2022</span>
+														</div>
+														<div class="orders__order__info__count">
+															<span>10 товаров</span>
+														</div>
+														<div class="orders__order__info__price">
+															<span>177 350 <span class="font--ruble">₽</span></span>
+														</div>
+														<div class="orders__order__info__status orders__order__info__status--grey2">
+															<span>Отменен</span>
+														</div>
+														<div class="orders__order__info__person">
+															<span>Иванов Иван Иванович</span>
+															<span>Закупщик</span>
+														</div>
+													</div>
+												</div>
+												<div class="orders__order__downloads">
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--note-2"></div>
+														<span>КП для ИП Петров.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+													<a href="" class="orders__order__downloads__button">
+														<div class="icon icon--clipboard-tick"></div>
+														<span>Счет.pdf</span>
+														<div class="icon icon--arrow-down-2"></div>
+													</a>
+												</div>
+												<div class="orders__order__downloads">
+													<a href="" class="orders__order__downloads__link">Заказать УПД</a>
+													<a href="" class="orders__order__downloads__link">Заказать накладную</a>
+												</div>
+												<div class="orders__order__popup-opener" data-popup-target="popup__orders_list" data-popup-control="open">
+													<div class="orders__order__extra__toggler">Подробнее
+														<div class="orders__order__extra__toggler__flipper"></div>
+													</div>
+												</div>
+												<div class="orders__order__extra">
+													<div class="spoiler">
+														<div class="spoiler__content">
+															<div class="spoiler__content__inner">
+																<div class="orders__order__extra__content">
+																	<%- include('/orders__product') %>
+																</div>
+															</div>
+														</div>
+														<div class="spoiler__toggler">
+															<div class="orders__order__extra__toggler">
+																<span class="spoiler__initial">Подробнее</span>
+																<span class="spoiler__final">Скрыть</span>
+																<div class="spoiler__flipper">
+																	<div class="orders__order__extra__toggler__flipper"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="orders__footer">
+											<%- include('/pagination') %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__orders_list') %>
+	</body>
+
+</html>

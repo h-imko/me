@@ -1,0 +1,22 @@
+<% let cards = [
+	["Мои компании","5 компаний","buildings-2"],
+	 ["Контактные лица","10 контактов","people"],
+	 ["Заказы","","box"],
+	 ["Коммерческие предложения","","note"],
+	 ["Бухгалтерские документы","6 документов","folder-2"],
+	 ["Выход","","logout-2"]
+	] %>
+<div class="nav-cards">
+	<div class="nav-cards__container">
+		<div class="nav-cards__inner">
+			<%- include('/bonus-card') %>
+			<% for (const [title, caption, icon] of cards) { %>
+			<%- include('/nav-cards__card',{
+				title: title,
+				caption: caption,
+				icon: icon
+			}) %>
+			<% } %>
+		</div>
+	</div>
+</div>

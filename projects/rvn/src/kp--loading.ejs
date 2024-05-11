@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="kp">
+					<div class="kp__container">
+						<div class="kp__title">
+							<span>Готовое КП за 4 простых шага</span>
+						</div>
+						<%- include('/kp__steps') %>
+						<div class="kp__loader"></div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__kp_add') %>
+		<%- include('/popup__kp_error') %>
+	</body>
+
+</html>

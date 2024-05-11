@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="text-page">
+					<div class="text-page__container">
+						<div class="text-page__inner">
+							<h1>Проектирование</h1>
+							<img src="/src/assets/static/img/4.webp" alt="">
+							<p>Проектирование <a href="">является</a> <a href="">важнейшей</a> <a href="">частью</a> создания систем безопасности объекта. Оптимальный расчет проекта сводит затраты на расходные материалы, оборудование и работы к минимуму. Грамотно составленная проектная документация — это быстро и качественно выполненный монтаж и пуско-наладочные работы, правильное проведение которых обеспечит долгосрочное функционирование комплексов систем безопасности.</p>
+							<h2>Заголовок 2</h2>
+							<p>Проектирование является важнейшей частью создания систем безопасности объекта. Оптимальный расчет проекта сводит затраты на расходные материалы, оборудование и работы к минимуму. Грамотно составленная проектная документация — это быстро и качественно выполненный монтаж и пуско-наладочные работы, правильное проведение которых обеспечит долгосрочное функционирование комплексов систем безопасности.</p>
+							<p>Проектирование является важнейшей частью создания систем безопасности объекта. Оптимальный расчет проекта сводит затраты на расходные материалы, оборудование и работы к минимуму. Грамотно составленная проектная документация — это быстро и качественно выполненный монтаж и пуско-наладочные работы, правильное проведение которых обеспечит долгосрочное функционирование комплексов систем безопасности.</p>
+							<h3>Заголовок 3</h3>
+							<p>Компания РВН-Групп предлагает проектные услуги для следующих систем безопасности:</p>
+							<ul>
+								<li>Структурированные кабельные сети (СКС);</li>
+								<li>Системы видеонаблюдения (СВН);</li>
+								<li>Охранно-пожарные сигнализации (ОПС);</li>
+								<li>Системы контроля и управления доступом (СКУД);</li>
+								<li>Домофонные системы.</li>
+							</ul>
+							<p>Компания РВН-Групп предлагает проектные услуги для следующих систем безопасности:</p>
+							<ol>
+								<!-- сыном li может быть только один узел -->
+								<li>Структурированные кабельные сети (СКС);</li>
+								<li>Системы видеонаблюдения (СВН);</li>
+								<li>Охранно-пожарные сигнализации (ОПС);</li>
+								<li>Системы контроля и управления доступом (СКУД);</li>
+								<li>Домофонные системы.</li>
+							</ol>
+							<h4>Заголовок 4</h4>
+							<h5>Заголовок 5</h5>
+							<h6>Заголовок 6</h6>
+							<div class="text-page__table">
+								<div class="text-page__table__thead">
+									<div class="text-page__table__tr">
+										<div class="text-page__table__th">
+											<span>№</span>
+										</div>
+										<div class="text-page__table__th">
+											<span>Артикул</span>
+										</div>
+										<div class="text-page__table__th">
+											<span>Название</span>
+										</div>
+										<div class="text-page__table__th">
+											<span>Розничная цена</span>
+										</div>
+										<div class="text-page__table__th">
+											<span>Моя цена</span>
+										</div>
+										<div class="text-page__table__th">
+											<span>Вес, г</span>
+										</div>
+										<div class="text-page__table__th">
+											<span>Any</span>
+										</div>
+									</div>
+								</div>
+								<div class="text-page__table__tbody">
+									<% for( let index = 0; index < 5; index++ ) { %>
+									<div class="text-page__table__tr">
+										<div class="text-page__table__td">
+											<div class="text-page__table__counter">
+											</div>
+										</div>
+										<div class="text-page__table__td">
+											<div class="text-page__table__article">
+												<span>311302832</span>
+											</div>
+										</div>
+										<div class="text-page__table__td">
+											<div class="text-page__table__name">
+												<span>DS-2CD2043G0-I (2.8mm) 4Мп уличная цилиндрическая IP-камера с EXIR-подсветкой до 30м</span>
+											</div>
+										</div>
+										<div class="text-page__table__td">
+											<div class="text-page__table__price">
+												<span>500 300 <span class="font--ruble">₽</span></span>
+											</div>
+										</div>
+										<div class="text-page__table__td">
+											<div class="text-page__table__price">
+												<span>490 000 <span class="font--ruble">₽</span></span>
+												<span>+ 10 000 бонусов</span>
+											</div>
+										</div>
+										<div class="text-page__table__td">
+											<div class="text-page__table__weight">
+												<span>1 000</span>
+											</div>
+										</div>
+										<!-- можно добавлять просто абзацы, ссылки и жирный текст -->
+										<div class="text-page__table__td">
+											<p>Текст, <a href="">ссылка</a> <b>жир</b>.</p>
+										</div>
+									</div>
+									<% } %>
+								</div>
+							</div>
+						</div>
+						<div class="text-page__gallery">
+							<% const random = (min, max) => Math.floor(Math.random() * (max - min)) + min; %>
+							<% for( let index = 0; index < 10; index++ ) { %>
+							<% let size = `${random(300, 600)}x${random(300, 600)}` %>
+							<a href="https://placehold.co/<%- size %>" data-fslightbox="gallery"><img src="https://placehold.co/<%- size %>" alt="">
+							</a>
+							<% } %>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+	</body>
+
+</html>

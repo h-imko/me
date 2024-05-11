@@ -1,0 +1,25 @@
+@import 'flatpickr/dist/flatpickr.min';
+
+.flatpickr-day {
+	&.selected {
+		background: $asphalt;
+		border-color: $asphalt;
+	}
+
+	&.today {
+		border-color: $asphalt;
+	}
+
+	&:hover {
+		background: $grey-border1;
+	}
+
+	&:is(.nextMonthDay, .prevMonthDay):not(.flatpickr-disabled) {
+		color: $grey-text-on-white;
+	}
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+	fill: $blue;
+}

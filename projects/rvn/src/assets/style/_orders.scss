@@ -1,0 +1,434 @@
+.orders {
+	&__filter {
+		margin-top: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 35px;
+
+		@media (max-width: $mobile) {
+			gap: 15px;
+		}
+
+		.custom-input {
+			max-width: 831px;
+		}
+
+		&__tabs {
+			display: flex;
+			gap: 10px;
+			overflow: auto;
+			cursor: pointer;
+
+			@media (max-width: $mobile) {
+				gap: 5px;
+				flex-wrap: nowrap;
+				overflow: auto;
+				@include cover-container;
+			}
+
+			&__item {
+				@include tab;
+
+				&.is-active {
+					@include tab(true)
+				}
+			}
+		}
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: center;
+		margin-top: 35px;
+	}
+
+	&__list {
+		display: flex;
+		margin-top: 20px;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	&__products {
+		display: grid;
+		grid-template-columns: auto auto 1fr auto auto;
+		margin-top: 20px;
+		--gap: 40px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			gap: 10px;
+			order: 27;
+		}
+
+		& ~ .orders__order__extra & {
+			margin-top: -20px;
+		}
+
+		&__product {
+			display: contents;
+
+			@media (max-width: $mobile) {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 10px 7px;
+				padding: 16px;
+				background-color: #fff;
+				border: 1px solid $grey-border1;
+				border-radius: 5px;
+			}
+
+			> * {
+				@media (min-width: $mobile) {
+					padding-top: 15px;
+					padding-bottom: 15px;
+					border-top: 1px solid $grey-border1;
+					padding-left: calc(var(--gap) / 2);
+					padding-right: calc(var(--gap) / 2);
+				}
+			}
+
+			&:last-child {
+				> * {
+					@media (min-width: $mobile) {
+						border-bottom: 1px solid $grey-border1;
+					}
+				}
+			}
+
+			&__index {
+				@include d1;
+
+				&::before {
+					counter-increment: biba;
+					content: counter(biba);
+				}
+			}
+
+			&__img {
+				@media (max-width: $mobile) {
+					grid-column: 1;
+					grid-row: span 2;
+				}
+
+				img {
+					width: 61px;
+					height: 61px;
+					object-position: center;
+
+					@media (max-width: $mobile) {
+						width: 73px;
+						height: 73px;
+					}
+				}
+			}
+
+			&__info {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+			}
+
+			&__article {
+				@include d10;
+
+				@media (max-width: $mobile) {
+					@include m18;
+				}
+
+				&::before {
+					@media (max-width: $mobile) {
+						content: 'Арт';
+					}
+				}
+			}
+
+			&__name {
+				@include d1;
+				color: $grey-text;
+
+				@media (max-width: $mobile) {
+					@include text-line-clip(3);
+					@include m1;
+				}
+			}
+
+			&__count {
+				@include d1;
+				color: $grey-text;
+
+				@media (max-width: $mobile) {
+					@include m1;
+					grid-column: 1;
+				}
+			}
+
+			&__price {
+				@include d3;
+
+				@media (max-width: $mobile) {
+					@include m3;
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	&__order {
+		padding: 25px;
+		border-radius: 10px;
+		border: 1px solid $grey-border1;
+		counter-reset: biba;
+
+		@media (max-width: $mobile) {
+			display: grid;
+			grid-template-columns: 1fr;
+			padding: 16px;
+			gap: 10px;
+			background-color: $white;
+		}
+
+		&__info {
+			display: flex;
+			align-items: baseline;
+			gap: 25px;
+
+			@media (max-width: $mobile) {
+				display: contents;
+			}
+
+			&__left {
+				display: flex;
+				flex-wrap: wrap;
+				flex-grow: 1;
+				gap: 15px;
+				align-items: baseline;
+
+				@media (max-width: $mobile) {
+					display: contents;
+				}
+			}
+
+			&__right {
+				@media (max-width: $mobile) {
+					display: contents;
+				}
+			}
+
+			&__name {
+				@include d9;
+
+				@media (max-width: $mobile) {
+					@include m9;
+				}
+			}
+
+			&__date,
+			&__count,
+			&__person {
+				@include d1;
+				color: $grey-text;
+
+				@media (max-width: $mobile) {
+					@include m1;
+				}
+			}
+
+			&__price {
+				@include d2;
+
+				@media (max-width: $mobile) {
+					@include m2;
+				}
+			}
+
+			&__status {
+				padding: 9px 21px;
+				@include d1;
+				color: $asphalt;
+				border: 1px solid $asphalt;
+				border-radius: 666px;
+
+				@media (max-width: $mobile) {
+					padding: 9px 11px;
+					width: max-content;
+					@include m1;
+				}
+
+				&--light {
+					background-color: $grey-bg;
+				}
+
+				&--lighter {
+					border: 1px solid $grey-border1;
+				}
+
+				&--dark {
+					color: $white;
+					background-color: $asphalt;
+				}
+
+				&--grey {
+					color: $white;
+					background-color: $grey-border;
+					border: 1px solid $grey-border;
+				}
+
+				&--grey2 {
+					color: $black;
+					background-color: $light-grey-bg;
+					border: 1px solid $grey-border1;
+				}
+			}
+
+			&__person {
+				display: flex;
+				gap: 15px;
+				width: 100%;
+
+				@media (max-width: $mobile) {
+					flex-direction: column;
+					gap: 10px;
+					margin-top: 10px;
+				}
+			}
+
+			&__actions {
+				display: flex;
+				flex-direction: column;
+				white-space: nowrap;
+				align-items: flex-end;
+				gap: 13px;
+				@include d8;
+				color: $grey-text;
+
+				a:hover {
+					color: $black;
+				}
+
+				@media (max-width: $mobile) {
+					order: 10;
+					align-items: flex-start;
+					gap: 10px;
+					margin-top: 10px;
+				}
+
+				> :nth-child(2) {
+					color: $blue;
+
+					&:hover {
+						color: #100362;
+					}
+				}
+			}
+		}
+
+		&__downloads {
+			margin-top: 20px;
+			@include d1;
+			display: flex;
+			gap: 25px;
+			align-items: center;
+
+			@media (max-width: $mobile) {
+				display: contents;
+				@include m1;
+			}
+
+			> :first-child {
+				@media (max-width: $mobile) {
+					margin-top: 10px;
+				}
+			}
+
+			&__label {
+				background: $grey-border1;
+				border-radius: 51px;
+				padding: 4px 12px;
+				color: $asphalt;
+				@include d-button;
+				width: max-content;
+				text-align: center;
+
+				@media (max-width: $mobile) {
+					@include m-button;
+				}
+			}
+
+			&__button {
+				display: flex;
+				align-items: center;
+				--size: 22px;
+				gap: 5px;
+				@include d1;
+
+				@media (max-width: $mobile) {
+					align-items: flex-start;
+				}
+			}
+
+			&__link {
+				margin-left: auto;
+				@include d8;
+				color: $grey-text;
+
+				&:hover {
+					color: #100362;
+				}
+
+				@media (max-width: $mobile) {
+					margin-left: 0;
+					margin-top: 10px;
+				}
+
+				& ~ & {
+					margin-left: unset;
+
+					@media (max-width: $mobile) {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		&__extra {
+			margin-top: 20px;
+
+			@media (max-width: $mobile) {
+				display: none;
+			}
+
+			&__content {
+				padding-bottom: 25px;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+
+			&__toggler {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				@include d1;
+				--size: 16px;
+
+				&__flipper {
+					content: '';
+					@extend .icon, .icon--arrow-circle-down;
+
+					@media (max-width: $mobile) {
+						transform: rotate(-90deg);
+					}
+				}
+			}
+		}
+
+		&__popup-opener {
+			order: 54;
+
+			@media (min-width: $mobile) {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="kp">
+					<div class="kp__container">
+						<div class="kp__title">
+							<span>Готовое КП за 4 простых шага</span>
+						</div>
+						<%- include('/kp__steps') %>
+						<div class="kp__step">
+							<span>
+								<b>Шаг 4.</b>Скачайте готовое КП.
+							</span>
+						</div>
+						<div class="kp__inner">
+							<div class="kp__final">
+								<div class="kp__final__text">
+									<span>Ваше КП сформировано и будет храниться
+										<a href="">тут</a>.
+									</span>
+								</div>
+								<div class="kp__final__file">
+									<span>КП для ИП Петров.pdf</span>
+								</div>
+							</div>
+						</div>
+						<div class="kp__footer">
+							<div class="kp__footer__buttons">
+								<a href="" download="" class="kp__footer__button kp__footer__button--filled" data-button-beautiful>
+									<span>Скачать КП</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+	</body>
+
+</html>

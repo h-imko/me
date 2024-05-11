@@ -1,0 +1,138 @@
+.log {
+	flex-grow: 1;
+	background-image: url(/src/assets/static/img/log.webp);
+	background-size: cover;
+	background-position: left;
+	display: flex;
+	align-items: center;
+
+	@media (max-width: $mobile) {
+		padding: 16px 0 32px 0;
+	}
+
+	&__container {
+		@extend .container;
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		gap: 29px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 55px;
+
+		@media (max-width: $mobile) {
+			order: 1;
+			gap: 16px;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 52px 60px;
+		color: #8CCAF1;
+		--color: #8CCAF1;
+		--size: 30px;
+		padding: 0 8%;
+		@include d4;
+
+		@media (max-width: $mobile) {
+			@include m4;
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px;
+			padding: 0;
+			--size: 20px;
+		}
+
+		&__card {
+			display: flex;
+			gap: 14px;
+			align-items: flex-start;
+
+			@media (max-width: $mobile) {
+				gap: 10px;
+			}
+		}
+	}
+
+	&__form {
+		background: $grey-bg;
+		border-radius: 20px;
+		padding: 32px 22%;
+		align-self: stretch;
+		display: flex;
+		flex-direction: column;
+		gap: 13px;
+		justify-content: center;
+
+		@media (max-width: $mobile) {
+			padding: 30px 20px;
+			border-radius: 5px;
+			gap: 10px;
+		}
+
+		select:required ~ .custom-input__label::after,
+		input:required ~ .custom-input__label::after {
+			display: none;
+		}
+
+		&__title {
+			@extend h2;
+			text-align: center;
+			margin-bottom: 40px;
+
+			@media (max-width: $mobile) {
+				margin-bottom: 20px;
+			}
+
+			&__sub {
+				@include d1;
+				margin-top: 20px;
+			}
+		}
+
+		&__forgot {
+			text-align: right;
+			@include d1;
+		}
+
+		&__buttons {
+			margin-top: 20px;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 10px;
+
+			@media (max-width: $mobile) {
+				justify-content: center;
+			}
+
+			> :first-child:last-child {
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			&__filled {
+				@include button(true, false, "asphalt", true);
+				padding-left: 49px;
+				padding-right: 49px;
+			}
+
+			&__outlined {
+				@include button(true, false, "asphalt", false);
+				padding-left: 49px;
+				padding-right: 49px;
+			}
+		}
+	}
+}

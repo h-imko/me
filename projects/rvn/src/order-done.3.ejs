@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<form class="order-done">
+					<div class="order-done__container">
+						<div class="order-done__title">
+							<span>Ваш заказ №6455 успешно создан. </span>
+						</div>
+						<div class="order-done__caption">
+							<p>Номер вашей оплаты <b>№343434</b> .</p>
+							<p>
+								<span>
+									Вы можете следить за выполнением своего заказа в разделе «Заказы» или по <a href="">ссылке</a>. </span>
+							</p>
+						</div>
+						<a href="" download="" class="order-done__file">
+							<span>Счет по заказу №42344.pdf</span>
+							<div class="icon icon--arrow-down-2"></div>
+						</a>
+						<div class="order-done__payment">
+							<div class="order-done__payment__title">
+								<span>Оплата заказа</span>
+							</div>
+							<div class="order-done__payment__type">
+								<div class="icon icon--card"></div>
+								<span>Наличными при получении</span>
+							</div>
+							<div class="order-done__payment__price">
+								<span>Сумма к оплате <b>400 000 <span class="font--ruble">₽</span></b></span>
+							</div>
+						</div>
+					</div>
+				</form>
+			</article>
+		</main>
+		<%- include('/footer') %>
+	</body>
+
+</html>

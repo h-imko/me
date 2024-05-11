@@ -1,0 +1,56 @@
+<div class="popup" data-popup="popup__kp_add">
+	<div class="popup__inner" data-popup-inner>
+		<div class="popup__selfcloser" data-popup-selfcloser></div>
+		<div class="popup__title">
+			<span>Добавление товара</span>
+		</div>
+		<div class="kp-add">
+			<div class="kp-add__search">
+				<input type="search" placeholder="Поиск по артикулу">
+			</div>
+			<div class="kp-add__table">
+				<div class="header__search__drop__table">
+					<div class="header__search__drop__table__header">
+						<div class="header__search__drop__table__header__cell">
+							<span>РРЦ</span>
+						</div>
+						<div class="header__search__drop__table__header__cell">
+							<span>Моя цена</span>
+						</div>
+						<div class="header__search__drop__table__header__cell">
+							<span>Количество</span>
+						</div>
+					</div>
+					<div class="header__search__drop__table__body">
+						<% for( let index = 0; index < 5; index++ ) { %>
+						<div class="header__search__drop__table__row">
+							<div class="header__search__drop__table__img">
+								<img src="/src/assets/static/img/5.webp" alt="">
+							</div>
+							<a href="" class="header__search__drop__table__name">
+								<b>Видео</b>камера Optimus IP-E014.0(2.8-12)P_V.1
+							</a>
+							<div class="header__search__drop__table__price header__search__drop__table__price--1">
+								<span>8 500 688 ₽</span>
+							</div>
+							<div class="header__search__drop__table__price header__search__drop__table__price--2">
+								<span>8 500 000 ₽</span>
+							</div>
+							<div class="header__search__drop__table__count">
+								<div class="quantity">
+									<div class="quantity__button quantity__button--subtract"> </div>
+									<input type="number" class="quantity__input" min="0" max="10" value="0">
+									<div class="quantity__button quantity__button--add"> </div>
+								</div>
+							</div>
+						</div>
+						<% } %>
+					</div>
+				</div>
+			</div>
+			<div class="kp-add__button">
+				<span>Добавить товар</span>
+			</div>
+		</div>
+	</div>
+</div>

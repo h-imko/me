@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="lk">
+					<div class="lk__container">
+						<div class="lk__grid">
+							<div class="lk__grid__left">
+								<%- include('/lk__nav') %>
+								<a href="" class="lk__connect-button">
+									<span>Подключиться к ЭДО</span>
+								</a>
+							</div>
+							<div class="lk__grid__right">
+								<div class="lk__content">
+									<div class="lk-contacts">
+										<div class="lk__content__title">
+											<span>Контактные лица</span>
+										</div>
+										<div class="lk-contacts__button" data-popup-target="popup__add_contact" data-popup-control="open" data-button-beautiful>
+											<span>Создать контактное лицо</span>
+										</div>
+										<div class="lk-contacts__title">
+											<span>Список контактных лиц</span>
+										</div>
+										<div class="lk-contacts__filter">
+											<label class="custom-input">
+												<select name="" id="" required>
+													<option value="biba">Общество с ограниченной ответственностью «Весна»</option>
+													<option value="boba">boba</option>
+												</select>
+												<div class="custom-input__label">
+													<span>Выбор организации</span>
+												</div>
+											</label>
+										</div>
+										<div class="lk-contacts__table">
+											<div class="lk-contacts__table__thead">
+												<div class="lk-contacts__table__tr">
+													<div class="lk-contacts__table__th">
+														<span>ФИО</span>
+													</div>
+													<div class="lk-contacts__table__th">
+														<span>Телефон</span>
+													</div>
+													<div class="lk-contacts__table__th">
+														<span>Почта</span>
+													</div>
+													<div class="lk-contacts__table__th">
+														<span>Должность</span>
+													</div>
+													<div class="lk-contacts__table__th">
+														<span>Админ</span>
+													</div>
+													<div class="lk-contacts__table__th">
+														<!-- затычка -->
+													</div>
+												</div>
+											</div>
+											<div class="lk-contacts__table__tbody">
+												<div class="lk-contacts__table__tr">
+													<div class="lk-contacts__table__td lk-contacts__table__td--person">
+														<div class="lk-contacts__table__person">
+															<div class="lk-contacts__table__person__photo">
+																<img src="/src/assets/static/img/kitten.webp" alt="">
+															</div>
+															<div class="lk-contacts__table__person__name">
+																<span>Константин Константинович Константинопольский</span>
+															</div>
+														</div>
+													</div>
+													<div class="lk-contacts__table__td lk-contacts__table__td--tel">
+														<div class="lk-contacts__table__tel">
+															<span>+7 (920) 455-44-55</span>
+														</div>
+													</div>
+													<div class="lk-contacts__table__td lk-contacts__table__td--email">
+														<div class="lk-contacts__table__email">
+															<span>biba@gmail.com</span>
+														</div>
+													</div>
+													<div class="lk-contacts__table__td lk-contacts__table__td--post">
+														<div class="lk-contacts__table__post">
+															<span>Закупщик</span>
+														</div>
+													</div>
+													<div class="lk-contacts__table__td lk-contacts__table__td--check">
+														<div class="lk-contacts__table__check"></div>
+													</div>
+													<div class="lk-contacts__table__td lk-contacts__table__td--edit">
+														<div class="lk-contacts__table__edit">
+															<span>Изменить</span>
+														</div>
+													</div>
+												</div>
+												<div class="lk-contacts__table__tr">
+													<div class="lk-contacts__table__td lk-contacts__table__td--person">
+														<div class="lk-contacts__table__person">
+															<div class="lk-contacts__table__person__photo">
+																<img src="/src/assets/static/img/kitten.webp" alt="">
+															</div>
+															<div class="lk-contacts__table__person__name">
+																<span>Biba</span>
+															</div>
+														</div>
+													</div>
+													<div class="lk-contacts__table__td lk-contacts__table__td--tel">
+														<div class="lk-contacts__table__tel">
+															<span>+7 (920) 455-44-55</span>
+														</div>
+													</div>
+													<div class="lk-contacts__table__td lk-contacts__table__td--email">
+														<div class="lk-contacts__table__email">
+															<span>konstantinopolskiasdasdasdasdasdasdykonstantinopolskiasdasdasdasdasdasdy@gmail.com</span>
+														</div>
+													</div>
+													<div class="lk-contacts__table__td lk-contacts__table__td--post">
+														<div class="lk-contacts__table__post">
+															<span>Какая то очень длинная должность</span>
+														</div>
+													</div>
+													<div class="lk-contacts__table__td lk-contacts__table__td--check">
+													</div>
+													<div class="lk-contacts__table__td lk-contacts__table__td--edit">
+														<div class="lk-contacts__table__edit">
+															<span>Изменить</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__add_contact') %>
+		<%- include('/popup__add_contact_success') %>
+	</body>
+
+</html>

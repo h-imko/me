@@ -1,0 +1,44 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	--item-size: 34px;
+
+	&__arrow {
+		width: var(--item-size);
+		height: var(--item-size);
+		border-radius: 50%;
+		border: 1px solid $grey-border1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&::before {
+			content: '';
+			@extend .icon, .icon--arrow-right2;
+			--size: 10px;
+		}
+
+		&:first-child {
+			&::before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__page {
+		width: var(--item-size);
+		height: var(--item-size);
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all var(--transition-duration) ease;
+
+		&.is-active,
+		&:hover {
+			color: $white;
+			background-color: $asphalt;
+		}
+	}
+}

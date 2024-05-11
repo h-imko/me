@@ -1,0 +1,68 @@
+.default-warehouse {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	@media (max-width: $mobile) {
+		gap: 15px;
+	}
+
+	&__info {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 25px;
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			@include d1;
+			color: $grey-text;
+			--size: 18px;
+			--color: #{$asphalt};
+
+			@media (max-width: $mobile) {
+				@include m1;
+			}
+
+			b {
+				color: $black;
+				@include d4;
+
+				@media (max-width: $mobile) {
+					@include m4;
+				}
+			}
+		}
+
+		&__block {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		&__button {
+			@include button(true, false, "blue", false);
+		}
+	}
+
+	&__map {
+		height: 348px;
+		border-radius: 10px;
+		mask-image: radial-gradient(#000, #000);
+		overflow: hidden;
+		max-height: 75vh;
+
+		iframe {
+			height: 100% !important;
+			width: 100% !important;
+			border-radius: inherit;
+		}
+	}
+}

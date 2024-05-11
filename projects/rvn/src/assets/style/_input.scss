@@ -1,0 +1,216 @@
+.custom-input {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 7px;
+	$parent: &;
+	--padding-x: 12px;
+	position: relative;
+	--height: 50px;
+	@include d1;
+
+	@media (max-width: $mobile) {
+		@include m1;
+		--padding-x: 16px;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		--size: 18px;
+		right: 17px;
+		display: flex;
+
+		@media (max-width: $mobile) {
+			--size: 16px;
+			right: 16px;
+		}
+	}
+
+	&__label {
+		display: flex;
+		order: 1;
+		color: $grey-text;
+		transition: all var(--transition-duration) ease;
+		white-space: nowrap;
+		pointer-events: none;
+
+		span {
+			// width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		select ~ & {
+			@include d10;
+
+			@media (max-width: $mobile) {
+				@include m10;
+			}
+		}
+
+		select.is-required ~ &,
+		input.is-required ~ &,
+		select:required ~ &,
+		input:required ~ & {
+			&::after {
+				display: block;
+				content: '*';
+				transform: translateY(-10%);
+				color: $red;
+			}
+		}
+
+		:is(input, textarea) ~ & {
+			@include d1;
+			position: absolute;
+			left: 0;
+			right: 0;
+			padding-left: var(--padding-x);
+			padding-right: var(--padding-r, var(--padding-x));
+			display: flex;
+			align-items: center;
+			cursor: text;
+			top: 0;
+		}
+
+		:is(input, textarea):not(:is(:focus, :not(:placeholder-shown))) ~ & {
+			line-height: var(--height);
+		}
+
+		:is(input, textarea):is(:focus, :not(:placeholder-shown), :hover) ~ & {
+			@include d10;
+			top: 5px;
+		}
+
+		sup {
+			color: $red;
+			position: absolute;
+			transform: translateY(-10%);
+		}
+	}
+
+	%base {
+		order: 2;
+		outline: none;
+		transition: all var(--transition-duration) ease;
+		height: var(--height);
+		width: 100%;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		padding-left: var(--padding-x);
+		padding-right: var(--padding-r, var(--padding-x));
+		border: 1px solid $grey-border1;
+		border-radius: 5px;
+		@include d1;
+		appearance: none;
+		resize: none;
+		background-color: $white;
+
+		@media (max-width: $mobile) {
+			@include m1;
+		}
+
+		&::placeholder {
+			color: $grey-text;
+		}
+
+		&:disabled {
+			~ #{$parent}__label {}
+		}
+
+		&:not(:disabled) {
+
+			&:hover,
+			&:focus {
+				border: 1px solid $grey-text;
+			}
+
+			&:focus {}
+		}
+	}
+
+	select {
+		@extend %base;
+		--bgsize: 11px;
+		background-image: url(/src/assets/static/img/icon/stack.svg#arrow-down);
+		background-size: var(--bgsize);
+		background-color: $white;
+		background-position: center right 20px;
+		background-repeat: no-repeat;
+		padding-right: 32px;
+		text-overflow: ellipsis;
+
+		&:invalid {
+			color: $grey-text;
+		}
+
+		option {
+			color: $black
+		}
+	}
+
+	textarea {
+		height: 130px;
+
+		@media (max-width: $mobile) {
+			height: 112px;
+		}
+	}
+
+	input,
+	textarea {
+		@extend %base;
+
+		&[type=search] {
+			--padding-r: 40px;
+
+			@media (max-width: $mobile) {
+				--padding-r: 37px;
+			}
+
+			& ~ * {
+				--padding-r: 40px;
+
+				@media (max-width: $mobile) {
+					--padding-r: 37px;
+				}
+			}
+		}
+
+		&::placeholder {}
+
+		&:is(:focus, :not(:placeholder-shown)) {
+			padding-top: 23px;
+		}
+
+		&:not(:disabled) {
+			&:not(:focus):not(:hover):not(:placeholder-shown) {
+				&:valid {
+					~ #{$parent}__label {}
+				}
+
+				&:invalid {
+					border: 1px solid $red;
+
+					~ #{$parent}__label {}
+				}
+			}
+		}
+	}
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+	appearance: textfield;
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+}

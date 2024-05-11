@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="cart">
+					<div class="cart__container">
+						<div class="cart__title">
+							<span>Корзина</span>
+						</div>
+						<div class="cart__header">
+							<div class="cart__notification">
+								<p>
+									<b>Обратите внимание! </b>
+								</p>
+								<p>Корзина разбита на две части. Товары из раздела <b>«в наличии» можно оплатить сразу.</b> А товары из раздела <b>«предзаказ» оплачивается после созвона с менеджером</b>, который уточнит детали заказа.
+								</p>
+							</div>
+							<div class="cart__header__button" data-button-beautiful>
+								<span>Сформировать КП</span>
+							</div>
+						</div>
+						<div class="cart__filter">
+							<div class="cart__filter__tabs">
+								<div class="cart__filter__tabs__item is-active">
+									<span>В наличии</span>
+								</div>
+								<div class="cart__filter__tabs__item">
+									<span>Предзаказ</span>
+								</div>
+							</div>
+						</div>
+						<div class="cart__tip">
+							<span>К сожалению, этих товаров сейчас нет в наличии. Но вы можете отправить заявку менеджеру, и он закажет товар у поставщика или поможет подобрать замену.</span>
+						</div>
+						<div class="cart__clean">
+							<span>Очистить все</span>
+						</div>
+						<div class="cart__inner">
+							<div class="catalog__table-wrapper">
+								<div class="catalog__table catalog__table--1">
+									<div class="catalog__table__thead">
+										<div class="catalog__table__tr">
+											<div class="catalog__table__th">
+												<span>№</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Фото</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Артикул</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Название</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Розничная цена</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Моя цена</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Количество</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>сумма</span>
+											</div>
+											<div class="catalog__table__th">
+												<span>Наличие</span>
+											</div>
+											<div class="catalog__table__th"> </div>
+										</div>
+									</div>
+									<div class="catalog__table__tbody">
+										<% for( let index = 0; index < 10; index++ ) { %>
+										<%- include('/catalog__table__tr',{
+												labelColor: index % 2 ? "light" : "dark",
+												labelText: index % 2 ? "Акция" : "20%",
+												type: 1,
+												hidePreorder: true,
+												value: 1
+											}) %>
+										<% } %>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cart__footer">
+							<div class="cart__footer__buttons">
+								<div class="cart__footer__button cart__footer__button--filled" data-button-beautiful data-popup-selfcloser data-popup-control="open" data-popup-target="popup__cart_request_success">
+									<span>Отправить заявку менеджеру</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__cart_request_success') %>
+	</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<form class="order">
+					<!-- полностью автоматическая валидация на стандартных атрибутах, всем обязательным полям можно дать class="is-required", pattern и т.п. -->
+					<div class="order__container">
+						<div class="order__title">
+							<span>Оформление заказа</span>
+						</div>
+						<div class="order__grid">
+							<div class="order__grid__column">
+								<div class="order__block">
+									<div class="order__block__title">
+										<span> Реквизиты организации</span>
+									</div>
+									<div class="order__company">
+										<div class="order__company__title">
+											<span>О компании</span>
+										</div>
+										<label class="custom-input">
+											<select name="" id="" class="is-required">
+												<option value="" disabled hidden selected>Укажите тип</option>
+												<option value="biba">biba</option>
+												<option value="boba">boba</option>
+											</select>
+											<div class="custom-input__label">
+												<span>Выбор организации</span>
+											</div>
+										</label>
+										<div class="order__company__data">
+											<div class="order__company__data__item">
+												<p>Наименование организации</p>
+												<p>Общество с ограниченной ответственностью «Весна»</p>
+											</div>
+											<div class="order__company__data__item">
+												<p>Юридический адрес</p>
+												<p>г. Воронеж, ул. Петровская, д. 1, оф. 2</p>
+											</div>
+											<div class="order__company__data__item">
+												<p>Почтовый адрес</p>
+												<p>г. Воронеж, ул. Петровская, д. 1, оф. 2</p>
+											</div>
+											<div class="order__company__data__item">
+												<p>ИНН</p>
+												<p>7712345678</p>
+											</div>
+											<div class="order__company__data__item">
+												<p>КПП</p>
+												<p>465465465454</p>
+											</div>
+											<div class="order__company__data__item">
+												<p>Расчетный счет</p>
+												<p>40702810123450101230</p>
+											</div>
+											<div class="order__company__data__item">
+												<p>БИК</p>
+												<p>044521234</p>
+											</div>
+											<div class="order__company__data__item">
+												<p>Наименование банка</p>
+												<p>Московский банк ПАО Сбербанк г. Москва</p>
+											</div>
+										</div>
+									</div>
+									<div class="order__block__divider"> </div>
+									<div class="order__contact">
+										<div class="order__contact__title">
+											<span>Контактное лицо</span>
+										</div>
+										<label class="custom-input">
+											<select name="" id="" class="is-required">
+												<option value="" disabled hidden selected>Укажите тип</option>
+												<option value="biba">biba</option>
+												<option value="boba">boba</option>
+											</select>
+											<div class="custom-input__label">
+												<span>Выбор контактного лица</span>
+											</div>
+										</label>
+										<div class="order__contact__data">
+											<p>Иванов Иван Иванович </p>
+											<p>+7 (920) 455-44-55</p>
+											<p>ivanov@gmail.com</p>
+											<p>закупщик</p>
+										</div>
+									</div>
+								</div>
+								<div class="order__block">
+									<div class="order__block__title">
+										<span> Способ доставки</span>
+									</div>
+									<div class="order__tabs">
+										<div class="order__tabs__item is-active">
+											<span>Доставка</span>
+										</div>
+										<div class="order__tabs__item">
+											<span>Самовывоз</span>
+										</div>
+									</div>
+									<%- include('/order__delivery-form') %>
+									<!-- <%- include('/order__pickup-radios') %> -->
+								</div>
+								<div class="order__block">
+									<div class="order__block__title">
+										<span> Бонусы</span>
+									</div>
+									<div class="order__bonus">
+										<p>
+											<span>Использовать бонусы для оплаты, доступно <b>1000</b> бонусов</span>
+											<span>Оплачивайте до 50% от стоимости покупки</span>
+										</p>
+										<div class="order__bonus__inputgroup">
+											<label class="custom-input">
+												<input type="number" name="" id="" placeholder=" ">
+												<div class="custom-input__label">Количество бонусов</div>
+											</label>
+											<!-- кнопка опциональная, Настя ожидала что пересчет по нажатию будет проще и поэтому отрисовала -->
+											<div class="order__bonus__button">Подтвердить</div>
+											<input type="range" min="0" max="1000" value="0" step="1" name="" id="">
+										</div>
+									</div>
+								</div>
+								<div class="order__block">
+									<div class="order__block__title">
+										<span> Способ оплаты</span>
+									</div>
+									<div class="order__payment-radios">
+										<label class="order__payment-radios__item">
+											<input type="radio" name="balabas" id="" class="order__payment-radios__item__controller">
+											<div class="order__payment-radios__item__visual">
+												<div class="order__payment-radios__item__visual__decorator"></div>
+												<div class="order__payment-radios__item__visual__title">
+													<!-- <div class="icon icon--card"></div> -->
+													<img src="/src/assets/static/img/kitten.webp" alt="">
+													<span>Картой онлайн</span>
+												</div>
+												<div class="order__payment-radios__item__visual__extra">
+													<span>Картами Visa, MasterCard, Мир</span>
+												</div>
+											</div>
+										</label>
+										<label class="order__payment-radios__item">
+											<input type="radio" name="balabas" id="" class="order__payment-radios__item__controller">
+											<div class="order__payment-radios__item__visual">
+												<div class="order__payment-radios__item__visual__decorator"></div>
+												<div class="order__payment-radios__item__visual__title">
+													<div class="icon icon--clipboard-tick"></div>
+													<span>По реквизитам в счете</span>
+												</div>
+											</div>
+										</label>
+										<label class="order__payment-radios__item">
+											<input type="radio" name="balabas" id="" class="order__payment-radios__item__controller">
+											<div class="order__payment-radios__item__visual">
+												<div class="order__payment-radios__item__visual__decorator"></div>
+												<div class="order__payment-radios__item__visual__title">
+													<div class="icon icon--wallet-money"></div>
+													<span>Наличными при получении</span>
+												</div>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="order__grid__column">
+								<div class="order__summary">
+									<div class="order__summary__row">
+										<p>
+											<span>Товаров на сумму:</span>
+										</p>
+										<p>
+											<span>500 000 <span class="font--ruble">₽</span></span>
+										</p>
+									</div>
+									<div class="order__summary__row">
+										<p>
+											<span>Персональная скидка:</span>
+										</p>
+										<p>
+											<span>- 100 000 <span class="font--ruble">₽</span></span>
+										</p>
+									</div>
+									<div class="order__summary__row">
+										<p>
+											<span>Списано бонусов:</span>
+										</p>
+										<p>
+											<span>- 1 000</span>
+										</p>
+									</div>
+									<div class="order__summary__total">
+										<p>
+											<span>Итого:</span>
+										</p>
+										<p>
+											<span>400 000 <span class="font--ruble">₽</span></span>
+											<span>+ 6 000 бонусов</span>
+										</p>
+									</div>
+									<button type="submit" class="order__summary__button order__summary__button--filled" data-popup-selfcloser data-popup-control="open" data-popup-target="popup__order_invoice" data-button-beautiful>
+										<span>Оформить заказ</span>
+									</button>
+									<button type="submit" class="order__summary__button order__summary__button--outlined">
+										<span>Зарезервировать до 04.04.23</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__order_invoice') %>
+	</body>
+
+</html>

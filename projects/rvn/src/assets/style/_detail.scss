@@ -1,0 +1,463 @@
+@use "./container";
+
+.detail {
+	&__container {
+		@extend .container;
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 55px 30px;
+
+		@media (max-width: $mobile) {
+			gap: 0;
+		}
+	}
+
+	&__view {
+		grid-column: 1 / 7;
+		position: relative;
+		border-radius: 5px;
+		border: 1px solid $grey-border1;
+		background: #fff;
+		--padding: 15px;
+
+		@media (max-width: $mobile) {
+			grid-column: 1 / -1;
+		}
+	}
+
+	&__img {
+		&__slide {
+			aspect-ratio: 13 / 10;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				width: 450px;
+				height: 450px;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		.splide {
+			&__pagination {
+				gap: 8px;
+				bottom: 10px;
+				position: absolute;
+				left: 0;
+				width: 100%;
+				justify-content: center;
+
+				&__page {
+					cursor: pointer;
+					background-color: $grey-border1;
+					border: none;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					outline: none;
+
+					&.is-active {
+						background-color: $black;
+					}
+				}
+			}
+		}
+	}
+
+	&__thumbs {
+		position: absolute;
+		bottom: var(--padding);
+		left: var(--padding);
+		right: var(--padding);
+
+		@media (max-width: $mobile) {
+			display: none;
+		}
+
+		&__slide {
+			width: 110px;
+			height: 85px;
+			border-radius: 3px;
+			border: 1px solid $grey-border1;
+			background: #fff;
+			display: flex;
+			align-items: center;
+			transition: all ease var(--transition-duration);
+			justify-content: center;
+			cursor: pointer;
+
+			img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		.splide__slide.is-active &__slide,
+		&__slide:hover {
+			border: 1px solid $blue;
+		}
+	}
+
+	&__label {
+		&s {
+			position: absolute;
+			top: var(--padding);
+			left: var(--padding);
+			right: var(--padding);
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px;
+		}
+
+		display: flex;
+		flex-shrink: 0;
+		@include d1;
+		padding: 0 4px;
+		border-radius: 3px;
+
+		@media (max-width: $mobile) {
+			@include m1;
+		}
+
+		&--dark {
+			color: $black;
+			background-color: $light-grey-bg;
+		}
+
+		&--light {
+			color: $black;
+			border: 1px solid $black;
+			background-color: transparent;
+		}
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		gap: 35px;
+		grid-column: 7 / -1;
+
+		@media (max-width: $mobile) {
+			grid-column: 1 / -1;
+			margin-top: 20px;
+		}
+
+		&__block {
+			display: flex;
+			gap: 15px 30px;
+			flex-wrap: wrap;
+
+			@media (max-width: $mobile) {
+				gap: 20px 15px;
+			}
+
+			br {
+				@media (max-width: $mobile) {
+					display: none;
+				}
+			}
+		}
+
+		.quantity {
+			&__input {
+				height: 50px;
+				width: 101px;
+				@include d6;
+
+				@media (max-width: $mobile) {
+					width: 51px;
+					height: 26px;
+					@include m1;
+				}
+			}
+		}
+	}
+
+	&__name {
+		width: 100%;
+		@include d-h3;
+
+		@media (max-width: $mobile) {
+			@include m-h3;
+		}
+	}
+
+	&__article {
+		display: flex;
+		gap: 10px;
+		@include d1;
+
+		@media (max-width: $mobile) {
+			@include m1;
+		}
+
+		> :first-child {
+			color: $grey-text;
+		}
+	}
+
+	&__price {
+		display: grid;
+		grid-auto-columns: auto;
+		align-items: center;
+		gap: 0 10px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr auto;
+			width: 100%;
+		}
+
+		&__title {
+			grid-column: 1;
+			color: $grey-text;
+			@include d1;
+			margin-bottom: 8px;
+
+			@media (max-width: $mobile) {
+				@include m1;
+				margin-bottom: 0;
+			}
+		}
+
+		&__current {
+			grid-column: 1;
+			@include d11;
+
+			@media (max-width: $mobile) {
+				@include m11;
+				grid-column: 2;
+				text-align: right;
+			}
+		}
+
+		&__old {
+			grid-column: 1;
+			margin-top: 3px;
+			color: $grey-text;
+			@include d6;
+			text-decoration: line-through;
+
+			@media (max-width: $mobile) {
+				@include m6;
+				grid-column: 2;
+				text-align: right;
+			}
+		}
+
+		&__bonus {
+			grid-column: 2;
+			grid-row: 2;
+			@include d4;
+
+			@media (max-width: $mobile) {
+				@include m4;
+				grid-row: 3;
+				text-align: right;
+				margin-top: 3px;
+			}
+		}
+	}
+
+	&__availability {
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+		@include d1;
+
+		@media (max-width: $mobile) {
+			@include m1;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0px 8px;
+		}
+
+		&__title {
+			color: $grey-text;
+
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+
+		&__item {
+			@media (max-width: $mobile) {
+				border-radius: 5px;
+				border: 1px solid $grey-border1;
+				background: #fff;
+				padding: 10px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			span {
+				&:nth-child(1) {
+					@media (max-width: $mobile) {
+						color: $grey-text;
+					}
+				}
+			}
+		}
+	}
+
+	&__buy {
+		@include button(true, false, "blue", true);
+		height: 50px;
+
+		@media (max-width: $mobile) {
+			width: fit-content;
+			margin-left: auto;
+		}
+
+		&::after {
+			content: '';
+			@extend .icon, .icon--shopping-cart;
+			--size: 24px;
+			--color: #fff;
+		}
+	}
+
+	&__info {
+		grid-column: 1 / -1;
+
+		@media (max-width: $mobile) {
+			margin-top: 55px;
+		}
+
+		&__controls {
+			border-radius: 10px;
+			background: $light-grey-bg;
+			display: flex;
+			gap: 10px;
+			padding: 0 5px;
+			margin-bottom: 38px;
+			overflow: hidden;
+		}
+
+		&__control {
+			cursor: pointer;
+
+			@media (max-width: $mobile) {
+				flex: 1 1 0;
+			}
+
+			&__visual {
+				padding: 15px;
+				@include d1;
+				color: $grey-text;
+				transition: all ease var(--transition-duration);
+				position: relative;
+
+				@media (max-width: $mobile) {
+					text-align: center;
+				}
+
+				&::after {
+					content: '';
+					display: block;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					height: 2px;
+					background-color: $blue;
+					position: absolute;
+					opacity: 0;
+					transition: inherit;
+				}
+			}
+
+			&__controller {
+				position: absolute;
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			&:hover &__visual,
+			&__controller:checked ~ &__visual {
+				color: $blue;
+
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+
+		&__contents {}
+
+		&__content {
+			&__controller {
+				position: absolute;
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			&__controller:not(:checked) ~ &__visual {
+				display: none;
+			}
+		}
+	}
+
+	&__specs {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 0 30px;
+		@include d1;
+
+		@media (max-width: $mobile) {
+			@include m1;
+		}
+
+		&__row {
+			grid-column: 1 / 6;
+			padding-bottom: 10px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			border-bottom: 1px solid $grey-border1;
+			gap: 10px;
+
+			@media (max-width: $mobile) {
+				grid-column: 1 / -1;
+			}
+
+			&:not(:first-child) {
+				padding-top: 10px;
+			}
+		}
+	}
+
+	&__docs {
+		display: flex;
+		flex-direction: column;
+		padding-left: 20px;
+		gap: 15px;
+		width: fit-content;
+
+		&__item {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+
+			&::before,
+			&::after {
+				content: '';
+				@extend .icon;
+				--size: 22px;
+			}
+
+			&::before {
+				@extend .icon--document-text;
+			}
+
+			&::after {
+				@extend .icon--arrow-down-2;
+			}
+		}
+	}
+}

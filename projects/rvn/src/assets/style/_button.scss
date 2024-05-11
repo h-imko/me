@@ -1,0 +1,187 @@
+.button {
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	user-select: none;
+	outline: none;
+	text-align: center;
+	cursor: pointer;
+	height: min-content;
+	transition: all ease .3s;
+
+	@media (min-width: $mobile) {
+		white-space: nowrap;
+	}
+
+	:not(input) {
+		pointer-events: none;
+	}
+
+	&[data-button-beautiful],
+	&--beautiful {
+		&:hover {
+			background-image: radial-gradient(circle 110px at var(--x) var(--y), rgba(#28BDD1, .4), rgba(#28BDD1, 0));
+		}
+
+		// &::before {
+		// 	--size: 0;
+		// 	content: '';
+		// 	position: absolute;
+		// 	left: var(--x);
+		// 	top: var(--y);
+		// 	width: var(--size);
+		// 	height: var(--size);
+		// 	background: radial-gradient(circle closest-side, pink, transparent);
+		// 	transform: translate(-50%, -50%);
+		// 	transition: width 0.2s ease, height 0.2s ease;
+		// }
+		// &:hover::before {
+		// 	--size: 200px;
+		// }
+		// &::after {
+		// 	content: '';
+		// 	width: 100%;
+		// 	height: 100%;
+		// }
+	}
+
+	&--primary:is(&--blue) {
+		// background: red;
+	}
+
+	&--primary {
+		background-color: var(--primary-color);
+		border-color: var(--primary-color);
+		color: var(--secondary-color);
+	}
+
+	&--outline {
+		background-color: transparent;
+		border-color: var(--primary-color);
+		color: var(--primary-color);
+	}
+
+	&--small {
+		padding: 10px 13px;
+		@include d10;
+
+		@media (max-width: $mobile) {
+			@include m10;
+		}
+	}
+
+	&--big {
+		padding: 14.5px 27px;
+		@include d-button;
+
+		@media (max-width: $mobile) {
+			@include m-button;
+		}
+	}
+
+	&--wide {
+		width: 100%;
+
+		@media (max-width: $mobile) {
+			max-width: 287px;
+		}
+	}
+
+	&--fit {
+		width: max-content;
+		max-width: 100%;
+
+		@media (max-width: $mobile) {
+			width: 100%;
+			max-width: 287px;
+		}
+	}
+
+	&--blue {
+		--primary-color: #{$blue};
+		--secondary-color: #{$white};
+
+		&:hover {
+			--primary-color: #{$blue2};
+		}
+
+		&:active {
+			--primary-color: #{$blue3};
+		}
+	}
+
+	&--white {
+		--primary-color: #{$white};
+		--secondary-color: #{$black};
+
+		&:hover {
+			--secondary-color: #{$asphalt};
+		}
+
+		&:active {
+			--secondary-color: #{$asphalt};
+		}
+	}
+
+	&--asphalt {
+		--primary-color: #{$asphalt};
+		--secondary-color:#{$white};
+
+		&:hover {
+			--primary-color: #{$black};
+		}
+
+		&:active {
+			--primary-color: #{$black};
+		}
+	}
+
+	@media (max-width: $mobile) {
+		@include m-button;
+		width: 100%;
+	}
+}
+
+@mixin button($isBig: true, $isWide: false, $color : "blue", $isPrimary: true) {
+	@extend .button;
+
+	@if ($isBig) {
+		@extend .button--big;
+	}
+
+	@else {
+		@extend .button--small;
+	}
+
+	@if ($isWide) {
+		@extend .button--wide;
+	}
+
+	@else {
+		@extend .button--fit;
+	}
+
+	@if ($isPrimary) {
+		@extend .button--primary;
+	}
+
+	@else {
+		@extend .button--outline;
+	}
+
+	@if ($color =="white") {
+		@extend .button--white;
+	}
+
+	@else if ($color =="asphalt") {
+		@extend .button--asphalt;
+	}
+
+	@else {
+		@extend .button--blue;
+	}
+}

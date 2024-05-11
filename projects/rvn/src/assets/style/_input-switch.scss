@@ -1,0 +1,36 @@
+.input-switch {
+	--gap: 3px;
+	--switch-size: 15px;
+	--border-width: 1px;
+	appearance: none;
+	width: calc(var(--gap) * 2 + var(--border-width) * 2 + var(--switch-size) * 2);
+	height: calc(var(--gap) * 2 + var(--border-width) * 2 + var(--switch-size));
+	border: var(--border-width)solid $black;
+	padding: var(--gap);
+	border-radius: 666px;
+	display: flex;
+	transition: all ease var(--transition-duration);
+	cursor: pointer;
+
+	&:checked {
+		&::before {
+			flex: auto;
+		}
+	}
+
+	&::after {
+		content: '';
+		width: var(--switch-size);
+		height: var(--switch-size);
+		border-radius: 50%;
+		background-color: $black;
+		display: block;
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		flex: 0;
+		transition: inherit;
+	}
+}

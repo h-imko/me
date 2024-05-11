@@ -1,0 +1,495 @@
+.order {
+	&__container {
+		@extend %container;
+	}
+
+	&__title {
+		@include d13;
+		margin-bottom: 35px;
+
+		@media (max-width: $mobile) {
+			@include m13;
+			margin-bottom: 25px;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 30px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+
+		&__column {
+			counter-reset: block-index;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			@media (max-width: $mobile) {
+				gap: 30px;
+			}
+		}
+	}
+
+	&__block {
+		padding: 45px 50px;
+		counter-increment: block-index;
+
+		@media (min-width: $mobile) {
+			background-color: $white;
+			border: 1px solid $grey-border1;
+			border-radius: 10px;
+		}
+
+		@media (max-width: $mobile) {
+			padding: 0;
+		}
+
+		.custom-input,
+		.custom-form {
+			max-width: 826px;
+		}
+
+		&__title {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 27px;
+			margin-bottom: 30px;
+
+			@media (max-width: $mobile) {
+				@include m21;
+				margin-bottom: 20px;
+			}
+
+			&::before {
+				content: counter(block-index) ".";
+			}
+		}
+
+		&__divider {
+			margin: 30px 0;
+			height: 1px;
+			background-color: $grey-border1;
+
+			@media (max-width: $mobile) {
+				height: 0;
+				margin: 20px 0;
+			}
+		}
+	}
+
+	&__company {
+		&__title {
+			@include d14;
+			margin-bottom: 22px;
+
+			@media (max-width: $mobile) {
+				@include m14;
+				margin-bottom: 10px;
+			}
+		}
+
+		&__data {
+			padding-top: 20px;
+			padding-left: 16px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			@media (max-width: $mobile) {
+				gap: 15px;
+				padding-left: 0;
+				padding-top: 15px;
+			}
+
+			&__item {
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+
+				p {
+					&:first-child {
+						@include d10;
+						color: $grey-text;
+
+						@media (max-width: $mobile) {
+							@include m19;
+						}
+					}
+
+					&:last-child {
+						@include d1;
+
+						@media (max-width: $mobile) {
+							@include m1;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__contact {
+		&__title {
+			@include d14;
+			margin-bottom: 22px;
+
+			@media (max-width: $mobile) {
+				@include m14;
+				margin-bottom: 10px;
+			}
+		}
+
+		&__data {
+			padding-left: 16px;
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			margin-top: 20px;
+			@include d1;
+
+			@media (max-width: $mobile) {
+				padding-top: 15px;
+				margin-top: 0;
+				padding-left: 0;
+				@include m1;
+			}
+		}
+	}
+
+	&__tabs {
+		@extend .switch-tabs;
+		margin-bottom: 30px;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 15px;
+		}
+
+		&__item {
+			@extend .switch-tabs__item;
+		}
+	}
+
+	&__pickup-radios {
+		@extend .kp__logo-radios;
+		margin-bottom: 26px;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 15px;
+		}
+
+		&__item {
+			@extend .kp__logo-radios__item;
+
+			&__controller {
+				@extend .kp__logo-radios__item__controller;
+			}
+
+			&__info {
+				display: flex;
+				align-items: flex-start;
+				color: $grey-text;
+				gap: 8px;
+				--size: 18px;
+				@include d1;
+
+				@media (max-width: $mobile) {
+					@include m1;
+				}
+			}
+
+			&__visual {
+				@extend .kp__logo-radios__item__visual;
+				gap: 13px 25px !important;
+
+				@media (max-width: $mobile) {
+					gap: 15px !important;
+				}
+
+				&__decorator {
+					@extend .kp__logo-radios__item__visual__decorator;
+				}
+
+				&__title {
+					@include d2;
+					grid-column: 2;
+
+					@media (max-width: $mobile) {
+						@include m2;
+					}
+				}
+
+				&__extra {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 15px;
+					grid-column: 2;
+				}
+			}
+		}
+	}
+
+	&__payment-radios {
+		@extend .kp__logo-radios;
+
+		&__item {
+			@extend .kp__logo-radios__item;
+
+			&__controller {
+				@extend .kp__logo-radios__item__controller;
+			}
+
+			&__visual {
+				@extend .kp__logo-radios__item__visual;
+				grid-template-columns: auto 1fr 1fr !important;
+				align-items: center;
+				gap: 13px 25px !important;
+
+				@media (max-width: $mobile) {
+					gap: 9px 15px !important;
+					grid-template-columns: auto 1fr !important;
+				}
+
+				&__decorator {
+					@extend .kp__logo-radios__item__visual__decorator;
+				}
+
+				&__title {
+					@extend .kp__logo-radios__item__visual__title;
+					display: flex;
+					gap: 11px;
+					align-items: center;
+					--size: 24px;
+
+					img {
+						width: var(--size);
+						height: var(--size);
+						object-fit: contain;
+					}
+				}
+
+				&__extra {
+					@include d1;
+
+					@media (max-width: $mobile) {
+						@include m1;
+						grid-column: 2;
+						color: $grey-text;
+					}
+				}
+			}
+		}
+	}
+
+	&__bonus {
+		p {
+			margin-top: 1px;
+			display: flex;
+			flex-direction: column;
+			@include d1;
+
+			@media (max-width: $mobile) {
+				@include m1;
+			}
+
+			b {
+				@include d-button;
+
+				@media (max-width: $mobile) {
+					@include m-button;
+				}
+			}
+
+			span:nth-child(2) {
+				color: $grey-text;
+			}
+		}
+
+		&__inputgroup {
+			margin-top: 20px;
+			display: grid;
+			grid-template-columns: 1fr auto;
+			gap: 20px 15px;
+			max-width: 574px;
+
+			@media (max-width: $mobile) {
+				grid-template-columns: 1fr;
+				gap: 10px;
+				margin-top: 15px;
+			}
+		}
+
+		&__button {
+			@include button(true, false, "blue", false);
+
+			@media (max-width: $mobile) {
+				order: 1;
+			}
+		}
+
+		input[type=range] {
+			height: 25px;
+			appearance: none;
+			width: 100%;
+			display: block;
+			background-color: transparent;
+
+			&::-webkit-slider-runnable-track {
+				width: 100%;
+				height: 1px;
+				cursor: pointer;
+				background: $grey-border;
+			}
+
+			&::-webkit-slider-thumb {
+				box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.12);
+				border: 1px solid $black;
+				height: 25px;
+				width: 25px;
+				border-radius: 50px;
+				background: #FFFFFF;
+				cursor: pointer;
+				-webkit-appearance: none;
+				margin-top: -12.5px;
+			}
+
+			&::-moz-range-track {
+				width: 100%;
+				height: 1px;
+				cursor: pointer;
+				background: $grey-border;
+				border-radius: 5px;
+			}
+
+			&::-moz-range-thumb {
+				box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.12);
+				border: 1px solid $black;
+				height: 25px;
+				width: 25px;
+				border-radius: 50px;
+				background: #FFFFFF;
+				cursor: pointer;
+			}
+
+			&::-ms-track {
+				width: 100%;
+				height: 1px;
+				cursor: pointer;
+				background: transparent;
+				border-color: transparent;
+				color: transparent;
+			}
+
+			&::-ms-fill-lower {
+				background: $grey-border;
+				border-radius: 10px;
+			}
+
+			&::-ms-fill-upper {
+				background: $grey-border;
+				border-radius: 10px;
+			}
+
+			&::-ms-thumb {
+				margin-top: 1px;
+				box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.12);
+				border: 1px solid $black;
+				height: 25px;
+				width: 25px;
+				border-radius: 50px;
+				background: #FFFFFF;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__summary {
+		display: grid;
+		grid-template-columns: auto auto;
+
+		@media (min-width: $mobile) {
+			padding: 45px 35px;
+			background: $light-grey-bg;
+			border-radius: 10px;
+			position: sticky;
+			top: 40px;
+		}
+
+		p {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			&:nth-child(2) {
+				align-items: flex-end;
+			}
+		}
+
+		&__row {
+			display: contents;
+			@include d12;
+
+			@media (max-width: $mobile) {
+				@include m12;
+			}
+
+			&:nth-child(n + 2) p {
+				margin-top: 10px;
+			}
+		}
+
+		&__total {
+			display: contents;
+			@include d11;
+
+			@media (max-width: $mobile) {
+				@include m9;
+			}
+
+			p {
+				margin-top: 15px;
+
+				span {
+					&:nth-child(n +2) {
+						@include d2;
+						margin-top: 3px;
+
+						@media (max-width: $mobile) {
+							@include m2;
+						}
+					}
+				}
+			}
+		}
+
+		&__button {
+			margin-top: 35px;
+			padding: 16px 27px;
+			grid-column: 1 / -1;
+
+			@media (max-width: $mobile) {
+				margin-top: 25px;
+			}
+
+			& + & {
+				margin-top: 15px;
+
+				@media (max-width: $mobile) {
+					margin-top: 10px;
+				}
+			}
+
+			&--filled {
+				@include button(true, true, "blue", true);
+			}
+
+			&--outlined {
+				@include button(true, true, "blue", false);
+			}
+		}
+	}
+}

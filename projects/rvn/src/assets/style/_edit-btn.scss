@@ -1,0 +1,26 @@
+.edit-btn {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	--size: 16px;
+	@include d10;
+	--color: #{$black};
+	color: var(--color);
+	transition: all ease var(--transition-duration);
+
+	&::before {
+		content: '';
+		@extend .icon, .icon--edit-2;
+	}
+
+	&:hover {
+		--color: #{$blue};
+	}
+
+	span {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+}

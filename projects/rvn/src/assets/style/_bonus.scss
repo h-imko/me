@@ -1,0 +1,57 @@
+.bonus {
+	.lk__content__title {
+		margin-bottom: 30px;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 35px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+
+		&__block {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			@media (max-width: $mobile) {
+				gap: 5px;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		gap: 11px;
+		@include d12;
+
+		@media (max-width: $mobile) {
+			@include m12;
+		}
+
+		b {
+			@include d2;
+
+			@media (max-width: $mobile) {
+				@include m2;
+			}
+		}
+
+		&::before {
+			content: '';
+			@extend .icon, .icon--warning-2;
+		}
+	}
+
+	&__link {
+		@include d8;
+	}
+}

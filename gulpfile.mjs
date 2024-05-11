@@ -46,7 +46,7 @@ function css() {
 			cascade: false,
 			flexbox: false,
 		}))
-		.pipe(replaceSrc())
+		.pipe(replace("/src/", "../../"))
 		.pipe(sourcemaps.write("./"))
 		.pipe(destGulp.dest("./build/assets/style/"))
 		.pipe(bs.stream())

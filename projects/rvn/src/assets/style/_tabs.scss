@@ -1,0 +1,59 @@
+.tabs {
+	input:is(&__controller) {
+		visibility: hidden;
+		position: absolute;
+		pointer-events: none;
+	}
+
+	&__control {
+		&__visual {
+			cursor: pointer;
+			user-select: none;
+
+			&:is(.tabs__controller:checked ~ &) {}
+
+			&:is(.tabs__controller:not(:checked) ~ &) {}
+		}
+	}
+
+	&__content {
+		&__visual {
+			&:is(.tabs__controller:checked ~ &) {}
+
+			&:is(.tabs__controller:not(:checked) ~ &) {
+				display: none;
+			}
+		}
+	}
+}
+
+.switch-tabs {
+	width: max-content;
+	border: 1px solid #E1E1E1;
+	border-radius: 42px;
+	display: flex;
+	padding: 4px;
+
+	@media (max-width: $mobile) {
+		width: 100%;
+	}
+
+	&__item {
+		cursor: pointer;
+		@include d1;
+		padding: 11px 28px;
+		color: $black;
+		border-radius: 666px;
+		text-align: center;
+
+		@media (max-width: $mobile) {
+			flex: 1 1 0;
+			@include m1;
+		}
+
+		&.is-active {
+			color: $white;
+			background-color: $asphalt;
+		}
+	}
+}

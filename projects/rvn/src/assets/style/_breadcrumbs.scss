@@ -1,0 +1,49 @@
+.breadcrumbs {
+	font-size: 0;
+	margin-bottom: 24px;
+
+	@media (max-width: $mobile) {
+		margin-bottom: 10px;
+	}
+
+	&__container {
+		@extend %container;
+	}
+
+	&__inner {
+		display: flex;
+		white-space: nowrap;
+		overflow: auto;
+	}
+
+	&__item {
+		span {
+			@include d1;
+		}
+
+		&:first-child {
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+
+		&:not(:last-child) {
+			span {
+				&::after {
+					content: '';
+					width: 3px;
+					height: 3px;
+					margin: 0 5px;
+					display: inline-block;
+					background-color: $black;
+					vertical-align: middle;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		&:last-child {
+			color: $grey-text-on-white;
+		}
+	}
+}

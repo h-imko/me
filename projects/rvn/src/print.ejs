@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/src/assets/style/print.css" />
+	</head>
+	<% let kp = {
+	clientname: "Биба и Боба",
+	text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis repellendus asperiores itaque totam voluptate aliquid nemo architecto repudiandae eveniet exercitationem.",
+	goods: [
+		{
+			img: "/src/assets/static/img/3.webp",
+			article: "89002281488",
+			name: "Мотоблок",
+			count: "54",
+			summ: "54000",
+			price: "1000"
+		},
+		{
+			img: "/src/assets/static/img/3.webp",
+			article: "89002281488",
+			name: "Мотоблок",
+			count: "54",
+			summ: "54000",
+			price: "1000"
+		},
+		{
+			img: "/src/assets/static/img/3.webp",
+			article: "89002281488",
+			name: "Мотоблок",
+			count: "54",
+			summ: "54000",
+			price: "1000"
+		},
+		{
+			img: "/src/assets/static/img/3.webp",
+			article: "89002281488",
+			name: "Мотоблок",
+			count: "54",
+			summ: "54000",
+			price: "1000"
+		},
+		{
+			img: "/src/assets/static/img/3.webp",
+			article: "89002281488",
+			name: "Мотоблок",
+			count: "54",
+			summ: "54000",
+			price: "1000"
+		},
+		{
+			img: "/src/assets/static/img/3.webp",
+			article: "89002281488",
+			name: "Мотоблок",
+			count: "54",
+			summ: "54000",
+			price: "1000"
+		},
+		{
+			img: "/src/assets/static/img/3.webp",
+			article: "89002281488",
+			name: "Мотоблок",
+			count: "54",
+			summ: "54000",
+			price: "1000"
+		}
+	],
+	summary: {
+		summ: "54000",
+		dicsount: "5400",
+		total: "48600"
+	},
+	extra: [
+		{
+			name: "Доставка",
+			price: "1488"
+		}
+	],
+	total: "50088",
+	requisites: [
+		{
+			name: "Наименование организации",
+			value: "Жмых airlines"
+		},
+		{
+			name: "Юридический адрес",
+			value: "443079. г. Калиновка ул. Ленина д. 148"
+		},
+		{
+			name: "ИНН",
+			value: "1586541237984"
+		},
+		{
+			name: "Банк",
+			value: "ПАО Сбербанк"
+		}
+	],
+	contacts: {
+		img: "/src/assets/static/img/4.webp",
+		name: "Пенисия Детрова",
+		tel: "89002281488",
+		mail: "pd@mail.ru"
+	}
+} %>
+
+	<body>
+		<main>
+			<div class="print">
+				<div class="title">
+					<span>Коммерческое предложение</span>
+				</div>
+				<% if (kp.clientname) { %>
+				<div class="client">
+					<div class="client__title">
+						<span>Клиент:</span>
+					</div>
+					<div class="client__name">
+						<span><%- kp.clientname %></span>
+					</div>
+					<% if (kp.clientlogo) { %>
+					<div class="client__logo">
+						<img src="<%- kp.clientlogo %>" alt="">
+					</div>
+					<% } %>
+				</div>
+				<% } %>
+				<% if (kp.text) { %>
+				<div class="text">
+					<p><%- kp.text %></p>
+				</div>
+				<% } %>
+				<table>
+					<thead>
+						<tr>
+						</tr>
+						<tr>
+							<td>
+								<div class="table__content">
+									<span>№</span>
+								</div>
+							</td>
+							<td>
+								<div class="table__content">
+									<span>Фото</span>
+								</div>
+							</td>
+							<td>
+								<div class="table__content">
+									<span>Артикул</span>
+								</div>
+							</td>
+							<td>
+								<div class="table__content">
+									<span>Название</span>
+								</div>
+							</td>
+							<td>
+								<div class="table__content"><span>Кол-во</span></div>
+							</td>
+							<td>
+								<div class="table__content">
+									<span>Цена</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+						</tr>
+					</thead>
+					<tbody>
+						<% for( let index = 0; index < kp.goods?.length; index++ ) { %>
+						<tr>
+							<td>
+								<div class="table__counter"></div>
+							</td>
+							<td>
+								<div class="table__img">
+									<img src="<%- kp.goods[index].img %>" alt="">
+								</div>
+							</td>
+							<td>
+								<div class="table__article">
+									<% if (kp.goods[index].article) { %>
+									<span><%- kp.goods[index].article %></span>
+									<% } %>
+								</div>
+							</td>
+							<td>
+								<div class="table__name">
+									<span><%- kp.goods[index].name %></span>
+								</div>
+							</td>
+							<td>
+								<div class="table__count">
+									<% if (kp.goods[index].count) { %>
+									<span><%- kp.goods[index].count %> шт.</span>
+									<% } %>
+								</div>
+							</td>
+							<td>
+								<div class="table__price">
+									<% if (kp.goods[index].summ) { %>
+									<span><%- kp.goods[index].summ %> <span class="font--ruble">₽</span></span>
+									<% } %>
+									<% if (kp.goods[index].price) { %>
+									<span><%- kp.goods[index].price %> <span class="font--ruble">₽</span>/шт.</span>
+									<% } %>
+								</div>
+							</td>
+						</tr>
+						<% } %>
+					</tbody>
+				</table>
+				<div class="summary">
+					<div class="summary__main">
+						<div class="summary__row">
+							<div class="summary__key">
+								<span>Сумма:</span>
+							</div>
+							<div class="summary__value">
+								<span><%- kp.summary.summ %> <span class="font--ruble">₽</span></span>
+							</div>
+						</div>
+						<div class="summary__row">
+							<div class="summary__key">
+								<span>Скидка:</span>
+							</div>
+							<% if (kp.summary.dicsount) { %>
+							<div class="summary__value">
+								<span><%- kp.summary.dicsount %> <span class="font--ruble">₽</span></span>
+							</div>
+							<% } %>
+						</div>
+						<div class="summary__row">
+							<div class="summary__key">
+								<span><b>Итого:</b></span>
+							</div>
+							<div class="summary__value">
+								<span><b><%- kp.summary.total %> <span class="font--ruble">₽</span></b></span>
+							</div>
+						</div>
+					</div>
+					<% if (kp.extra.length) { %>
+					<div class="summary__extra">
+						<div class="summary__row">
+							<div class="summary__key">
+								<span><b>Дополнительные услуги:</b></span>
+							</div>
+						</div>
+						<% for( let index = 0; index < kp.extra.length; index++ ) { %>
+						<div class="summary__row">
+							<div class="summary__key">
+								<span><%- kp.extra[index].name %></span>
+							</div>
+							<div class="summary__value">
+								<span><%- kp.extra[index].price %> <span class="font--ruble">₽</span></span>
+							</div>
+						</div>
+						<% } %>
+					</div>
+					<% } %>
+					<% if (kp.total) { %>
+					<div class="summary__footer">
+						<div class="summary__row">
+							<div class="summary__key">
+								<span><b>Итого:</b></span>
+							</div>
+							<div class="summary__value">
+								<span><b><%- kp.total %> <span class="font--ruble">₽</span></b></span>
+							</div>
+						</div>
+					</div>
+					<% } %>
+				</div>
+				<% if (kp.requisites) { %>
+				<div class="requisites">
+					<div class="requisites__title">
+						<span>Наши реквизиты</span>
+					</div>
+					<div class="requisites__list">
+						<% for( let index = 0; index < kp.requisites?.length; index++ ) { %>
+						<div class="requisites__list__row">
+							<% if (kp.requisites[index].name) { %>
+							<span><%- kp.requisites[index].name %></span>
+							<% } %>
+							<% if (kp.requisites[index].value) { %>
+							<span><%- kp.requisites[index].value %></span>
+							<% } %>
+						</div>
+						<% } %>
+					</div>
+				</div>
+				<% } %>
+				<% if (kp.contacts) { %>
+				<div class="contacts">
+					<div class="contacts__title">
+						<span>Контакты</span>
+					</div>
+					<% if (kp.contacts.img) { %>
+					<div class="contacts__img">
+						<img src="<%- kp.contacts.img %>" alt="">
+					</div>
+					<% } %>
+					<% if (kp.contacts.name) { %>
+					<div class="contacts__item">
+						<span><%- kp.contacts.name %></span>
+					</div>
+					<% } %>
+					<% if (kp.contacts.tel) { %>
+					<div class="contacts__item">
+						<img src="/src/assets/static/img/icon/call.svg" alt="">
+						<span><%- kp.contacts.tel %></span>
+					</div>
+					<% } %>
+					<% if (kp.contacts.mail) { %>
+					<div class="contacts__item">
+						<img src="/src/assets/static/img/icon/sms-tracking.svg" alt="">
+						<span><%- kp.contacts.mail %></span>
+					</div>
+					<% } %>
+				</div>
+				<% } %>
+			</div>
+		</main>
+	</body>
+	<iframe name="printframe"></iframe>
+	<script src="/src/assets/script/print.js"></script>
+
+</html>

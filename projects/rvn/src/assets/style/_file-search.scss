@@ -1,0 +1,68 @@
+.file-search {
+	&__container {
+		@extend %container;
+	}
+
+	&__title {
+		@include d13;
+	}
+
+	&__filter {
+		margin-top: 25px;
+		display: flex;
+		flex-direction: column;
+		gap: 35px;
+
+		.custom-input {
+			max-width: 831px;
+		}
+
+		&__tabs {
+			display: flex;
+			gap: 15px;
+			flex-wrap: wrap;
+			cursor: pointer;
+
+			&__item {
+				@include tab;
+
+				&.is-active {
+					@include tab(true)
+				}
+			}
+		}
+	}
+
+	&__inner {
+		margin-top: 30px;
+	}
+
+	&__add {
+		display: flex;
+		gap: 16px;
+		flex-wrap: wrap;
+		margin-top: 32px;
+
+		&__button {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+
+			&--placeholder {
+				grid-column: 1;
+				grid-row: 1;
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			&--actual {
+				grid-column: 1;
+				grid-row: 1;
+
+				.button {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

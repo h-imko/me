@@ -1,0 +1,26 @@
+@mixin tab($isActive : false) {
+	padding: 9px 21px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 666px;
+	@include d1;
+	text-align: center;
+	white-space: nowrap;
+
+	@media (max-width: $mobile) {
+		@include m1;
+		padding: 9px 11px;
+	}
+
+	@if ($isActive) {
+		border-color: $asphalt;
+		background-color: $asphalt;
+		color: $white;
+	}
+
+	@else {
+		border-color: $grey-text;
+		background-color: transparent;
+		color: $grey-text;
+	}
+}

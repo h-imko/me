@@ -1,0 +1,91 @@
+<div class="popup popup--small " data-popup="popup__add_contact">
+	<div class="popup__inner" data-popup-inner>
+		<div class="popup__selfcloser" data-popup-selfcloser></div>
+		<div class="popup__title">
+			<span>Создание контактного лица</span>
+		</div>
+		<form class="custom-form">
+			<div class="custom-form__group">
+				<div class="custom-form__col">
+					<div class="custom-form__row">
+						<div class="custom-form__cell custom-form__cell--centered">
+							<div class="dropzone dropzone--2">
+								<ul class="dropzone__list">
+									<li class="dropzone__list__item dropzone__list__item--placeholder">
+										<input type="file" class="dropzone__input" required>
+										<span> Добавить <br> фото</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>ФИО</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="tel" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Телефон</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="email" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Email</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Должность</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-checkbox">
+								<input type="checkbox">
+								<span>Назначить администратором</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="custom-form__group">
+				<div class="custom-form__col">
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<div class="custom-form__footer">
+								<button type="submit" class="custom-form__button" data-popup-selfcloser data-popup-control="open" data-popup-target="popup__add_contact_success">
+									<span>Создать</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

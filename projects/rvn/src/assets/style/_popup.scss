@@ -1,0 +1,175 @@
+.popup {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: #00000080;
+	overflow: auto;
+	z-index: 666;
+	transition: opacity var(--transition-duration) ease;
+	pointer-events: none;
+	opacity: 0;
+	display: flex;
+
+	@media (min-width: $mobile) {
+		padding-top: 64px;
+		padding-bottom: 64px;
+	}
+
+	.noscroll & {
+		padding-right: calc(var(--scrollbar-width));
+	}
+
+	&--small &__inner {
+		@media (min-width: $mobile) {
+			max-width: 592px;
+			padding: 50px;
+		}
+	}
+
+	&--small {
+		.custom-form {
+			@media (min-width: $mobile) {
+				padding: 0 40px;
+			}
+		}
+
+		.custom-input {
+			textarea {
+				height: 115px;
+			}
+		}
+	}
+
+	&--giant &__inner {
+		max-width: 1502px;
+	}
+
+	&--toast {}
+
+	&--toast &__inner {
+		@media (max-width: $mobile) {
+			margin-top: auto;
+			border-radius: 15px 15px 0 0;
+			padding: 40px 16px 32px 16px;
+		}
+	}
+
+	&--toast &__title {
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+
+	&.is-active {
+		pointer-events: auto;
+		opacity: 1;
+	}
+
+	&__inner {
+		position: relative;
+		background: $page-bg;
+		width: 100%;
+
+		@media (max-width: $mobile) {
+			padding: 40px 16px 32px 16px;
+			overflow: auto;
+		}
+
+		@media (min-width: $mobile) {
+			border-radius: 15px;
+			padding: 50px 60px;
+			max-width: 950px;
+			margin-bottom: auto;
+			margin-top: auto;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		text-align: center;
+
+		@media (min-width: $mobile) {
+			@include d13;
+		}
+
+		@media (max-width: $mobile) {
+			@include m13;
+		}
+
+		&__sub {
+			@include d1;
+			margin-top: 10px;
+		}
+	}
+
+	&__success {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		&__icon {
+			width: 52px;
+			height: 52px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1.3px solid $black;
+			border-radius: 50%;
+			background: $light-grey-bg;
+
+			&::after {
+				content: '';
+				@extend .icon, .icon--check-success;
+			}
+		}
+
+		&__caption {
+			@include d1;
+			text-align: center;
+			margin-top: 15px;
+		}
+
+		&__button {
+			@include button(true, false, "blue", true);
+			margin-top: 35px;
+		}
+	}
+
+	&__selfcloser {
+		position: absolute;
+		top: 26px;
+		right: 26px;
+		@extend .icon, .icon--close;
+		--size: 15px;
+		cursor: pointer;
+
+		@media (max-width: $mobile) {
+			right: 16px;
+			top: 16px;
+		}
+	}
+
+	&__buttongroup {
+		display: flex;
+		gap: 21px;
+		flex-wrap: wrap;
+
+		&__button {
+			&--filled {
+				@include button(true, false, "blue", true);
+			}
+
+			&--outlined {
+				@include button(true, false, "blue", false);
+			}
+		}
+	}
+}
+
+[data-popup-control] {
+	cursor: pointer;
+}

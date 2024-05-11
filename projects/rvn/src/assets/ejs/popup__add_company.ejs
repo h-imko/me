@@ -1,0 +1,223 @@
+<div class="popup" data-popup="popup__add_company">
+	<div class="popup__inner" data-popup-inner>
+		<div class="popup__selfcloser" data-popup-selfcloser></div>
+		<div class="popup__title">
+			<span>Добавление компании</span>
+		</div>
+		<form class="custom-form">
+			<div class="custom-form__group">
+				<div class="custom-form__col">
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<select name="" id="" required>
+									<!-- у опции-плейсхолдера пустой value -->
+									<option value="" disabled hidden selected>Укажите тип</option>
+									<option value="biba">biba</option>
+									<option value="boba">boba</option>
+								</select>
+								<div class="custom-input__label">
+									<span>Тип организации</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Название организации</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Юридический адрес</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Почтовый адрес</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>ИНН</span>
+								</div>
+							</label>
+						</div>
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>КПП</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Расчетный счет</span>
+								</div>
+							</label>
+						</div>
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Наименование банка</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>БИК</span>
+								</div>
+							</label>
+						</div>
+						<div class="custom-form__cell">
+							<!-- пустая ячейка затычка потому что надо чтоб предыдущая была в половину -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="custom-form__group">
+				<div class="custom-form__col">
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<div class="custom-form__title">
+								<span>Карточка организации (необязательно)</span>
+							</div>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<div class="dropzone dropzone--1">
+								<ul class="dropzone__list">
+									<li class="dropzone__list__item dropzone__list__item--placeholder">
+										<input type="file" class="dropzone__input">
+										<span> Прикрепить</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="custom-form__group">
+				<div class="custom-form__col">
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<div class="custom-form__title">
+								<span>Контактное лицо</span>
+							</div>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<div class="dropzone dropzone--2">
+								<ul class="dropzone__list">
+									<li class="dropzone__list__item dropzone__list__item--placeholder">
+										<input type="file" class="dropzone__input" required>
+										<span> Добавить <br> фото</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>ФИО</span>
+								</div>
+							</label>
+						</div>
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="tel" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Телефон</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="email" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Email</span>
+								</div>
+							</label>
+						</div>
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<!-- пустой плейсхолдер обязательно -->
+								<input type="text" required placeholder=" ">
+								<div class="custom-input__label">
+									<span>Должность</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-checkbox">
+								<input type="checkbox">
+								<span>Назначить администратором</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="custom-form__group">
+				<div class="custom-form__col">
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<div class="custom-form__footer">
+								<button type="submit" class="custom-form__button" data-popup-selfcloser data-popup-control="open" data-popup-target="popup__add_company_success">
+									<span>Добавить компанию</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

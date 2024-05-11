@@ -1,0 +1,26 @@
+<% let categories = ["Видеонаблюдение","Системы контроля и управления доступом","Домофоны и переговорные устройства","Охранно-пожарные системы","Оборудование СКС","Кабельная продукция","Сетевое оборудование","Источники питания","Системы оповещения и трансляции","Монтажные и расходные материалы","Инструменты","Жесткие диски и карты памяти","Умный дом" ] %>
+<div class="header__catalog__drop">
+	<label for="header__catalog__controller" class="header__catalog__drop__selfcloser">close</label>
+	<div class="header__catalog__drop__categories">
+		<input type="radio" name="header__catalog__drop__inner__category" id="category-reset" hidden data-synced-inputs="reset">
+		<input type="radio" name="header__catalog__drop__categories__item" hidden data-synced-inputs="reset">
+		<input type="radio" name="header__catalog__drop__inner__group" id="header__catalog__drop__inner__groups-reset" hidden>
+		<a href="" class="header__catalog__drop__categories__title">
+			<span>Каталог</span>
+		</a>
+		<% categories.forEach((category, index) => { %>
+		<%- include('/header__catalog/header__catalog__drop__categories__item',{
+				index: index,
+				title: category
+			}) %>
+		<%	}); %>
+	</div>
+	<div class="header__catalog__drop__inner">
+		<% categories.forEach((category, index) => { %>
+		<%- include('/header__catalog/header__catalog__drop__inner__category',{
+					index: index,
+					category: category
+				}) %>
+		<%	}); %>
+	</div>
+</div>

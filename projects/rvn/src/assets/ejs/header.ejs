@@ -1,0 +1,186 @@
+<header class="header">
+	<div class="header__container">
+		<div class="header__inner">
+			<div class="header__top">
+				<div class="header__group">
+					<div class="header__burger">
+						<input type="checkbox" id="header__menu__controller__double" hidden data-synced-inputs="header__menu__controller">
+						<label for="header__menu__controller" class="header__burger__button"></label>
+					</div>
+					<a href="index.html" class="header__logo">
+						<img src="/src/assets/static/img/logo.svg" alt="">
+					</a>
+					<label for="header__search__controller" class="header__search-opener"></label>
+				</div>
+				<div class="header__group">
+					<a href="" class="header__link">
+						<span>В&nbsp;розничный магазин</span>
+						<div class="icon icon--login"></div>
+					</a>
+				</div>
+				<div class="header__group">
+					<a href="" class="header__link">
+						<span> Мои компании</span>
+					</a>
+					<a href="" class="header__link">
+						<span> Контактные лица</span>
+					</a>
+					<a href="" class="header__link">
+						<span>Заказы </span>
+					</a>
+					<a href="" class="header__link">
+						<span> Коммерческие предложения</span>
+					</a>
+					<a href="" class="header__link">
+						<span>Бухгалтерские документы </span>
+					</a>
+					<a href="" class="header__bonus-btn">
+						<span>Бонусы</span>
+					</a>
+					<a href="" class="header__link">
+						<span>Выход</span>
+						<div class="icon icon--logout"></div>
+					</a>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="header__group">
+					<div class="header__catalog">
+						<input type="checkbox" id="header__catalog__controller" class="header__catalog__controller">
+						<label for="header__catalog__controller" class="header__catalog__btn" data-button-beautiful>
+							<div class="header__catalog__btn__icon"></div>
+							<span>Каталог</span>
+						</label>
+						<%- include('/header__catalog/header__catalog__drop') %>
+					</div>
+					<div class="header__search">
+						<input type="checkbox" id="header__search__controller" class="header__search__controller" hidden>
+						<div class="header__search__inner">
+							<button class="header__search__button"></button>
+							<input class="header__search__field" type="search" placeholder="Введите артикул или название товара">
+							<label for="header__search__controller" class="header__search__selfcloser"></label>
+							<div class="header__search__drop">
+								<div class="header__search__drop__table">
+									<div class="header__search__drop__table__header">
+										<div class="header__search__drop__table__header__cell">
+											<span>РРЦ</span>
+										</div>
+										<div class="header__search__drop__table__header__cell">
+											<span>Моя цена</span>
+										</div>
+										<div class="header__search__drop__table__header__cell">
+											<span>Количество</span>
+										</div>
+									</div>
+									<div class="header__search__drop__table__body">
+										<% for( let index = 0; index < 5; index++ ) { %>
+										<div class="header__search__drop__table__row">
+											<div class="header__search__drop__table__img">
+												<img src="/src/assets/static/img/5.webp" alt="">
+											</div>
+											<a href="" class="header__search__drop__table__name">
+												<b>Видео</b>камера Optimus IP-E014.0(2.8-12)P_V.1
+											</a>
+											<div class="header__search__drop__table__price header__search__drop__table__price--1">
+												<span>8 500 688 ₽</span>
+											</div>
+											<div class="header__search__drop__table__price header__search__drop__table__price--2">
+												<span>8 500 000 ₽</span>
+											</div>
+											<div class="header__search__drop__table__count">
+												<div class="quantity">
+													<div class="quantity__button quantity__button--subtract"> </div>
+													<input type="number" class="quantity__input" min="0" max="10" value="0">
+													<div class="quantity__button quantity__button--add"> </div>
+												</div>
+											</div>
+										</div>
+										<% } %>
+									</div>
+								</div>
+								<div class="header__search__drop__footer">
+									<button class="header__search__drop__all">Все результаты</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__meta">
+						<div class="header__meta__item">
+							<div class="icon icon--building"></div>
+							<span>ИП Константинопольский</span>
+						</div>
+						<div class="header__meta__item header__meta__item--bold">
+							<div class="icon icon--shopping-cart"></div>
+							<span>100 000 <span class="font--ruble">₽</span></span>
+						</div>
+						<!-- <div class="header__meta__item">
+							<div class="icon icon--profile-circle"></div>
+							<span>Романов</span>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__menu">
+		<input type="checkbox" name="" class="header__menu__controller" id="header__menu__controller" hidden data-synced-inputs="header__menu__controller">
+		<div class="header__menu__inner">
+			<div class="header__menu__container">
+				<div class="header__menu__group">
+					<a href="" class="header__menu__item">
+						<div class="icon icon--building"></div>
+						<span>ИП Константинопольский</span>
+					</a>
+					<a href="" class="header__menu__item">
+						<div class="icon icon--profile-circle"></div>
+						<span>Романов</span>
+					</a>
+				</div>
+				<div class="header__menu__group">
+					<a href="" class="header__menu__item">
+						<div class="icon icon--buildings"></div>
+						<span>Мои компании</span>
+					</a>
+					<a href="" class="header__menu__item">
+						<div class="icon icon--people-2"></div>
+						<span>Контактные лица</span>
+					</a>
+					<a href="" class="header__menu__item">
+						<div class="icon icon--box-2"></div>
+						<span>Заказы</span>
+					</a>
+					<a href="" class="header__menu__item">
+						<div class="icon icon--note-2"></div>
+						<span>Коммерческие предложения</span>
+					</a>
+					<a href="" class="header__menu__item">
+						<div class="icon icon--folder-minus"></div>
+						<span>Бухгалтерские документы</span>
+					</a>
+					<a href="" class="header__menu__item">
+						<div class="icon icon--ruble-2"></div>
+						<span>Бонусы</span>
+					</a>
+					<a href="" class="header__menu__item">
+						<div class="icon icon--house-2"></div>
+						<span>Склад по умолчанию</span>
+					</a>
+					<a href="" class="header__menu__item">
+						<div class="icon icon--user-tag-2"></div>
+						<span>Мой менеджер</span>
+					</a>
+				</div>
+				<div class="header__menu__group">
+					<a href="" class="header__menu__item">
+						<span>Выход</span>
+						<div class="icon icon--logout"></div>
+					</a>
+					<a href="" class="header__menu__item">
+						<span>В розничный магазин</span>
+						<div class="icon icon--login"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

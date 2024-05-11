@@ -1,0 +1,190 @@
+.dropzone {
+	width: 100%;
+
+	&--processing {}
+
+	&--dragover {}
+
+	&--empty {}
+
+	&--1 &__list &__list__item:not(&__list__item--placeholder) {
+		@include d-button;
+
+		&:hover {
+			--color: #{$blue};
+		}
+
+		&::after {
+			content: '';
+			@extend .icon, .icon--close;
+			--size: 9px;
+		}
+
+		img {
+			display: none;
+		}
+	}
+
+	&--1 &__list &__list__item {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&--1 .dropzone__list__item--placeholder {
+		@include button(true, false, "asphalt", false);
+	}
+
+	&--1.dropzone--full .dropzone__list__item--placeholder {
+		display: none;
+	}
+
+	&--2 {
+		width: 107px;
+		height: 107px;
+	}
+
+	&--2 &__list {
+		width: 100%;
+		height: 100%;
+	}
+
+	&--2 .dropzone__list__item--placeholder {
+		background-color: $grey-bg;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		@include d1;
+		border-radius: 50%;
+		overflow: hidden;
+
+		input {
+			border-radius: inherit;
+		}
+	}
+
+	&--2 .dropzone__list__item {
+		width: 100%;
+		height: 100%;
+
+		&::before {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 50%;
+		}
+	}
+
+	&--2 .dropzone__list__item:not(.dropzone__list__item--placeholder) {
+		pointer-events: none;
+
+		&::after {
+			pointer-events: auto;
+			content: '';
+			@extend .icon, .icon--close;
+			position: absolute;
+			top: 1px;
+			left: 100%;
+			--size: 9px;
+			--color: #{$black};
+		}
+	}
+
+	&--2 .dropzone__list__item:not(.dropzone__list__item--placeholder) ~ .dropzone__list__item--placeholder {
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		background: transparent;
+		pointer-events: none;
+
+		&::before {
+			height: 41px;
+			content: '';
+			background-color: rgba(0, 0, 0, 0.43);
+			display: block;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			pointer-events: auto;
+		}
+
+		input {
+			top: initial;
+			bottom: 0;
+			height: 41px;
+			pointer-events: auto;
+		}
+
+		span {
+			display: none;
+		}
+
+		&::after {
+			position: absolute;
+			bottom: 0;
+			height: 41px;
+			content: '';
+			@extend .icon, .icon--camera;
+			--color: #{$white};
+		}
+	}
+
+	&--3 {
+		display: flex;
+		flex-direction: column;
+		@extend .dropzone--1;
+		width: max-content;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&--3 .dropzone__list__item {
+		justify-content: center;
+	}
+
+	&__submit {
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		@include button(true, false, "blue", true);
+	}
+
+	&:not(&--full) &__submit {
+		display: none;
+	}
+
+	&__list {
+		list-style: none;
+		position: relative;
+
+		&__item {
+			cursor: pointer;
+			position: relative;
+
+			&[data-file-name] {
+				&::before {
+					content: attr(data-file-name);
+				}
+			}
+		}
+	}
+
+	&__input {
+		display: block;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		cursor: inherit;
+	}
+}

@@ -1,0 +1,39 @@
+<div class="popup popup--small" data-popup="popup__default_warehouse_change">
+	<div class="popup__inner" data-popup-inner>
+		<div class="popup__selfcloser" data-popup-selfcloser></div>
+		<div class="popup__title">
+			<span>Сменить склад по умолчанию</span>
+			<div class="popup__title__sub">Оставьте заявку, и наш менеджер свяжется с вами, чтобы сменить склад.</div>
+		</div>
+		<form class="custom-form">
+			<div class="custom-form__group">
+				<div class="custom-form__col">
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<textarea placeholder=" "></textarea>
+								<div class="custom-input__label">
+									<span>Комментарий </span>
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="custom-form__group">
+				<div class="custom-form__col">
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<div class="custom-form__footer">
+								<!-- затычка -->
+								<button type="submit" onclick="event.preventDefault()" class="custom-form__button" data-popup-selfcloser data-popup-control="open" data-popup-target="popup__default_warehouse_change_success">
+									<span>Отправить заявку</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

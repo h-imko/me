@@ -1,0 +1,47 @@
+.quantity {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	position: relative;
+
+	&__input {
+		width: 52px;
+		height: 26px;
+		border: 1px solid $grey-border1;
+		border-radius: 5px;
+		text-align: center;
+		@include d1;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		width: var(--size);
+		height: var(--size);
+		--size: 13px;
+
+		&::before {
+			content: '';
+			width: var(--size);
+			height: 1px;
+			background-color: #444;
+			display: block;
+			position: absolute;
+		}
+
+		&--add {
+			&::after {
+				position: absolute;
+				content: '';
+				width: var(--size);
+				height: 1px;
+				background-color: #444;
+				display: block;
+				transform: rotate(90deg);
+			}
+		}
+
+		&--subtract {}
+	}
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="kp">
+					<div class="kp__container">
+						<div class="kp__title">
+							<span>Готовое КП за 4 простых шага</span>
+						</div>
+						<%- include('/kp__steps') %>
+						<div class="kp__step">
+							<span>
+								<b>Шаг 2.</b>Добавьте услуги, которые вы хотите предложить клиенту, если такие имеются.
+							</span>
+						</div>
+						<div class="kp__inner">
+							<div class="kp__services">
+								<div class="kp__services__item">
+									<div class="kp__services__item__name">
+										<span>Доставка</span>
+									</div>
+									<div class="kp__services__item__price">
+										<span>1 000 <span class="font--ruble">₽</span></span>
+									</div>
+									<div class="kp__services__item__remove"></div>
+									<div class="kp__services__item__edit"></div>
+								</div>
+								<div class="kp__services__item">
+									<div class="kp__services__item__name">
+										<span>Монтаж</span>
+									</div>
+									<div class="kp__services__item__price">
+										<span>2 000 <span class="font--ruble">₽</span></span>
+									</div>
+									<div class="kp__services__item__remove"></div>
+									<div class="kp__services__item__edit"></div>
+								</div>
+								<div class="kp__services__add">
+									<div class="kp__services__add__group">
+										<label class="custom-input">
+											<input type="text" placeholder=" ">
+											<div class="custom-input__label">
+												<span>Название услуги </span>
+											</div>
+										</label>
+									</div>
+									<div class="kp__services__add__group">
+										<label class="custom-input">
+											<input type="number" placeholder=" ">
+											<div class="custom-input__label">
+												<span>Цена </span>
+											</div>
+										</label>
+										<span><span class="font--ruble">₽</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="kp__table-add">
+								<div class="kp__table-add__plus"></div>
+								<span>Добавить еще услугу</span>
+							</div>
+						</div>
+						<div class="kp__footer">
+							<div class="kp__footer__buttons">
+								<div class="kp__footer__button kp__footer__button--back">
+									<div class="icon icon--arrow-left"></div>
+									<span>Назад</span>
+								</div>
+								<div class="kp__footer__button kp__footer__button--outlined">
+									<span>Пропустить</span>
+								</div>
+								<div class="kp__footer__button kp__footer__button--filled" data-button-beautiful>
+									<span>Далее</span>
+									<div class="icon icon--arrow-right"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+	</body>
+
+</html>

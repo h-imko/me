@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="lk">
+					<div class="lk__container">
+						<div class="lk__grid">
+							<div class="lk__grid__left">
+								<%- include('/lk__nav') %>
+								<a href="" class="lk__connect-button">
+									<span>Подключиться к ЭДО</span>
+								</a>
+							</div>
+							<div class="lk__grid__right">
+								<div class="lk__content">
+									<div class="my-company">
+										<div class="lk__content__title">
+											<span>Мои компании</span>
+										</div>
+										<%- include('/my-company__list') %>
+										<div class="my-company__button" data-popup-target="popup__add_company" data-popup-control="open" data-button-beautiful>
+											<span>Добавить компанию</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__add_company') %>
+		<%- include('/popup__add_company_success') %>
+	</body>
+
+</html>

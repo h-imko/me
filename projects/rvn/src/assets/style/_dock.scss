@@ -1,0 +1,38 @@
+.dock {
+	position: sticky;
+	bottom: 0;
+	left: 0;
+	background-color: $white;
+	padding: 10px 0;
+	border-top: 1px solid $grey-border1;
+
+	@media (min-width: $mobile) {
+		display: none;
+	}
+
+	&__container {
+		@extend %container;
+	}
+
+	&__inner {
+		display: flex;
+		gap: 10px;
+		justify-content: center;
+	}
+
+	&__item {
+		flex: 0 0 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 6px;
+		@include m19;
+		--color: #{$grey-text-on-white};
+		--size: 24px;
+		color: var(--color);
+
+		&.is-active {
+			--color: #{$black};
+		}
+	}
+}

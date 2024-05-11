@@ -1,0 +1,285 @@
+.commercial-offers {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	&__filter {
+		margin-top: 26px;
+		max-width: 826px;
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+		}
+	}
+
+	&__table {
+		$columns: 5;
+		$alone-cell-column: 2;
+		margin-top: 40px;
+		margin-bottom: auto;
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+		}
+
+		@media (min-width: $mobile) {
+			display: grid;
+			grid-template-columns: min-content 1fr repeat($columns - 2, auto);
+		}
+
+		&__tbody {
+			display: contents;
+
+			@media (max-width: $mobile) {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+		}
+
+		&__tr {
+			display: contents;
+
+			@media (max-width: $mobile) {
+				background-color: $white;
+				padding: 16px;
+				border: 1px solid $grey-border1;
+				border-radius: 5px;
+				width: 100%;
+				display: grid;
+				grid-template-columns: min-content min-content 1fr min-content;
+				grid-template-rows: auto auto auto;
+				gap: 15px;
+				align-items: center;
+				justify-content: flex-start;
+				grid-template-areas:
+					"download download download download"
+					"status status status date"
+					"remove edit action action";
+			}
+		}
+
+		&__tr:first-child &__td {
+			&:nth-child(-n + #{$columns}) {
+				border-top: 1px solid $grey-border1;
+
+				@media (max-width: $mobile) {
+					border-top: none;
+				}
+			}
+		}
+
+		&__td {
+			@media (min-width: $mobile) {
+				padding-left: calc(25px / 2);
+				padding-right: calc(25px / 2);
+				padding-top: calc(19px / 2);
+				padding-bottom: calc(19px / 2);
+				grid-row: span 2;
+			}
+
+			&--download {
+				@media (max-width: $mobile) {
+					grid-area: download;
+				}
+			}
+
+			&--status {
+				@media (max-width: $mobile) {
+					grid-area: status;
+				}
+			}
+
+			&--date {
+				@media (max-width: $mobile) {
+					grid-area: date;
+				}
+			}
+
+			&--remove {
+				@media (max-width: $mobile) {
+					grid-area: remove;
+				}
+			}
+
+			&--edit {
+				@media (max-width: $mobile) {
+					grid-area: edit;
+				}
+			}
+
+			&--action {
+				@media (max-width: $mobile) {
+					grid-area: action;
+				}
+			}
+
+			&:nth-child(1) {
+				@media (min-width: $mobile) {
+					grid-column: 1;
+					padding-left: 20px;
+				}
+			}
+
+			&:nth-child(-n + #{$columns}) {
+				@media (min-width: $mobile) {
+					padding-top: 15px;
+				}
+			}
+
+			&:not(:nth-child(#{$alone-cell-column})) {
+				@media (min-width: $mobile) {
+					border-bottom: 1px solid $grey-border1;
+					padding-bottom: 15px;
+				}
+			}
+
+			&:nth-child(#{$columns}) {
+				@media (min-width: $mobile) {
+					grid-row: span 2;
+					padding-right: 20px;
+				}
+			}
+
+			&:nth-child(#{$columns + 1}) {
+				@media (min-width: $mobile) {
+					grid-row: initial;
+					grid-column: $alone-cell-column;
+				}
+			}
+
+			&:nth-child(#{$alone-cell-column}) {
+				@media (min-width: $mobile) {
+					grid-row: initial;
+				}
+			}
+		}
+
+		&__remove {
+			content: '';
+			@extend .icon, .icon--trash;
+			--size: 20px;
+			cursor: pointer;
+
+			&:hover {
+				--color: #{$blue};
+			}
+
+			@media (max-width: $mobile) {
+				--size: 16px;
+			}
+		}
+
+		&__download {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			cursor: pointer;
+			@include d1;
+			--size: 22px;
+
+			@media (max-width: $mobile) {
+				@include m1;
+				--size: 16px;
+			}
+
+			&::before {
+				content: '';
+				@extend .icon, .icon--note-2;
+
+				@media (max-width: $mobile) {
+					align-self: flex-start;
+				}
+			}
+
+			&::after {
+				content: '';
+				@extend .icon, .icon--arrow-down-2;
+
+				@media (max-width: $mobile) {
+					margin-left: auto;
+				}
+			}
+		}
+
+		&__date {
+			@include d1;
+			color: $grey-text;
+		}
+
+		&__edit {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: 7px;
+			@include d10;
+			--color: #{$black};
+			color: var(--color);
+
+			span {
+				@media (max-width: $mobile) {
+					display: none;
+				}
+			}
+
+			&:hover {
+				--color: #{$blue};
+			}
+
+			&::before {
+				content: '';
+				--size: 16px;
+				@extend .icon, .icon--edit-2;
+			}
+		}
+
+		&__action {
+			@include d8;
+			cursor: pointer;
+
+			&:hover {
+				color: $blue;
+			}
+
+			@media (max-width: $mobile) {
+				text-align: right;
+			}
+
+			&--blue {
+				color: $blue;
+
+				&:hover {
+					color: #100362;
+				}
+			}
+		}
+
+		&__status {
+			padding: 9px 21px;
+			@include d1;
+			color: $asphalt;
+			border: 1px solid $asphalt;
+			border-radius: 666px;
+			width: max-content;
+
+			&--light {
+				background-color: $grey-bg;
+			}
+
+			&--grey {
+				background-color: $grey-border1;
+				border: 1px solid $grey-border1;
+			}
+		}
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: center;
+		margin-top: 35px;
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+		}
+	}
+}

@@ -1,0 +1,91 @@
+.bonus-card {
+	padding: 35px 31px 32px 35px;
+	box-shadow: 0 4px 28px rgba(33, 39, 56, .15);
+	border-radius: 15px;
+	background-color: $asphalt;
+	--color: #{$white};
+	color: var(--color);
+	display: grid;
+	grid-template-columns: auto auto;
+	align-items: flex-start;
+
+	@media (max-width: $mobile) {
+		padding: 15px;
+		border-radius: 10px;
+		box-shadow: 0 2px 16px rgba(33, 39, 56, .15);
+	}
+
+	&__logo {
+		width: 91px;
+		grid-column: 1;
+		margin-bottom: 21px;
+
+		@media (max-width: $mobile) {
+			width: 66px;
+			margin-bottom: 17px;
+		}
+	}
+
+	&__label {
+		grid-column: 2;
+		@include d4;
+		border: 1px solid var(--color);
+		width: max-content;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 3px;
+		justify-self: flex-end;
+		padding: 3px 15px;
+
+		@media (max-width: $mobile) {
+			@include m4;
+			padding: 4px 7px;
+			border-radius: 2px;
+		}
+	}
+
+	&__count,
+	&__holder,
+	&__caption {
+		grid-column: 1/-1;
+	}
+
+	&__count {
+		display: flex;
+		align-items: baseline;
+
+		&__number {
+			@include d5;
+
+			@media (max-width: $mobile) {
+				@include m5;
+			}
+		}
+
+		&__text {
+			@include d6;
+
+			@media (max-width: $mobile) {
+				@include m6;
+			}
+		}
+	}
+
+	&__holder {
+		@include d7;
+
+		@media (max-width: $mobile) {
+			@include m7;
+		}
+	}
+
+	&__caption {
+		margin-top: 29px;
+		@include d8;
+
+		@media (max-width: $mobile) {
+			@include m8;
+		}
+	}
+}

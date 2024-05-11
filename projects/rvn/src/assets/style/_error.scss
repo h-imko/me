@@ -1,0 +1,37 @@
+.error {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	padding: 16px;
+	gap: 8px;
+	@include d1;
+	border-radius: 5px;
+	background: #FFF2F2;
+	align-items: center;
+
+	&-group {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	@media (max-width: $mobile) {
+		@include m1;
+	}
+
+	> * {
+		grid-column: 2;
+	}
+
+	&::before {
+		content: ' ';
+		@extend .icon, .icon--warning-2;
+		--color:#{$red};
+		--size: 24px;
+		grid-column: 1;
+		flex-shrink: 0;
+
+		@media (max-width: $mobile) {
+			--size: 16px;
+		}
+	}
+}

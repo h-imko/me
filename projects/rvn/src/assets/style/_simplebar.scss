@@ -1,0 +1,17 @@
+@import 'simplebar/dist/simplebar';
+
+.simplebar {
+	&-track:is(&-vertical) {
+		width: 9px;
+	}
+
+	&-scrollbar {
+		cursor: pointer;
+
+		&::before {
+			background-color: $grey-border1;
+			opacity: 1;
+			border-radius: 666px;
+		}
+	}
+}

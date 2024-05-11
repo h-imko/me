@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<main>
+			<article class="article d-desktop">
+				<div class="main-slider">
+					<div class="main-slider__container">
+						<div class="main-slider__slider">
+							<div class='splide'>
+								<div class='splide__arrows'>
+									<button type='button' class='splide__arrow splide__arrow--prev'></button>
+									<button type='button' class='splide__arrow splide__arrow--next'></button>
+								</div>
+								<div class='splide__track'>
+									<ul class='splide__list'>
+										<% for( let index = 0; index < 4; index++ ) { %>
+										<li class='splide__slide'>
+											<%- include('/main-slider__slide') %>
+										</li>
+										<% } %>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="article">
+				<%- include('/nav-cards') %>
+			</article>
+		</main>
+		<%- include('/footer') %>
+	</body>
+
+</html>

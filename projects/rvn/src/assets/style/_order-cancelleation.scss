@@ -1,0 +1,54 @@
+.order-cancelleation {
+	&__back {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		@include d1;
+		margin-bottom: 35px;
+		cursor: pointer;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 15px;
+		}
+
+		&:hover {
+			color: #004797;
+			--color: #004797;
+		}
+
+		&::before {
+			content: '';
+			@extend .icon, .icon--undo;
+			--size: 24px;
+		}
+	}
+
+	&__caption {
+		margin-top: 10px;
+		@include d1;
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+			@include m1;
+		}
+	}
+
+	&__textarea {
+		margin-top: 35px;
+		max-width: 831px;
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+		}
+	}
+
+	&__button {
+		margin-top: 40px;
+		@include button(true, false, "blue", true);
+
+		@media (max-width: $mobile) {
+			margin-top: 20px;
+			// @include button--mobile-primary-normal-long;
+		}
+	}
+}

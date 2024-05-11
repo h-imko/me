@@ -1,0 +1,29 @@
+.custom-ul,
+%custom-ul {
+	list-style-position: inside;
+}
+
+.custom-ol,
+%custom-ol {
+	list-style-position: inside;
+	counter-reset: biba;
+
+	li {
+		counter-increment: biba;
+		display: flex;
+		align-items: center;
+		gap: 9px;
+
+		&::before {
+			content: counter(biba);
+			width: 23px;
+			height: 18px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: $light-grey-bg;
+			border-radius: 3px;
+			@include d15;
+		}
+	}
+}

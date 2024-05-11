@@ -1,0 +1,38 @@
+<div class="popup popup--small" data-popup="popup__my_manager_change">
+	<div class="popup__inner" data-popup-inner>
+		<div class="popup__selfcloser" data-popup-selfcloser></div>
+		<div class="popup__title">
+			<span>Сменить менеджера</span>
+			<div class="popup__title__sub">Если вас не удовлетворяет работа вашего менеджера, то вы можете оставить заявку на его смену. Мы подберем вам нового в течение одного рабочего дня. </div>
+		</div>
+		<form class="custom-form">
+			<div class="custom-form__group">
+				<div class="custom-form__col">
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<label class="custom-input">
+								<textarea placeholder=" "></textarea>
+								<div class="custom-input__label">
+									<span>Пожалуйста, укажите причину смены менеджера </span>
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="custom-form__group">
+				<div class="custom-form__col">
+					<div class="custom-form__row">
+						<div class="custom-form__cell">
+							<div class="custom-form__footer">
+								<button type="submit" class="custom-form__button" onclick="event.preventDefault()" data-popup-selfcloser data-popup-control="open" data-popup-target="popup__my_manager_change_success">
+									<span>Отправить заявку</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

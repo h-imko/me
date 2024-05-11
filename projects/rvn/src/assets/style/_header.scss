@@ -1,0 +1,888 @@
+%catalog-mobile-back {
+	@include m1;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	--size: 16px;
+	--color: #{$grey-text};
+	color: var(--color);
+	margin-bottom: 30px;
+	user-select: none;
+
+	&::before {
+		content: '';
+		@extend .icon, .icon--undo;
+	}
+}
+
+@mixin calatog-mobile-item {
+	padding: 15px 0;
+	border-bottom: 1px solid $grey-border1;
+	@include d1;
+	color: $black;
+}
+
+.header {
+	margin-bottom: var(--header-margin);
+	background-color: $page-bg;
+	z-index: 99;
+
+	@media (max-width: $mobile) {
+		border-bottom: 1px solid $grey-border1;
+		position: sticky;
+		top: 0;
+		left: 0;
+	}
+
+	&__container {
+		@extend %container;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 23px;
+
+		@media (max-width: $laptop) {
+			gap: 16px;
+		}
+	}
+
+	&__bottom {
+		@media (max-width: $mobile) {
+			position: absolute;
+			visibility: hidden;
+			height: 0;
+			width: 0;
+			overflow: hidden;
+		}
+	}
+
+	&__logo {
+		display: block;
+		width: 140px;
+
+		@media (max-width: $laptop) {
+			width: 100px;
+		}
+
+		@media (max-width: $mobile) {
+			width: 91px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__search-opener {
+		@extend .icon, .icon--search-normal;
+		--size: 26px;
+
+		@media (min-width: $mobile) {
+			--display: none;
+		}
+	}
+
+	&__group {
+		display: flex;
+		align-items: center;
+		// align-items: stretch;
+		gap: 23px;
+
+		@media (max-width: $laptop) {
+			gap: 16px;
+		}
+
+		@media (max-width: $mobile) {
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		&:nth-child(1) {
+			.header__link {
+				@media (max-width: $mobile) {
+					display: none;
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			margin-right: auto;
+
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+
+		&:nth-child(3) {
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+	}
+
+	&__burger {
+		@media (min-width: $mobile) {
+			display: none;
+		}
+
+		input:checked ~ &__button {
+			@extend .icon--close;
+		}
+
+		&__button {
+			@extend .icon, .icon--menu;
+			--size: 26px;
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: stretch;
+		gap: 6px;
+		@include d1;
+		--size: 24px;
+		--color: #{$black};
+		// align-items: flex-start;
+		height: 100%;
+		vertical-align: baseline;
+
+		@media (max-width: $laptop) {
+			--display: none;
+		}
+
+		&:hover {
+			color: $blue;
+			--color: #{$blue};
+		}
+	}
+
+	&__bonus-btn {
+		@include d1;
+		border: 1px solid $black;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		height: 25px;
+		padding: 0 8px;
+
+		&:hover {
+			color: $blue;
+			border: 1px solid $blue;
+		}
+	}
+
+	&__catalog {
+		position: relative;
+		z-index: 1000;
+
+		&__controller {
+			position: absolute;
+			z-index: -1111;
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		&__controller:checked ~ &__drop {
+			opacity: 1;
+			z-index: 9;
+			pointer-events: auto;
+		}
+
+		&__controller:not(:checked) ~ &__drop * {
+			pointer-events: none;
+		}
+
+		&__controller:checked ~ &__btn &__btn__icon {
+			@extend .icon--close;
+		}
+
+		&__btn {
+			@include button(true, false, "blue", true);
+
+			&__icon {
+				--color: #{$white};
+				--size: 24px;
+				@extend .icon, .icon--element-3;
+			}
+		}
+
+		&__drop {
+			background: $white;
+			display: flex;
+			transition: opacity var(--transition-duration) ease;
+			opacity: 0;
+			z-index: -9999;
+			pointer-events: none;
+			visibility: visible;
+
+			@media (min-width: $mobile) {
+				top: calc(100% + 6px);
+				left: 0;
+				position: absolute;
+				max-height: calc(100vh - 32px - var(--header-height));
+				width: var(--container-width);
+				max-width: calc(100vw - 2 * var(--container-padding));
+				border: 1px solid $grey-border1;
+				box-shadow: 0 4px 38px rgba(33, 39, 56, 0.08);
+				border-radius: 5px;
+			}
+
+			@media (max-width: $mobile) {
+				flex-direction: column;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding: 40px 16px 16px 16px;
+				z-index: 9999;
+			}
+
+			&__selfcloser {
+				position: absolute;
+				top: 16px;
+				right: 16px;
+				@extend .icon, .icon--close;
+				--size: 15px;
+				z-index: 999;
+
+				@media (min-width: $mobile) {
+					--display: none;
+				}
+			}
+
+			&__categories {
+				display: flex;
+				flex-direction: column;
+				overflow-y: auto;
+
+				&__title {
+					@include m13;
+					margin-bottom: 30px;
+
+					@media (min-width: $mobile) {
+						display: none;
+					}
+				}
+
+				@media (min-width: $mobile) {
+					flex-shrink: 0;
+					flex-basis: 15%;
+					border-right: 2px solid $grey-bg;
+					gap: 10px;
+					padding: 20px;
+				}
+
+				@media (max-width: $mobile) {
+					padding-right: 16px;
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					padding: inherit;
+					width: 100%;
+					height: 100%;
+				}
+
+				&__item {
+					@media (max-width: $mobile) {
+						@include calatog-mobile-item;
+					}
+
+					input {
+						position: absolute;
+						width: 0;
+						height: 0;
+						z-index: -1111;
+						opacity: 0;
+					}
+
+					span {
+						@include d1;
+						transition: all var(--transition-duration) ease;
+						cursor: pointer;
+						display: flex;
+						align-items: flex-end;
+						justify-content: space-between;
+						gap: 8px;
+
+						&::after {
+							display: inline;
+							vertical-align: middle;
+							@extend .icon, .icon--arrow-right;
+							--size: 16px;
+							--color: #{$blue};
+							transition: inherit;
+							opacity: 0;
+
+							@media (min-width: $mobile) {
+								content: '';
+							}
+						}
+					}
+
+					&:hover span,
+					input:checked ~ span {
+						color: $blue;
+
+						&::after {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			&__inner {
+				padding: 40px 60px;
+				overflow-y: auto;
+
+				@media (min-width: $mobile) {
+					flex-shrink: 1;
+					flex-grow: 1;
+				}
+
+				@media (max-width: $mobile) {
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					padding: inherit;
+					pointer-events: none;
+					width: 100%;
+					height: 100%;
+				}
+
+				&__category {
+					display: flex;
+					overflow: hidden;
+					position: relative;
+
+					@media (max-width: $mobile) {
+						pointer-events: none;
+						height: 100%;
+						width: 100%;
+						position: absolute;
+						padding: inherit;
+						left: 0;
+						top: 0;
+					}
+
+					&__back {
+						@extend %catalog-mobile-back;
+
+						@media (min-width: $mobile) {
+							display: none;
+						}
+					}
+
+					&__parent {
+						margin-bottom: 15px;
+						@include m-h5;
+
+						@media (min-width: $mobile) {
+							display: none;
+						}
+					}
+
+					&__content {
+						width: 100%;
+						columns: 4;
+						column-gap: 60px;
+						transition: all var(--transition-duration) ease;
+						opacity: 1;
+						background-color: #fff;
+
+						@media (max-width: $mobile) {
+							display: flex;
+							position: absolute;
+							top: 0;
+							left: 0;
+							padding: inherit;
+							flex-direction: column;
+							height: 100%;
+							width: 100%;
+							pointer-events: auto;
+							overflow-y: auto;
+							overflow-x: hidden;
+						}
+					}
+
+					input:not(:checked) ~ &__content {
+						@media (min-width: $mobile) {
+							visibility: hidden;
+							height: 0;
+							overflow: hidden;
+							opacity: 0;
+						}
+
+						@media (max-width: $mobile) {
+							transform: translateX(100%);
+						}
+					}
+
+					input {
+						position: absolute;
+						width: 0;
+						height: 0;
+						z-index: -1111;
+						opacity: 0;
+					}
+				}
+
+				&__group {
+					display: flex;
+					flex-direction: column;
+					gap: 12px;
+					break-inside: avoid;
+
+					@media (min-width: $mobile) {
+						margin-bottom: 25px;
+					}
+
+					@media (max-width: $mobile) {
+						gap: 0;
+						width: 100%;
+					}
+				}
+
+				&__title {
+					@include d1;
+					color: $black !important;
+
+					&:is(label) {
+						@media (min-width: $mobile) {
+							display: none;
+						}
+					}
+
+					&:is(a) {
+						&:hover {
+							color: $blue !important;
+						}
+
+						border-bottom: none !important;
+						padding-top: 0 !important;
+
+						@media (max-width: $mobile) {
+							span {
+								@include m-h5;
+							}
+						}
+					}
+
+					@media (max-width: $mobile) {
+						@include calatog-mobile-item;
+					}
+				}
+
+				&__controller:not(:checked) ~ &__list {
+					@media (max-width: $mobile) {
+						transform: translateX(100%);
+					}
+				}
+
+				&__list {
+					display: flex;
+					flex-direction: column;
+					@include d1;
+
+					@media (min-width: $mobile) {
+						gap: 1em;
+					}
+
+					label {
+						@extend %catalog-mobile-back;
+
+						@media (min-width: $mobile) {
+							display: none;
+						}
+					}
+
+					@media (max-width: $mobile) {
+						height: 100%;
+						background-color: $white;
+						width: 100%;
+						position: absolute;
+						left: 0;
+						top: 0;
+						padding: 40px 16px 16px 16px;
+						transform: translateX(0);
+						transition: all ease .3s;
+						overflow-y: auto;
+					}
+
+					a {
+						color: $grey-text;
+						transition: all var(--transition-duration) ease;
+
+						@media (max-width: $mobile) {
+							@include calatog-mobile-item;
+						}
+
+						&:hover {
+							color: $blue;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__search {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		position: relative;
+		--input-height: 58px;
+
+		@media (max-width: $mobile) {
+			--input-height: 46px;
+		}
+
+		&__button {
+			position: absolute;
+			@extend .icon, .icon--search-normal;
+			z-index: 15;
+			right: 20px;
+			--size: 26px;
+			cursor: pointer;
+
+			@media (max-width: $mobile) {
+				right: calc(var(--container-padding) + 16px);
+				--size: 16px;
+				top: calc(48px / 2 + var(--header-height, 40px));
+				transform: translateY(-50%);
+			}
+		}
+
+		&__inner {
+			z-index: 10;
+			position: relative;
+			display: flex;
+			align-items: center;
+			flex-grow: 1;
+
+			@media (max-width: $mobile) {
+				align-items: flex-start;
+				flex-direction: column;
+				position: fixed;
+				visibility: visible;
+				background-color: $page-bg;
+				bottom: 0;
+				top: 0;
+				left: 0;
+				right: 0;
+				padding: var(--header-height, 40px) 16px 16px 16px;
+				opacity: 0;
+				pointer-events: none;
+				transition: all ease var(--transition-duration);
+			}
+		}
+
+		&__controller:checked ~ &__inner {
+			@media (max-width: $mobile) {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+
+		&__selfcloser {
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			@extend .icon, .icon--close;
+			--size: 15px;
+			z-index: 999;
+
+			@media (min-width: $mobile) {
+				--display: none;
+			}
+		}
+
+		&__field {
+			width: 100%;
+			@include d1;
+			background-color: $grey-bg;
+			border: 1px solid $grey-border;
+			border-radius: 5px;
+			height: var(--input-height);
+			padding-left: 25px;
+			padding-right: 54px;
+			appearance: none;
+			transition: border var(--transition-duration) ease;
+
+			&:hover {
+				border: 1px solid $black;
+			}
+
+			@media (max-width: $mobile) {
+				flex-shrink: 0;
+				padding-right: 48px;
+				background-color: $white;
+				padding-left: 16px;
+			}
+		}
+
+		&__field:not(:placeholder-shown) ~ &__drop {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		&__drop {
+			width: 100%;
+			flex-direction: column;
+			gap: 7px;
+			transition: opacity var(--transition-duration) ease;
+			max-height: calc(100vh - var(--header-height) - 16px);
+			overflow: auto;
+			opacity: 0;
+			pointer-events: none;
+			display: none;
+
+			&:not(:empty) {
+				display: flex !important;
+			}
+
+			@media (min-width: $mobile) {
+				border-radius: 5px;
+				position: absolute;
+				top: calc(100% + 6px);
+				box-shadow: 0 4px 38px rgba(33, 39, 56, 0.08);
+				padding: 20px;
+				background: $white;
+				border: 1px solid $grey-border1;
+				gap: 15px;
+			}
+
+			@media (max-width: $mobile) {
+				position: static;
+				margin-top: 35px;
+				gap: 15px;
+			}
+
+			&__table {
+				--gap: 25px;
+				--padding: 15px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				@media (max-width: $mobile) {
+					--gap: 8px;
+				}
+
+				&__header {
+					display: grid;
+					grid-template-columns: 80px 80px 100px;
+					gap: var(--gap);
+					background-color: $light-grey-bg;
+					width: fit-content;
+					margin-left: auto;
+					border-radius: 10px;
+					padding: var(--padding);
+					@include d1;
+
+					@media (max-width: $mobile) {
+						display: none;
+					}
+				}
+
+				&__body {
+					display: flex;
+					flex-direction: column;
+					gap: 15px;
+
+					@media (max-width: $mobile) {
+						gap: 35px;
+					}
+				}
+
+				&__row {
+					display: grid;
+					grid-template-columns: 49px 1fr 80px 80px 100px;
+					gap: 0 var(--gap);
+					padding-right: var(--padding);
+					align-items: center;
+
+					@media (max-width: $mobile) {
+						grid-template-columns: 73px 1fr;
+						padding-right: 0;
+						align-items: flex-start;
+					}
+				}
+
+				&__name {
+					@include d1;
+
+					@media (max-width: $mobile) {
+						@include m1;
+					}
+				}
+
+				&__price {
+					color: $black;
+					@include d3;
+
+					@media (max-width: $mobile) {
+						display: flex;
+						justify-content: space-between;
+						grid-column: span 2;
+					}
+
+					&--1 {
+						@media (max-width: $mobile) {
+							margin-top: 15px;
+						}
+
+						&::before {
+							@media (max-width: $mobile) {
+								content: "РРЦ";
+								color: $grey-text;
+								@include m1;
+							}
+						}
+					}
+
+					&--2 {
+						@media (max-width: $mobile) {
+							margin-top: 20px;
+							margin-bottom: 25px;
+						}
+
+						&::before {
+							@media (max-width: $mobile) {
+								content: "Моя цена";
+								color: $grey-text;
+								@include m1;
+							}
+						}
+					}
+				}
+
+				&__img {
+					width: 100%;
+					aspect-ratio: 1;
+
+					img {
+						height: 100%;
+					}
+				}
+
+				&__count {
+					@media (max-width: $mobile) {
+						grid-column: span 2;
+						display: flex;
+						justify-content: flex-end;
+					}
+				}
+			}
+
+			&__footer {
+				display: flex;
+				justify-content: center;
+			}
+
+			&__all {
+				@include button(false, false, "blue", false);
+			}
+		}
+	}
+
+	&__meta {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(2, 1fr);
+		align-items: center;
+		row-gap: 9px;
+		column-gap: inherit;
+
+		&__item {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			@include d1;
+			--size: 20px;
+			--color: #{$black};
+			cursor: pointer;
+
+			&:hover {
+				color: $blue;
+				--color: #{$blue};
+			}
+
+			&--bold {
+				@include d3;
+				--size: 24px;
+			}
+		}
+	}
+
+	&__cart {
+		height: auto;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	&__menu {
+		&__controller:checked ~ &__inner {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		&__container {
+			@extend .container;
+		}
+
+		&__inner {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: var(--header-height);
+			background-color: $page-bg;
+			z-index: 99;
+			overflow: auto;
+			display: flex;
+			flex-direction: column;
+			opacity: 0;
+			pointer-events: none;
+			transition: all ease var(--transition-duration);
+		}
+
+		&__group {
+			display: flex;
+			flex-direction: column;
+			gap: 23px;
+			padding: 23px 0;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid $grey-border1;
+			}
+		}
+
+		&__item {
+			@include m1;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			--size: 20px;
+
+			&.biba .icon {
+				mask-image: url(/src/assets/static/img/icon/house.svg);
+			}
+		}
+	}
+}

@@ -1,0 +1,118 @@
+.registration {
+	flex-grow: 1;
+	display: flex;
+
+	&__container {
+		flex-grow: 1;
+		@extend %container;
+
+		@media (min-width: $mobile) {
+			margin-top: 30px;
+			margin-bottom: 30px;
+			background: $white;
+			border: 1px solid $grey-border;
+			border-radius: 10px;
+		}
+	}
+
+	&__inner {
+		padding: 20px 0;
+		width: 100%;
+		max-width: 831px;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		@include d13;
+		text-align: center;
+		width: 100%;
+
+		@media (max-width: $mobile) {
+			@include m13;
+			text-align: left;
+		}
+	}
+
+	&__loading {
+		@extend .icon, .icon--loading;
+		--size: 60px;
+		margin-bottom: 20px;
+
+		@media (max-width: $mobile) {
+			--size: 43px;
+			margin-bottom: 15px;
+			align-self: flex-start;
+		}
+	}
+
+	&__caption {
+		text-align: center;
+		margin-top: 20px;
+		width: 100%;
+		@include d14;
+
+		br + br {
+			@media (min-width: $mobile) {
+				display: none;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			@include m14;
+			margin-top: 15px;
+			text-align: left;
+		}
+	}
+
+	&__form {
+		margin-top: 35px;
+		width: 100%;
+
+		@media (max-width: $mobile) {
+			margin-top: 25px;
+		}
+	}
+
+	&__back {
+		margin-bottom: 45px;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		@include d1;
+		align-self: flex-start;
+		transition: all ease var(--transition-duration);
+
+		&:hover {
+			color: $blue;
+			--color: #{$blue};
+		}
+
+		@media (max-width: $mobile) {
+			@include m1;
+			margin-bottom: 10px;
+		}
+
+		&::before {
+			content: '';
+			@extend .icon, .icon--arrow-down-2;
+			transform: rotate(90deg);
+		}
+	}
+
+	.custom-form__button {
+		background-color: $asphalt;
+
+		&:hover {
+			background-color: #202A30;
+		}
+	}
+
+	.dropzone--1 .dropzone__list__item--placeholder {
+		color: $asphalt;
+		border-color: $asphalt;
+	}
+}

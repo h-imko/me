@@ -1,0 +1,70 @@
+.cookie-notification {
+	position: fixed;
+	@extend %container;
+	bottom: 17px;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+	z-index: -9999;
+	transition: opacity var(--transition-duration) ease;
+
+	@media (max-width: $mobile) {
+		bottom: 70px;
+	}
+
+	&.is-active {
+		z-index: 9999999;
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	&__inner {
+		background-color: $white;
+		display: flex;
+		padding: 20px;
+		max-width: 375px;
+		margin-left: auto;
+		box-shadow: 0 4px 35px rgba(33, 39, 56, 0.17);
+		border-radius: 5px;
+
+		@media (max-width: $mobile) {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			gap: 10px 15px;
+		}
+	}
+
+	&__selfcloser {
+		--size: 15px;
+		margin-left: 15px;
+		@extend .icon, .icon--close;
+		cursor: pointer;
+
+		@media (max-width: $mobile) {
+			grid-column: 2;
+			grid-row: 1;
+			align-self: flex-start;
+			justify-self: flex-end;
+		}
+	}
+
+	&__button {
+		margin-left: 10px;
+		@include button(false, false, "blue", true);
+
+		@media (max-width: $mobile) {
+			grid-column: 1;
+			width: max-content;
+			margin-left: 0;
+		}
+	}
+
+	&__text {
+		@include d1;
+
+		a {
+			@include d17;
+		}
+	}
+}

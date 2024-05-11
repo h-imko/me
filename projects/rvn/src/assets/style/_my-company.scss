@@ -1,0 +1,129 @@
+.my-company {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	@media (max-width: $mobile) {
+		gap: 15px;
+	}
+
+	&__company {
+		&__header {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			padding: 17px 0;
+
+			@media (max-width: $mobile) {
+				gap: 10px;
+				padding: 15px 0;
+				align-items: flex-start;
+			}
+		}
+
+		&__header &__name {
+			margin-right: auto;
+		}
+
+		&__name {
+			@include d2;
+
+			@media (max-width: $mobile) {
+				@include m2;
+			}
+		}
+
+		&__edit {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: 7px;
+			--size: 16px;
+			@include d10;
+			--color: #{$black};
+			color: var(--color);
+			transition: all ease var(--transition-duration);
+
+			&::before {
+				content: '';
+				@extend .icon, .icon--edit-2;
+			}
+
+			&:hover {
+				--color: #{$blue};
+			}
+
+			span {
+				@media (max-width: $mobile) {
+					display: none;
+				}
+			}
+		}
+
+		&__flipper {
+			display: flex;
+
+			&::before {
+				content: '';
+				--size: 13px;
+				@extend .icon, .icon--arrow-down;
+			}
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			padding-left: 26px;
+			padding-bottom: 25px;
+
+			@media (max-width: $mobile) {
+				padding-left: 0;
+				gap: 10px;
+				padding-bottom: 15px;
+			}
+		}
+
+		&__info-item {
+			@media (max-width: $mobile) {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+			}
+
+			p {
+				&:nth-child(1) {
+					@include d10;
+					color: $grey-text;
+
+					@media (max-width: $mobile) {
+						@include m10;
+					}
+				}
+
+				&:nth-child(2) {
+					@include d1;
+
+					@media (max-width: $mobile) {
+						@include m1;
+					}
+				}
+			}
+		}
+	}
+
+	&__list {
+		> * {
+			border-top: 1px solid $grey-border1;
+
+			&:last-child {
+				border-bottom: 1px solid $grey-border1;
+			}
+		}
+	}
+
+	&__button {
+		@include button(true, false, "blue", true);
+	}
+}

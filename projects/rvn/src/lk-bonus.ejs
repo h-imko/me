@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<main>
+			<article class="article">
+				<div class="lk">
+					<div class="lk__container">
+						<div class="lk__grid">
+							<div class="lk__grid__left">
+								<%- include('/lk__nav') %>
+								<a href="" class="lk__connect-button">
+									<span>Подключиться к ЭДО</span>
+								</a>
+							</div>
+							<div class="lk__grid__right">
+								<div class="lk__content">
+									<div class="bonus">
+										<div class="lk__content__title">
+											<span>Бонусы</span>
+										</div>
+										<div class="bonus__title">
+											<span></span>
+										</div>
+										<div class="bonus__content">
+											<div class="bonus__content__block">
+												<%- include('/bonus-card') %>
+											</div>
+											<div class="bonus__content__block">
+												<div class="bonus__info">
+													<span>Ближайшее списание <b>300 бонусов</b> <br> произойдет <b>27.03.23 </b></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+	</body>
+
+</html>

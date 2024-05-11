@@ -1,0 +1,7 @@
+$mobile: "1220px";
+$laptop: "1400px";
+
+:root {
+	--mobile: #{$mobile};
+	--laptop: #{$laptop};
+}

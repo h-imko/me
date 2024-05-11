@@ -1,0 +1,62 @@
+.not-found {
+	text-align: center;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+
+	&__container {
+		@extend %container;
+
+		@media (max-width: $mobile) {}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__nums {
+		margin-bottom: 30px;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 25px;
+		}
+
+		img {
+			height: 140px;
+
+			@media (max-width: $mobile) {
+				height: auto;
+				max-width: 320px;
+			}
+		}
+	}
+
+	&__title {
+		@include d13;
+
+		@media (max-width: $mobile) {
+			@include m13;
+		}
+	}
+
+	&__caption {
+		@include d1;
+		margin-top: 15px;
+
+		@media (max-width: $mobile) {
+			@include m1;
+		}
+	}
+
+	&__btn {
+		margin-top: 45px;
+
+		@media (max-width: $mobile) {
+			margin-top: 30px;
+		}
+
+		@include button(true, false, "blue", true)
+	}
+}

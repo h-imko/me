@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<main>
+			<article class="article">
+				<div class="lk">
+					<div class="lk__container">
+						<div class="lk__grid">
+							<div class="lk__grid__left">
+								<%- include('/lk__nav') %>
+								<a href="" class="lk__connect-button">
+									<span>Подключиться к ЭДО</span>
+								</a>
+							</div>
+							<div class="lk__grid__right">
+								<div class="lk__content">
+									<form class="order-cancelleation">
+										<div class="order-cancelleation__back">
+											<span>Назад</span>
+										</div>
+										<div class="lk__content__title">
+											<span>Отмена заказа №54354453</span>
+										</div>
+										<div class="order-cancelleation__caption">
+											<span>Вы уверены, что хотите отменить заказ?</span>
+										</div>
+										<div class="order-cancelleation__textarea">
+											<label class="custom-input">
+												<textarea name="" id="" placeholder=" "></textarea>
+												<div class="custom-input__label">
+													<span>Пожалуйста, укажите причину отмены заказа</span>
+												</div>
+											</label>
+										</div>
+										<button type="submit" class="order-cancelleation__button" data-button-beautiful>
+											<span>Отменить заказ</span>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+	</body>
+
+</html>

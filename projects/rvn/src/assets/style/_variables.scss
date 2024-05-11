@@ -1,0 +1,13 @@
+:root {
+	--header-margin: 30px;
+	--button-height: 56px;
+	--container-padding: 32px;
+	--container-width: 1500px;
+	--transition-duration: .3s;
+
+	@media (max-width: $mobile) {
+		--container-padding: 16px;
+		--header-margin: 10px;
+		--container-width: 600px;
+	}
+}

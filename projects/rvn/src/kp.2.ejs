@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="kp">
+					<div class="kp__container">
+						<div class="kp__title">
+							<span>Готовое КП за 4 простых шага</span>
+						</div>
+						<%- include('/kp__steps') %>
+						<div class="kp__step">
+							<span>
+								<b>Шаг 3.</b>Добавьте контакты вашей компании и клиента, а так же вводный текст.
+							</span>
+						</div>
+						<div class="kp__inner">
+							<div class="kp__form">
+								<div class="kp__form__group">
+									<div class="kp__form__group__title">
+										<span>Реквизиты моей компании</span>
+									</div>
+									<div class="kp__form__group__content">
+										<label class="custom-input">
+											<select name="" id="" required>
+												<option value="" disabled hidden selected>Укажите тип</option>
+												<option value="biba">biba</option>
+												<option value="boba">boba</option>
+											</select>
+											<div class="custom-input__label">
+												<span>Выбор организации</span>
+											</div>
+										</label>
+										<div class="kp__form__company-data">
+											<div class="kp__form__company-data__item">
+												<p>Наименование организации</p>
+												<p>Общество с ограниченной ответственностью «Весна»</p>
+											</div>
+											<div class="kp__form__company-data__item">
+												<p>Юридический адрес</p>
+												<p>г. Воронеж, ул. Петровская, д. 1, оф. 2</p>
+											</div>
+											<div class="kp__form__company-data__item">
+												<p>Почтовый адрес</p>
+												<p>г. Воронеж, ул. Петровская, д. 1, оф. 2</p>
+											</div>
+											<div class="kp__form__company-data__item">
+												<p>ИНН</p>
+												<p>7712345678</p>
+											</div>
+											<div class="kp__form__company-data__item">
+												<p>КПП</p>
+												<p>465465465454</p>
+											</div>
+											<div class="kp__form__company-data__item">
+												<p>Расчетный счет</p>
+												<p>40702810123450101230</p>
+											</div>
+											<div class="kp__form__company-data__item">
+												<p>БИК</p>
+												<p>044521234</p>
+											</div>
+											<div class="kp__form__company-data__item">
+												<p>Наименование банка</p>
+												<p>Московский банк ПАО Сбербанк г. Москва</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="kp__form__group">
+									<div class="kp__form__group__title">
+										<span>Реквизиты моей компании</span>
+									</div>
+									<div class="kp__form__group__content">
+										<div class="kp__logo-radios">
+											<label class="kp__logo-radios__item">
+												<input class="kp__logo-radios__item__controller" type="radio" name="biba">
+												<div class="kp__logo-radios__item__visual">
+													<div class="kp__logo-radios__item__visual__decorator"></div>
+													<div class="kp__logo-radios__item__visual__title">Мой логотип</div>
+													<div class="kp__logo-radios__item__visual__extra">
+														<div class="dropzone dropzone--2">
+															<ul class="dropzone__list">
+																<li class="dropzone__list__item dropzone__list__item--placeholder">
+																	<input type="file" class="dropzone__input" required accept="image/png, image/jpeg">
+																	<span> Добавить <br> фото</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</label>
+											<label class="kp__logo-radios__item">
+												<input class="kp__logo-radios__item__controller" type="radio" name="biba">
+												<div class="kp__logo-radios__item__visual">
+													<div class="kp__logo-radios__item__visual__decorator"></div>
+													<div class="kp__logo-radios__item__visual__title">Логотип RVN GROUP</div>
+												</div>
+											</label>
+											<label class="kp__logo-radios__item">
+												<input class="kp__logo-radios__item__controller" type="radio" name="biba">
+												<div class="kp__logo-radios__item__visual">
+													<div class="kp__logo-radios__item__visual__decorator"></div>
+													<div class="kp__logo-radios__item__visual__title">Без логотипа</div>
+												</div>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="kp__form__group">
+									<div class="kp__form__group__title">
+										<span>Контактное лицо</span>
+									</div>
+									<div class="kp__form__group__content">
+										<label class="custom-input">
+											<select name="" id="" required>
+												<option value="biba">Иванов Иван Иванович</option>
+												<option value="boba">boba</option>
+											</select>
+											<div class="custom-input__label">
+												<span>Выбор контактного лица</span>
+											</div>
+										</label>
+										<div class="kp__form__contact-data">
+											<p>Иванов Иван Иванович </p>
+											<p>+7 (920) 455-44-55</p>
+											<p>ivanov@gmail.com</p>
+											<p>закупщик</p>
+										</div>
+									</div>
+								</div>
+								<div class="kp__form__group">
+									<div class="kp__form__group__title">
+										<span>Добавить мое фото</span>
+										<input class="input-switch" type="checkbox" name="" id="" data-control-group="1" data-control-mode="master">
+									</div>
+									<div class="kp__form__group__content" data-control-group="1" data-control-mode="slave" data-control-type="display" hidden>
+										<div class="kp__form__my-photo">
+											<img src="/src/assets/static/img/kitten.webp" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="kp__form__group">
+									<div class="kp__form__group__title">
+										<span>Клиент</span>
+									</div>
+									<div class="kp__form__group__content">
+										<label class="custom-input">
+											<input type="text" placeholder=" ">
+											<div class="custom-input__label">
+												<span>Название организации или имя клиента</span>
+											</div>
+										</label>
+									</div>
+								</div>
+								<div class="kp__form__group">
+									<div class="kp__form__group__title">
+										<span>Вводный текст</span>
+									</div>
+									<div class="kp__form__group__content">
+										<label class="custom-input">
+											<textarea placeholder=" "></textarea>
+											<div class="custom-input__label">
+												<span>Комментарий</span>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="kp__footer">
+							<div class="kp__footer__buttons">
+								<div class="kp__footer__button kp__footer__button--back">
+									<div class="icon icon--arrow-left"></div>
+									<span>Назад</span>
+								</div>
+								<div class="kp__footer__button kp__footer__button--outlined">
+									<span>Пропустить</span>
+								</div>
+								<div class="kp__footer__button kp__footer__button--filled" data-button-beautiful>
+									<span>Далее</span>
+									<div class="icon icon--arrow-right"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+	</body>
+
+</html>

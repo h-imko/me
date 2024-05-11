@@ -1,0 +1,209 @@
+.cart {
+	&__container {
+		@extend %container;
+	}
+
+	&__title {
+		@include d13;
+
+		@media (max-width: $mobile) {
+			@include m13;
+		}
+	}
+
+	&__header {
+		margin-top: 20px;
+		display: flex;
+		gap: 66px;
+		align-items: flex-start;
+
+		@media (max-width: $mobile) {
+			flex-direction: column-reverse;
+			gap: 15px;
+			margin-top: 15px;
+		}
+
+		&__button {
+			@include button(true, false, "blue", true);
+
+			@media (max-width: $mobile) {
+				width: 100%;
+			}
+		}
+	}
+
+	&__notification {
+		border: 1px solid $asphalt;
+		border-radius: 10px;
+		padding: 30px 25px;
+		@include d1;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		@media (max-width: $mobile) {
+			padding: 25px;
+		}
+
+		b {
+			@include d-button;
+		}
+	}
+
+	&__filter {
+		margin-top: 40px;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: $mobile) {
+			margin-top: 25px;
+		}
+
+		&__tabs {
+			display: flex;
+			gap: 15px;
+			flex-wrap: wrap;
+			cursor: pointer;
+
+			&__item {
+				@include tab;
+
+				&.is-active {
+					@include tab(true)
+				}
+			}
+		}
+	}
+
+	&__clean {
+		margin-top: 10px;
+		@include d16;
+		margin-left: auto;
+		width: max-content;
+		text-decoration-line: underline;
+		cursor: pointer;
+		transition: all ease var(--transition-duration);
+
+		&:hover {
+			color: $blue;
+		}
+
+		@media (max-width: $mobile) {
+			margin-top: 25px;
+			@include m16;
+		}
+	}
+
+	&__tip {
+		@include d12;
+		margin-top: 30px;
+		max-width: 735px;
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+			@include m12;
+		}
+	}
+
+	&__inner {
+		margin-top: 25px;
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+		}
+	}
+
+	&__footer {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		@media (max-width: $mobile) {
+			margin-top: 25px;
+			gap: 25px;
+		}
+
+		&__buttons {
+			display: flex;
+			gap: 15px;
+
+			@media (max-width: $mobile) {
+				flex-direction: column;
+				gap: 10px;
+			}
+		}
+
+		&__button {
+			&--filled {
+				@include button(true, false, "blue", true);
+			}
+
+			&--outlined {
+				@include button(true, false, "blue", false);
+			}
+		}
+	}
+
+	&__summary {
+		max-width: 411px;
+		display: grid;
+		grid-template-columns: auto auto;
+
+		@media (max-width: $mobile) {
+			max-width: initial;
+		}
+
+		&__row {
+			display: contents;
+			@include d12;
+
+			@media (max-width: $mobile) {
+				@include m12;
+			}
+
+			p {
+				display: flex;
+				justify-content: flex-end;
+			}
+
+			&:nth-child(n + 2) span {
+				margin-top: 11px;
+			}
+		}
+
+		&__total {
+			display: contents;
+			@include d11;
+
+			@media (max-width: $mobile) {
+				@include m11;
+			}
+
+			span {
+				margin-top: 23px;
+
+				@media (max-width: $mobile) {
+					margin-top: 15px;
+				}
+			}
+
+			p {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+
+				span {
+					&:nth-child(n +2) {
+						@include d2;
+						margin-top: 3px;
+
+						@media (max-width: $mobile) {
+							@include m2;
+						}
+					}
+				}
+			}
+		}
+	}
+}

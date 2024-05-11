@@ -1,0 +1,300 @@
+.lk-contacts {
+	&__button {
+		margin-top: 26px;
+		@include button(true, false, "blue", true);
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+		}
+	}
+
+	&__title {
+		margin-top: 40px;
+		@include d-button;
+
+		@media (max-width: $mobile) {
+			margin-top: 24px;
+			@include m-button;
+		}
+	}
+
+	&__filter {
+		margin-top: 26px;
+		max-width: 826px;
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+		}
+	}
+
+	&__table {
+		display: grid;
+		grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(225px, 1fr) minmax(auto, 1fr) minmax(auto, 65px) auto;
+		margin-top: 20px;
+
+		@media (max-width: $mobile) {
+			margin-top: 10px;
+			grid-template-columns: 1fr;
+		}
+
+		&__thead,
+		&__tbody,
+		&__tr {
+			display: contents;
+		}
+
+		&__tr {
+			@media (max-width: $mobile) {
+				grid-template-columns: repeat(2, auto);
+				background-color: $white;
+				padding: 15px;
+				border-radius: 5px;
+				border: 1px solid $grey-border1;
+				display: grid;
+				gap: 10px;
+				grid-template-columns: auto auto;
+				grid-template-rows: auto auto auto auto;
+				align-items: center;
+				grid-template-areas:
+					"person person"
+					"post post"
+					"email email"
+					"tel tel"
+					"check edit";
+			}
+		}
+
+		&__thead {
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+
+		&__tbody {
+			@media (max-width: $mobile) {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+		}
+
+		&__td,
+		&__th {
+			@media (min-width: $mobile) {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+			@include d1;
+
+			&:first-child {
+				@media (min-width: $mobile) {
+					padding-left: 20px;
+				}
+			}
+
+			&:last-child {
+				@media (min-width: $mobile) {
+					padding-right: 20px;
+				}
+			}
+		}
+
+		&__td {
+			@media (min-width: $mobile) {
+				border-bottom: 1px solid $grey-border1;
+			}
+
+			&--person {
+				@media (max-width: $mobile) {
+					grid-area: person;
+				}
+			}
+
+			&--tel {
+				@media (max-width: $mobile) {
+					grid-area: tel;
+				}
+			}
+
+			&--email {
+				@media (max-width: $mobile) {
+					grid-area: email;
+				}
+			}
+
+			&--post {
+				@media (max-width: $mobile) {
+					grid-area: post;
+				}
+			}
+
+			&--check {
+				@media (max-width: $mobile) {
+					grid-area: check;
+				}
+			}
+
+			&--edit {
+				@media (max-width: $mobile) {
+					grid-area: edit;
+				}
+			}
+		}
+
+		&__th {
+			@media (min-width: $mobile) {
+				background-color: $light-grey-bg;
+			}
+
+			&:first-child {
+				@media (min-width: $mobile) {
+					border-radius: 10px 0 0 10px;
+				}
+			}
+
+			&:last-child {
+				@media (min-width: $mobile) {
+					border-radius: 0 10px 10px 0;
+				}
+			}
+		}
+
+		&__person {
+			display: flex;
+			gap: 20px;
+			align-items: flex-start;
+
+			@media (max-width: $mobile) {
+				gap: 11px;
+			}
+
+			&__photo {
+				width: 40px;
+				height: 40px;
+				flex-shrink: 0;
+
+				@media (max-width: $mobile) {
+					width: 58px;
+					height: 58px;
+				}
+
+				img {
+					height: 100%;
+					border-radius: 50%;
+					object-fit: cover;
+				}
+			}
+
+			&__name {
+				@include d1;
+
+				@media (max-width: $mobile) {
+					@include m-button;
+				}
+			}
+		}
+
+		&__tel,
+		&__email,
+		&__post {
+			color: $grey-text;
+			display: flex;
+			@include d1;
+
+			@media (max-width: $mobile) {
+				@include m1;
+			}
+		}
+
+		&__tel {
+			display: flex;
+			align-items: center;
+			gap: 7px;
+
+			&::before {
+				@extend .icon, .icon--call;
+				--color: #{$grey-text};
+				--size: 14px;
+				display: flex;
+
+				@media (max-width: $mobile) {
+					content: '';
+				}
+			}
+		}
+
+		&__email {
+			word-break: break-all;
+			display: flex;
+			align-items: center;
+			gap: 7px;
+
+			&::before {
+				@extend .icon, .icon--sms-tracking;
+				--color: #{$grey-text};
+				--size: 14px;
+				display: flex;
+
+				@media (max-width: $mobile) {
+					content: '';
+				}
+			}
+		}
+
+		&__check {
+			@media (max-width: $mobile) {
+				width: min-content;
+				padding: 5px;
+				background-color: $light-grey-bg;
+				display: flex;
+				gap: 3px;
+				align-items: center;
+				@include m1;
+				border-radius: 5px;
+			}
+
+			&::before {
+				content: '';
+				@extend .icon, .icon--tick-circle;
+				--size: 16px;
+
+				@media (max-width: $mobile) {
+					--size: 12px;
+				}
+			}
+
+			&::after {
+				@media (max-width: $mobile) {
+					content: 'Админ';
+				}
+			}
+		}
+
+		&__edit {
+			cursor: pointer;
+			@include d10;
+			display: flex;
+			align-items: center;
+			gap: 7px;
+			--color: #{$black};
+			color: var(--color);
+
+			@media (max-width: $mobile) {
+				justify-content: flex-end;
+			}
+
+			&:hover {
+				--color: #{$blue};
+			}
+
+			&::before {
+				content: '';
+				@extend .icon, .icon--edit-2;
+				--size: 16px;
+			}
+		}
+	}
+}

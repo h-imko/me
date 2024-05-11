@@ -1,0 +1,215 @@
+.docs {
+	&__filter {
+		margin-top: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 35px;
+
+		@media (max-width: $mobile) {
+			gap: 15px;
+		}
+
+		.custom-input {
+			max-width: 831px;
+		}
+
+		&__tabs {
+			display: flex;
+			gap: 15px;
+			cursor: pointer;
+
+			@media (max-width: $mobile) {
+				overflow: auto;
+				gap: 5px;
+				@include cover-container;
+			}
+
+			&__item {
+				@include tab;
+				border-color: $asphalt;
+				color: $asphalt;
+				white-space: nowrap;
+
+				@media (max-width: $mobile) {
+					flex: 1 1 0;
+				}
+
+				&.is-active {
+					@include tab(true)
+				}
+			}
+		}
+
+		&__date {
+			--gap: 20px;
+			gap: var(--gap);
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+
+			@media (max-width: $mobile) {
+				--gap: 15px;
+			}
+
+			&__title {
+				width: 100%;
+				@include d-button;
+
+				@media (max-width: $mobile) {
+					@include m-button;
+				}
+			}
+
+			&__divider {
+				margin-left: calc(var(--gap) / -2);
+				margin-right: calc(var(--gap) / -2);
+
+				&::before {
+					content: "-";
+				}
+			}
+
+			&__input {
+				position: relative;
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+
+				@media (max-width: $mobile) {
+					flex: 1 1 0;
+				}
+
+				input {
+					height: 50px;
+					width: 132px;
+					padding: 0 12px;
+					border: 1px solid $grey-border1;
+					border-radius: 5px;
+					@include d1;
+					background-color: $white;
+					outline: none;
+
+					// &::-webkit-calendar-picker-indicator,
+					// &::-webkit-inner-spin-button {
+					// 	display: none;
+					// }
+					@media (max-width: $mobile) {
+						width: 100%;
+						@include m1;
+						// background-image: url(/src/assets/static/img/icon/calendar.svg);
+						// background-position: center right 10px;
+						// background-repeat: no-repeat;
+						// background-size: 24px;
+					}
+				}
+
+				&::after {
+					position: absolute;
+					right: 12px;
+					content: '';
+					@extend .icon, .icon--calendar;
+					--size: 24px;
+
+					@media (max-width: $mobile) {
+						--display: none;
+					}
+				}
+			}
+
+			&__button {
+				@include button(true, false, "blue", false);
+			}
+		}
+	}
+
+	&__list {
+		margin-top: 30px;
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		> * {
+			@media (min-width: $mobile) {
+				border-bottom: 1px solid $grey-border1;
+			}
+
+			@media (max-width: $mobile) {
+				border: 1px solid $grey-border1;
+				border-radius: 5px;
+			}
+
+			&:first-child {
+				@media (min-width: $mobile) {
+					border-top: 1px solid $grey-border1;
+				}
+			}
+		}
+	}
+
+	&__footer {
+		margin-top: 35px;
+		display: flex;
+		justify-content: center;
+
+		@media (max-width: $mobile) {
+			margin-top: 15px;
+		}
+	}
+
+	&__doc {
+		padding: 15px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+
+		@media (max-width: $mobile) {
+			padding: 15px;
+			flex-direction: column;
+			align-items: stretch;
+			background-color: $white;
+		}
+
+		&__remove {
+			content: '';
+			@extend .icon, .icon--trash;
+			--size: 20px;
+			cursor: pointer;
+
+			&:hover {
+				--color: #{$blue};
+			}
+		}
+
+		&__download {
+			display: flex;
+			align-items: flex-start;
+			gap: 5px;
+			cursor: pointer;
+			@include d1;
+			--size: 22px;
+
+			@media (max-width: $mobile) {
+				@include m1;
+			}
+
+			&::before {
+				content: '';
+				@extend .icon, .icon--task-square;
+			}
+
+			&::after {
+				content: '';
+				@extend .icon, .icon--arrow-down-2;
+
+				@media (max-width: $mobile) {
+					margin-left: auto;
+				}
+			}
+		}
+	}
+}

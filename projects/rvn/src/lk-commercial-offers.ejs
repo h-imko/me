@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<main>
+			<article class="article">
+				<div class="lk">
+					<div class="lk__container">
+						<div class="lk__grid">
+							<div class="lk__grid__left">
+								<%- include('/lk__nav') %>
+								<a href="" class="lk__connect-button">
+									<span>Подключиться к ЭДО</span>
+								</a>
+							</div>
+							<div class="lk__grid__right">
+								<div class="lk__content">
+									<div class="commercial-offers">
+										<div class="lk__content__title">
+											<span>Коммерческие предложения</span>
+											<div class="button button--fit button--big button--blue button--beautiful button--primary">
+												<span>Сформировать кп</span>
+											</div>
+										</div>
+										<div class="commercial-offers__filter">
+											<label class="custom-input">
+												<select name="" id="" required>
+													<option value="biba">Общество с ограниченной ответственностью «Весна»</option>
+													<option value="boba">boba</option>
+												</select>
+												<div class="custom-input__label">
+													<span>Выбор организации</span>
+												</div>
+											</label>
+										</div>
+										<div class="commercial-offers__table">
+											<div class="commercial-offers__table__tbody">
+												<% for( let index = 0; index < 8; index++ ) { %>
+												<div class="commercial-offers__table__tr">
+													<div class="commercial-offers__table__td commercial-offers__table__td--remove">
+														<div class="commercial-offers__table__remove"></div>
+													</div>
+													<div class="commercial-offers__table__td commercial-offers__table__td--download">
+														<a href="" download="" class="commercial-offers__table__download">
+															<span>
+																<% if(index == 0){%>
+																КП №40 для ИП Петров.pdf
+																<% } else {%>
+																КП №39 для Общество с ограниченной ответственностью «Лилия».pdf
+																<% }  %>
+															</span>
+														</a>
+													</div>
+													<div class="commercial-offers__table__td commercial-offers__table__td--date">
+														<div class="commercial-offers__table__date">
+															<span>21.12.22</span>
+														</div>
+													</div>
+													<div class="commercial-offers__table__td commercial-offers__table__td--edit">
+														<div class="commercial-offers__table__edit">
+															<span>Изменить</span>
+														</div>
+													</div>
+													<div class="commercial-offers__table__td commercial-offers__table__td--action">
+														<% if(index == 0){%>
+														<div class="commercial-offers__table__action commercial-offers__table__action--blue">
+															<span>Оформить заказ</span>
+														</div>
+														<% } else {%>
+														<div class="commercial-offers__table__action">
+															<span>Повторить заказ</span>
+														</div>
+														<% }  %>
+													</div>
+													<div class="commercial-offers__table__td commercial-offers__table__td--status">
+														<% if(index == 0){%>
+														<div class="commercial-offers__table__status commercial-offers__table__status--light">
+															<span>Счет сформирован</span>
+														</div>
+														<% } else {%>
+														<div class="commercial-offers__table__status commercial-offers__table__status--grey">
+															<span>Оплачен</span>
+														</div>
+														<% }  %>
+													</div>
+												</div>
+												<% } %>
+											</div>
+										</div>
+										<div class="commercial-offers__footer">
+											<%- include('/pagination') %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+	</body>
+
+</html>

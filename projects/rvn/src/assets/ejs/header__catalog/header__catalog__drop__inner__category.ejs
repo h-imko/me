@@ -1,0 +1,18 @@
+<% let groups = ["Беспроводные системы","Адресные системы-Рубеж","Беспроводные системы","Адресные системы-Болид","Адресные системы-Болид"] %>
+<div class="header__catalog__drop__inner__category">
+	<input type="radio" name="header__catalog__drop__inner__category" data-synced-inputs="category-<%- index %>" id="category<%- index %>">
+	<div class="header__catalog__drop__inner__category__content">
+		<label for="category-reset" class="header__catalog__drop__inner__category__back">
+			Назад
+		</label>
+		<a href="" class="header__catalog__drop__inner__category__parent">Каталог</a>
+		<% groups.forEach((title, jndex) => { %>
+		<%- include('/header__catalog/header__catalog__drop__inner__group', {
+			title: title,
+			groupIndex: jndex,
+			categoryIndex: index,
+			category:category
+		 }) %>
+		<% }) %>
+	</div>
+</div>

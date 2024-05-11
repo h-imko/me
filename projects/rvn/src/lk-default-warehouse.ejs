@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<main>
+			<article class="article">
+				<div class="lk">
+					<div class="lk__container">
+						<div class="lk__grid">
+							<div class="lk__grid__left">
+								<%- include('/lk__nav') %>
+								<a href="" class="lk__connect-button">
+									<span>Подключиться к ЭДО</span>
+								</a>
+							</div>
+							<div class="lk__grid__right">
+								<div class="lk__content">
+									<div class="default-warehouse">
+										<div class="lk__content__title">
+											<span>Склад по умолчанию</span>
+										</div>
+										<div class="default-warehouse__info">
+											<div class="default-warehouse__info__block">
+												<div class="default-warehouse__info__item">
+													<div class="icon icon--location"></div>
+													<span><b>Краснодар, ул.Уральская, 83А</b></span>
+												</div>
+												<div class="default-warehouse__info__item">
+													<div class="icon icon--clock"></div>
+													<span> Ежедневно 10:00-21:00</span>
+												</div>
+												<div class="default-warehouse__info__item">
+													<div class="icon icon--call"></div>
+													<span>+7 (495) 374-84-84 доб. 116 </span>
+												</div>
+											</div>
+											<div class="default-warehouse__info__block">
+												<div class="default-warehouse__info__button" data-popup-target="popup__default_warehouse_change" data-popup-control="open">
+													<span>Сменить склад</span>
+												</div>
+											</div>
+										</div>
+										<div class="default-warehouse__map">
+											<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aae451fd6b47f9dfa1e99becd11a8f7be525770c45e2729596645fdb45c3e8a3c&amp;source=constructor" width="949" height="680" frameborder="0"></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__default_warehouse_change') %>
+		<%- include('/popup__default_warehouse_change_success') %>
+	</body>
+
+</html>

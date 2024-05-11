@@ -1,0 +1,116 @@
+.footer {
+	background-color: $asphalt;
+	padding-top: 44px;
+	padding-bottom: 37px;
+	margin-top: 80px;
+
+	@media (max-width: $mobile) {
+		padding-top: 40px;
+		padding-bottom: 35px;
+		margin-top: 40px;
+	}
+
+	&__container {
+		@extend %container;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+
+		@media (max-width: $mobile) {
+			gap: 26px;
+		}
+	}
+
+	&__main {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
+
+	&__group {
+		display: flex;
+		gap: 40px;
+		align-items: center;
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		&:nth-child(1) {
+			@media (max-width: $mobile) {
+				gap: 10px;
+			}
+		}
+
+		&:nth-child(2) {
+			@media (max-width: $mobile) {
+				gap: 15px;
+			}
+		}
+	}
+
+	&__link {
+		color: $white;
+		@include d2;
+		display: flex;
+		gap: 19px;
+		transition: all ease var(--transition-duration);
+		align-items: center;
+		--color: #{$white};
+		--size: 24px;
+
+		&:hover {
+			color: $grey-border;
+			--color: #{$grey-border};
+		}
+
+		@media (max-width: $mobile) {
+			@include m2;
+		}
+	}
+
+	&__btn {
+		@include button(true, false, "white", true);
+
+		@media (max-width: $mobile) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		gap: 22px;
+		color: $grey-text-on-darkgrey;
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		&__link {
+			@include d17;
+
+			@media (max-width: $mobile) {
+				@include m17;
+			}
+		}
+	}
+
+	&__copyright {
+		@include d1;
+
+		@media (max-width: $mobile) {
+			@include m1;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<main>
+			<article class="article">
+				<div class="lk">
+					<div class="lk__container">
+						<div class="lk__grid">
+							<div class="lk__grid__left">
+								<%- include('/lk__nav') %>
+								<a href="" class="lk__connect-button">
+									<span>Подключиться к ЭДО</span>
+								</a>
+							</div>
+							<div class="lk__grid__right">
+								<div class="lk__content">
+									<div class="my-manager">
+										<div class="lk__content__title">
+											<span>Мой менеджер</span>
+										</div>
+										<div class="my-manager__card">
+											<div class="my-manager__card__img">
+												<img src="/src/assets/static/img/kitten.webp" alt="">
+											</div>
+											<div class="my-manager__card__name">
+												<span>Рябинова Ольга Анатольевна</span>
+											</div>
+											<div class="my-manager__card__post">
+												<span>Менеджер компании «RVN GROUP», опыт работы 5 лет </span>
+											</div>
+										</div>
+										<div class="my-manager__button" data-popup-target="popup__my_manager_change" data-popup-control="open">
+											<span>Сменить менеджера</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__my_manager_change') %>
+		<%- include('/popup__my_manager_change_success') %>
+	</body>
+
+</html>

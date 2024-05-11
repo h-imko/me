@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<%- include('/head') %>
+
+	<body>
+		<%- include('/header') %>
+		<%- include('/breadcrumbs') %>
+		<main>
+			<article class="article">
+				<div class="contacts">
+					<div class="contacts__container">
+						<div class="contacts__title">
+							<span>Контакты</span>
+						</div>
+						<div class="contacts__header">
+							<div class="contacts__info">
+								<div class="contacts__info__text">
+									<span>Справочная служба</span>
+								</div>
+								<a href="tel:+7 (495) 374 84 84" class="contacts__info__item">
+									<div class="icon icon--call"></div>
+									<span>+7 (495) 374 84 84</span>
+								</a>
+								<a href="mailto:info@rvn-group.ru" class="contacts__info__item">
+									<div class="icon icon--sms-tracking"></div>
+									<span>info@rvn-group.ru</span>
+								</a>
+							</div>
+							<div class="contacts__header__button" data-popup-target="popup__feedback" data-popup-control="open">
+								<span>Задать вопрос</span>
+							</div>
+							<div class="contacts__header__tabs">
+								<div class="contacts__header__tabs__item is-active">
+									<span>На карте</span>
+								</div>
+								<div class="contacts__header__tabs__item">
+									<span>Списком</span>
+								</div>
+							</div>
+						</div>
+						<!-- для переключения видов на мобиле -->
+						<!-- <div class="contacts__map contacts__map--list-view"> -->
+						<!-- класс модификатор - contacts__map--has-chosen если какой-то из адресов выбран, к сожалению без него заменеджить слои наложения с нижней панелькой и шапкой невозможно, зато никаких дублей контента -->
+						<div class="contacts__map contacts__map--map-view contacts__map--has-chosen">
+							<div class="contacts__map__aside">
+								<div class="contacts__map__address-list" data-simplebar data-simplebar-auto-hide="false">
+									<div class="contacts__map__address-list__inner">
+										<% for( let index = 1; index < 6; index++ ) { %>
+										<div class="contacts__map__address <% if (index == 1) { %>
+										  is-active
+										<% } %>">
+											<div class="contacts__map__address__content">
+												<div class="contacts__map__address__content__closer"></div>
+												<div class="contacts__map__address__item">
+													<span><b>Центральный офис</b></span>
+												</div>
+												<div class="contacts__map__address__item">
+													<div class="icon icon--location"></div>
+													<span>
+														<%- index %>Москва, ул.Сущёвский Вал дом 5 стр.12, ТК «Савёловский-Мобильный», Магазин П-116
+													</span>
+												</div>
+												<div class="contacts__map__address__item">
+													<div class="icon icon--noun-metro"></div>
+													<span>Савеловская</span>
+												</div>
+												<div class="contacts__map__address__item">
+													<div class="icon icon--clock"></div>
+													<span>Ежедневно 10:00-21:00</span>
+												</div>
+												<div class="contacts__map__address__item">
+													<div class="icon icon--call"></div>
+													<span>+7 (495) 374-84-84 доб. 116</span>
+												</div>
+												<div class="contacts__map__address__item">
+													<div class="icon icon--sms-tracking"></div>
+													<span>p116@rvn-group.ru</span>
+												</div>
+											</div>
+										</div>
+										<% } %>
+									</div>
+								</div>
+							</div>
+							<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aae451fd6b47f9dfa1e99becd11a8f7be525770c45e2729596645fdb45c3e8a3c&amp;source=constructor" frameborder="0"></iframe>
+							<!--  is-active за показ текстбокса -->
+							<!-- <div class="contacts__map__point is-active" style="--left: 800px; --top: 500px;">
+								<div class="contacts__map__point__info">
+									<span>Москва, ул.Сущёвский Вал дом 5 стр.12, ТК «Савёловский-Мобильный», Магазин П-116</span>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<%- include('/footer') %>
+		<%- include('/popup__order_invoice') %>
+	</body>
+
+</html>

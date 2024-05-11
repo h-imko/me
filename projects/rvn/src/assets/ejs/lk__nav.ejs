@@ -1,0 +1,11 @@
+<% let items = [["Мои компании","buildings-2"],["Контактные лица","people"],["Заказы","box"],["Коммерческие предложения","note"],["Бонусы","ruble"],["Бухгалтерские документы","folder-2"],["Склад по умолчанию","house"],["Мой менеджер","user-tag"],["Выход","logout-2"]] %>
+<div class="lk__nav">
+	<% for( let index = 0; index < items.length; index++ ) { %>
+	<a href="" class="lk__nav__item <% if (index == 0) { %>
+	 is-active
+	<% } %>">
+		<div class="icon icon--<%- items[index][1] %>"></div>
+		<span><%- items[index][0] %></span>
+	</a>
+	<% } %>
+</div>

@@ -1,0 +1,102 @@
+.nav-cards {
+	&__container {
+		@extend %container;
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 30px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			grid-template-rows: unset;
+			gap: 10px;
+		}
+
+		.bonus-card {
+			grid-row: span 2;
+			transition: all ease var(--transition-duration);
+
+			&:hover {
+				transform: translateY(-3px);
+			}
+		}
+	}
+
+	&__card {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		background: $white;
+		box-shadow: 0 4px 38px rgba(33, 39, 56, 0.08);
+		padding: 24px;
+		border-radius: 15px;
+		transition: all ease var(--transition-duration);
+
+		&:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 4px 6px rgba(33, 39, 56, 0.1), 0 4px 38px rgba(33, 39, 56, 0.08);
+		}
+
+		@media (max-width: $mobile) {
+			padding: 20px;
+		}
+
+		&:nth-child(2n + 2) {
+			grid-column: 2;
+
+			@media (max-width: $mobile) {
+				grid-column: 1;
+			}
+		}
+
+		&__title {
+			grid-column: 1;
+			@include d9;
+			align-self: flex-start;
+
+			@media (max-width: $mobile) {
+				@include m9;
+			}
+		}
+
+		&__caption {
+			align-self: flex-end;
+			grid-column: 1;
+			@include d1;
+			color: $grey-text;
+
+			@media (max-width: $mobile) {
+				align-self: flex-start;
+				@include m1;
+			}
+		}
+
+		&__icon {
+			width: 94px;
+			height: 94px;
+			border-radius: 50%;
+			background-color: $light-grey;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			grid-row: 1 / span 2;
+			grid-column: 2;
+
+			@media (max-width: $mobile) {
+				width: 67px;
+				height: 67px;
+			}
+
+			.icon {
+				--size: 40px;
+				--color: #{$grey-icon};
+
+				@media (max-width: $mobile) {
+					--size: 28px;
+				}
+			}
+		}
+	}
+}

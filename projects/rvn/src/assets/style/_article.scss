@@ -1,0 +1,17 @@
+article {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+
+	@media (max-width: $mobile) {
+		&:not(.d-desktop) + & {
+			margin-top: 60px;
+		}
+	}
+
+	@media (min-width: $mobile) {
+		&:not(.d-mobile) + & {
+			margin-top: 60px;
+		}
+	}
+}

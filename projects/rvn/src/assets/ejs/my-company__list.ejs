@@ -1,0 +1,60 @@
+<% let companies = ["Общество с ограниченной ответственностью «Весна»","ИП «Петров Игорь Петрович»","ИП «Рязенцева Ирина Владимировна»"] %>
+<div class="my-company__list">
+	<% companies.forEach(company => {%>
+	<div class="my-company__company">
+		<div class="spoiler">
+			<div class="spoiler__toggler">
+				<div class="my-company__company__header">
+					<div class="my-company__company__name">
+						<span><%- company %></span>
+					</div>
+					<div class="my-company__company__edit">
+						<span>Изменить</span>
+					</div>
+					<div class="spoiler__flipper">
+						<div class="my-company__company__flipper"></div>
+					</div>
+				</div>
+			</div>
+			<div class="spoiler__content">
+				<div class="spoiler__content__inner">
+					<div class="my-company__company__content">
+						<div class="my-company__company__info-item">
+							<p>Наименование организации</p>
+							<p>Общество с ограниченной ответственностью «Весна»</p>
+						</div>
+						<div class="my-company__company__info-item">
+							<p>Юридический адрес</p>
+							<p>г. Воронеж, ул. Петровская, д. 1, оф. 2</p>
+						</div>
+						<div class="my-company__company__info-item">
+							<p>Почтовый адрес</p>
+							<p>г. Воронеж, ул. Петровская, д. 1, оф. 2</p>
+						</div>
+						<div class="my-company__company__info-item">
+							<p>ИНН</p>
+							<p>7712345678</p>
+						</div>
+						<div class="my-company__company__info-item">
+							<p>КПП</p>
+							<p>465465465454</p>
+						</div>
+						<div class="my-company__company__info-item">
+							<p>Расчетный счет</p>
+							<p>40702810123450101230</p>
+						</div>
+						<div class="my-company__company__info-item">
+							<p>БИК</p>
+							<p>044521234</p>
+						</div>
+						<div class="my-company__company__info-item">
+							<p>Наименование банка</p>
+							<p>Московский банк ПАО Сбербанк г. Москва</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%});%>
+</div>
