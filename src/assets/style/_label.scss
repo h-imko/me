@@ -6,6 +6,11 @@
 	color: #fff;
 	text-transform: uppercase;
 
+	@media (max-width: $mobile) {
+		font-size: 12px;
+		padding: 8px;
+	}
+
 	&--pink {
 		background-color: #f36c75;
 	}

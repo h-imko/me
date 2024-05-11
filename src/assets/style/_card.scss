@@ -10,6 +10,12 @@
 	transition: box-shadow ease .3s;
 	position: relative;
 
+	@media (max-width: $mobile) {
+		padding: 16px 16px 24px 16px;
+		gap: 16px;
+		border-radius: 12px;
+	}
+
 	&:hover {
 		box-shadow: 0 4px 20px rgba(28, 42, 67, 0.1);
 	}
@@ -19,6 +25,10 @@
 		aspect-ratio: 16 / 9;
 		border-radius: 16px;
 		overflow: hidden;
+
+		@media (max-width: $mobile) {
+			border-radius: 8px;
+		}
 
 		img {
 			object-fit: cover;
@@ -37,6 +47,10 @@
 		display: flex;
 		gap: 12px;
 		flex-wrap: wrap;
+
+		@media (max-width: $mobile) {
+			gap: 8px;
+		}
 	}
 
 	&__title {
